@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { FormInput, Button } from "../../common/common.styles";
 
-class Feed extends Component {
+class Tab extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       editMode: false,
-      editText: this.props.feed.text
+      editText: this.props.tab.text
     };
   }
 
   onToggleEditMode = () => {
     this.setState(state => ({
       editMode: !state.editMode,
-      editText: this.props.feed.text
+      editText: this.props.tab.text
     }));
   };
 
@@ -23,13 +23,13 @@ class Feed extends Component {
   };
 
   onSaveEditText = () => {
-    this.props.onEditFeed(this.props.feed, this.state.editText);
+    this.props.onEditTab(this.props.tab, this.state.editText);
 
     this.setState({ editMode: false });
   };
 
   render() {
-    const { authUser, feed, onRemoveFeed } = this.props;
+    const { authUser, tab, onRemoveTab } = this.props;
     const { editMode, editText } = this.state;
 
     return (
@@ -42,12 +42,12 @@ class Feed extends Component {
           />
         ) : (
           <span>
-            <strong>{feed.userId}</strong> {feed.text}
-            {feed.editedAt && <span>(Edited)</span>}
+            <strong>{tab.userId}</strong> {tab.text}
+            {tab.editedAt && <span>(Edited)</span>}
           </span>
         )}
 
-        {authUser.uid === feed.userId && (
+        {authUser.uid === tab.userId && (
           <span>
             {editMode ? (
               <span>
@@ -59,7 +59,7 @@ class Feed extends Component {
             )}
 
             {!editMode && (
-              <Button type="button" onClick={() => onRemoveFeed(feed.uid)}>
+              <Button type="button" onClick={() => onRemoveTab(tab.uid)}>
                 Delete
               </Button>
             )}
@@ -70,4 +70,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default Tab;

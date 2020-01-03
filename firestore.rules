@@ -27,6 +27,12 @@ service cloud.firestore {
     	   allow create: if signedIn();
     }
 
+    match /tabs/{tabId} {
+        allow read: if signedIn();
+        allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
+        allow update, delete: if signedIn() && isOwner();
+    }
+    
     match /feeds/{feedId} {
         allow read: if signedIn();
         allow create: if signedIn() && request.resource.data.userId == request.auth.uid;

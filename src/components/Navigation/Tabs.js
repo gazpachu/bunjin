@@ -2,42 +2,42 @@ import React, { Component } from "react";
 import { Form, FormInput, Button } from "../../common/common.styles";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
-import Feed from "./Feed";
+import Tab from "./Tab";
 
-class Feeds extends Component {
+class Tabs extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       text: "",
       loading: false,
-      feeds: [],
+      tabs: [],
       limit: 5
     };
   }
 
   componentDidMount() {
-    this.onListenForFeeds();
+    this.onListenForTabs();
   }
 
-  onListenForFeeds = () => {
+  onListenForTabs = () => {
     this.setState({ loading: true });
 
     this.unsubscribe = this.props.firebase
-      .feeds()
+      .tabs()
       .orderBy("createdAt", "desc")
       .limit(this.state.limit)
       .onSnapshot(snapshot => {
         if (snapshot.size) {
-          let feeds = [];
-          snapshot.forEach(doc => feeds.push({ ...doc.data(), uid: doc.id }));
+          let tabs = [];
+          snapshot.forEach(doc => tabs.push({ ...doc.data(), uid: doc.id }));
 
           this.setState({
-            feeds: feeds.reverse(),
+            tabs: tabs.reverse(),
             loading: false
           });
         } else {
-          this.setState({ feeds: null, loading: false });
+          this.setState({ tabs: null, loading: false });
         }
       });
   };
@@ -50,8 +50,8 @@ class Feeds extends Component {
     this.setState({ text: event.target.value });
   };
 
-  onCreateFeed = (event, authUser) => {
-    this.props.firebase.feeds().add({
+  onCreateTab = (event, authUser) => {
+    this.props.firebase.tabs().add({
       text: this.state.text,
       userId: authUser.uid,
       createdAt: this.props.firebase.fieldValue.serverTimestamp()
@@ -62,18 +62,18 @@ class Feeds extends Component {
     event.preventDefault();
   };
 
-  onEditFeed = (feed, text) => {
-    const { uid, ...feedSnapshot } = feed;
+  onEditTab = (tab, text) => {
+    const { uid, ...tabSnapshot } = tab;
 
-    this.props.firebase.feed(feed.uid).update({
-      ...feedSnapshot,
+    this.props.firebase.tab(tab.uid).update({
+      ...tabSnapshot,
       text,
       editedAt: this.props.firebase.fieldValue.serverTimestamp()
     });
   };
 
-  onRemoveFeed = uid => {
-    this.props.firebase.feed(uid).delete();
+  onRemoveTab = uid => {
+    this.props.firebase.tab(uid).delete();
   };
 
   onNextPage = () => {
@@ -81,13 +81,13 @@ class Feeds extends Component {
   };
 
   render() {
-    const { text, feeds, loading } = this.state;
+    const { text, tabs, loading } = this.state;
 
     return (
       <AuthUserContext.Consumer>
         {authUser => (
           <div>
-            {!loading && feeds && (
+            {!loading && tabs && (
               <Button type="button" onClick={this.onNextPage}>
                 More
               </Button>
@@ -95,23 +95,23 @@ class Feeds extends Component {
 
             {loading && <div>Loading ...</div>}
 
-            {feeds && (
+            {tabs && (
               <ul>
-                {feeds.map(feed => (
-                  <Feed
+                {tabs.map(tab => (
+                  <Tab
                     authUser={authUser}
-                    key={feed.uid}
-                    feed={feed}
-                    onEditFeed={this.onEditFeed}
-                    onRemoveFeed={this.onRemoveFeed}
+                    key={tab.uid}
+                    tab={tab}
+                    onEditTab={this.onEditTab}
+                    onRemoveTab={this.onRemoveTab}
                   />
                 ))}
               </ul>
             )}
 
-            {!feeds && <div>There are no feeds ...</div>}
+            {!tabs && <div>There are no tabs ...</div>}
 
-            <Form onSubmit={event => this.onCreateFeed(event, authUser)}>
+            <Form onSubmit={event => this.onCreateTabb(event, authUser)}>
               <FormInput
                 type="text"
                 value={text}
@@ -126,4 +126,4 @@ class Feeds extends Component {
   }
 }
 
-export default withFirebase(Feeds);
+export default withFirebase(Tabs);

@@ -94,6 +94,12 @@ class Firebase {
 
   users = () => this.db.collection("users");
 
+  // *** Tabs API ***
+
+  tab = uid => this.db.doc(`tabs/${uid}`);
+
+  tabs = () => this.db.collection("tabs");
+
   // *** Feeds API ***
 
   feed = uid => this.db.doc(`feeds/${uid}`);

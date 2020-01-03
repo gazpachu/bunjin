@@ -2,12 +2,12 @@ import styled, { css } from "styled-components";
 import { darken } from "polished";
 import { Link } from "react-router-dom";
 
-export const headerHeight = "50px";
+export const headerHeight = "40px";
 
 export const colors = {
   primary: "#7e5bef",
   secondary: "#888",
-  bg: "#5b8fef",
+  bg: "#242424",
   red: "#c74343",
   green: "#30b182"
 };
@@ -23,14 +23,17 @@ export const spacing = {
   l4: "32px"
 };
 
+export const fontSizes = {
+  l1: "3em",
+  l2: "2em",
+  l3: "1.5em",
+  l4: "1em"
+};
+
 export const PageContainer = styled.section`
   text-align: center;
   padding: 20px;
-  background: linear-gradient(
-    to bottom,
-    ${colors.bg} 0%,
-    rgba(112, 64, 117, 0.85) 100%
-  );
+  background: ${colors.bg};
   color: white;
   min-height: calc(100vh - ${headerHeight});
 `;
@@ -99,4 +102,12 @@ export const FormButton = styled.button`
   ${button};
   margin-bottom: ${spacing.l3};
   width: 100%;
+`;
+
+export const growOnHover = css`
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

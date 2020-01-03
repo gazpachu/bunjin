@@ -1,63 +1,119 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, Fragment } from "react";
+import { withFirebase } from "../Firebase";
 import { AuthUserContext } from "../Session";
-import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
+import Tabs from "./Tabs";
 import {
   AppHeader,
-  AppHeaderLink,
-  Title,
+  HeaderBar,
+  HamburgerBox,
+  HamburgerInner,
   Nav,
   NavItem,
-  ChatIcon,
+  NavLink,
+  NavButton,
+  DashboardIcon,
   UserIcon,
   AdminIcon,
-  LoginIcon
+  LoginIcon,
+  LogoutIcon
 } from "./styles";
 
-const Navigation = ({ authUser }) => (
-  <AuthUserContext.Consumer>
-    {authUser => (
-      <AppHeader>
-        <AppHeaderLink to={ROUTES.LANDING}>
-          <Title>Shinban</Title>
-        </AppHeaderLink>
-        <Nav>
-          <NavItem>
-            {authUser && (
-              <Link to={ROUTES.DASHBOARDS} title="Dashboards">
-                <ChatIcon />
-              </Link>
-            )}
-          </NavItem>
-          {authUser && (
-            <NavItem>
-              <Link to={ROUTES.ACCOUNT} title="User account">
-                <UserIcon />
-              </Link>
-            </NavItem>
-          )}
-          {authUser && !!authUser.roles[ROLES.ADMIN] && (
-            <NavItem>
-              <Link to={ROUTES.ADMIN} title="Admin">
-                <AdminIcon />
-              </Link>
-            </NavItem>
-          )}
-          <NavItem>
-            {authUser ? (
-              <SignOutButton />
-            ) : (
-              <Link to={ROUTES.SIGN_IN} title="Sign in">
-                <LoginIcon />
-              </Link>
-            )}
-          </NavItem>
-        </Nav>
-      </AppHeader>
-    )}
-  </AuthUserContext.Consumer>
-);
+const Navigation = ({ authUser, firebase }) => {
+  const [isMenuActive, setMenuActive] = useState(0);
 
-export default Navigation;
+  return (
+    <AuthUserContext.Consumer>
+      {authUser => (
+        <AppHeader>
+          <HeaderBar>
+            <Tabs />
+            <NavButton onClick={() => setMenuActive(!isMenuActive)}>
+              <HamburgerBox>
+                <HamburgerInner isActive={isMenuActive} />
+              </HamburgerBox>
+            </NavButton>
+          </HeaderBar>
+          <Nav isActive={isMenuActive}>
+            <NavItem>
+              {authUser && (
+                <NavLink
+                  to={ROUTES.DASHBOARDS}
+                  title="Dashboards"
+                  onClick={() => setMenuActive(false)}
+                >
+                  <DashboardIcon />
+                  <span>Dashboards</span>
+                </NavLink>
+              )}
+            </NavItem>
+            {authUser && (
+              <NavItem>
+                <NavLink
+                  to={ROUTES.ACCOUNT}
+                  title="User account"
+                  onClick={() => setMenuActive(false)}
+                >
+                  <UserIcon />
+                  <span>Account</span>
+                </NavLink>
+              </NavItem>
+            )}
+            {authUser && !!authUser.roles[ROLES.ADMIN] && (
+              <NavItem>
+                <NavLink
+                  to={ROUTES.ADMIN}
+                  title="Admin"
+                  onClick={() => setMenuActive(false)}
+                >
+                  <AdminIcon />
+                  <span>Admin</span>
+                </NavLink>
+              </NavItem>
+            )}
+
+            {authUser ? (
+              <NavItem>
+                <NavButton
+                  onClick={() => {
+                    setMenuActive(false);
+                    firebase.doSignOut();
+                  }}
+                >
+                  <LogoutIcon title="Sign out" />
+                  <span>Sign out</span>
+                </NavButton>
+              </NavItem>
+            ) : (
+              <Fragment>
+                <NavItem>
+                  <NavLink
+                    to={ROUTES.SIGN_IN}
+                    title="Sign in"
+                    onClick={() => setMenuActive(false)}
+                  >
+                    <LoginIcon />
+                    <span>Sign in</span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    to={ROUTES.SIGN_UP}
+                    title="Sign up"
+                    onClick={() => setMenuActive(false)}
+                  >
+                    <LoginIcon />
+                    <span>Sign up</span>
+                  </NavLink>
+                </NavItem>
+              </Fragment>
+            )}
+          </Nav>
+        </AppHeader>
+      )}
+    </AuthUserContext.Consumer>
+  );
+};
+
+export default withFirebase(Navigation);
