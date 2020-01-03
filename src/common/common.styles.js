@@ -8,8 +8,10 @@ export const colors = {
   primary: "#7e5bef",
   secondary: "#888",
   bg: "#242424",
+  bg2: "#3a3a3a",
   red: "#c74343",
-  green: "#30b182"
+  green: "#30b182",
+  border: "rgba(255,255,255,0.2)"
 };
 
 export const breakpoints = {
@@ -27,15 +29,29 @@ export const fontSizes = {
   l1: "3em",
   l2: "2em",
   l3: "1.5em",
-  l4: "1em"
+  l4: "1em",
+  l5: "0.9em"
 };
 
 export const PageContainer = styled.section`
-  text-align: center;
-  padding: 20px;
-  background: ${colors.bg};
+  padding: ${spacing.l3};
   color: white;
   min-height: calc(100vh - ${headerHeight});
+  background: ${colors.bg};
+  text-align: center;
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
 `;
 
 export const button = props => css`
@@ -102,6 +118,24 @@ export const FormButton = styled.button`
   ${button};
   margin-bottom: ${spacing.l3};
   width: 100%;
+`;
+
+export const Select = styled.select`
+  appearance: none;
+  background: none;
+  color: white;
+  border: none;
+  outline: none;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 1.5em;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%);
+  background-position: calc(100% - 5px) calc(13px), calc(100%) calc(13px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
 `;
 
 export const growOnHover = css`

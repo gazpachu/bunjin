@@ -1,71 +1,59 @@
 import React, { Component } from "react";
-import { FormInput, Button } from "../../common/common.styles";
+import {
+  FeedBox,
+  FeedWrapper,
+  FeedList,
+  FeedItem,
+  ExternalLink,
+  Title,
+  Snippet
+} from "./styles";
 
 class Feed extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      editMode: false,
-      editText: this.props.feed.text
+      feed: null
     };
   }
 
-  onToggleEditMode = () => {
-    this.setState(state => ({
-      editMode: !state.editMode,
-      editText: this.props.feed.text
-    }));
-  };
+  componentDidMount() {
+    const { feed, parser } = this.props;
+    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
-  onChangeEditText = event => {
-    this.setState({ editText: event.target.value });
-  };
-
-  onSaveEditText = () => {
-    this.props.onEditFeed(this.props.feed, this.state.editText);
-
-    this.setState({ editMode: false });
-  };
+    if (feed && parser) {
+      parser.parseURL("http://localhost:3000/feed.xml", (err, feed) => {
+        if (err) throw err;
+        this.setState({ feed });
+      });
+    }
+  }
 
   render() {
-    const { authUser, feed, onRemoveFeed } = this.props;
-    const { editMode, editText } = this.state;
-
+    const { feed } = this.state;
+    console.log(feed);
     return (
-      <li>
-        {editMode ? (
-          <FormInput
-            type="text"
-            value={editText}
-            onChange={this.onChangeEditText}
-          />
-        ) : (
-          <span>
-            <strong>{feed.userId}</strong> {feed.text}
-            {feed.editedAt && <span>(Edited)</span>}
-          </span>
-        )}
-
-        {authUser.uid === feed.userId && (
-          <span>
-            {editMode ? (
-              <span>
-                <Button onClick={this.onSaveEditText}>Save</Button>
-                <Button onClick={this.onToggleEditMode}>Cancel</Button>
-              </span>
-            ) : (
-              <Button onClick={this.onToggleEditMode}>Edit</Button>
-            )}
-
-            {!editMode && (
-              <Button type="button" onClick={() => onRemoveFeed(feed.uid)}>
-                Delete
-              </Button>
-            )}
-          </span>
-        )}
-      </li>
+      <FeedBox>
+        <FeedWrapper>
+          <FeedList>
+            {feed &&
+              feed.items.map(item => (
+                <FeedItem key={item.guid}>
+                  <ExternalLink
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`${item.title} - ${item.contentSnippet}`}
+                  >
+                    <Title>{item.title}</Title> -{" "}
+                    <Snippet>{item.contentSnippet}</Snippet>
+                  </ExternalLink>
+                </FeedItem>
+              ))}
+          </FeedList>
+        </FeedWrapper>
+      </FeedBox>
     );
   }
 }

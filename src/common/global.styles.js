@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import Bg from "../assets/img/bg.png";
 import "normalize.css";
-import { colors } from "./common.styles";
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -23,7 +21,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Noto Sans JP", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: ${colors.secondary} url(${Bg});
     color: white;
   }
 
@@ -32,6 +29,11 @@ const GlobalStyles = createGlobalStyle`
   a:hover,
   a:visited {
     color: white;
+  }
+
+  button {
+    outline: none;
+    cursor: pointer;
   }
 `;
 

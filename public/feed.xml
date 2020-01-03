@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:media="http://search.yahoo.com/mrss/"
+	xmlns:meneame="http://meneame.net/faq-es.php"
+ >
+<channel>
+	<title>Menéame: publicadas</title>
+	<atom:link href="http://www.meneame.net/rss2.php" rel="self" type="application/rss+xml" />
+	<link>http://www.meneame.net</link>
+	<image><title>Menéame: publicadas</title><link>http://www.meneame.net</link><url>http://mnmstatic.net/img/mnm/eli-rss.png</url></image>
+	<description>Sitio colaborativo de publicación y comunicación entre blogs</description>
+	<pubDate>Fri, 03 Jan 2020 15:55:03 +0000</pubDate>
+	<generator>http://blog.meneame.net/</generator>
+	<language>es</language>
+	<atom:link rel="hub" href="http://pubsubhubbub.appspot.com/"/>
+	<item>
+		<meneame:link_id>3232456</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Esteban_Rosador</meneame:user>
+		<meneame:clicks>854</meneame:clicks>
+		<meneame:votes>52</meneame:votes>
+		<meneame:negatives>5</meneame:negatives>
+		<meneame:karma>261</meneame:karma>
+		<meneame:comments>4</meneame:comments>
+		<meneame:url>https://www.diariodecadiz.es/opinion/articulos/Ganotazo-cofrade_0_1424857520.html</meneame:url>
+		<title>Gañotazo cofrade</title>
+		<link>https://www.meneame.net/story/ganotazo-cofrade</link>
+		<comments>https://www.meneame.net/story/ganotazo-cofrade</comments>
+		<pubDate>Fri, 03 Jan 2020 15:55:20 +0000</pubDate>
+		<dc:creator>Esteban_Rosador</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[religion]]></category>
+		<category><![CDATA[laicismo]]></category>
+		<guid>https://www.meneame.net/story/ganotazo-cofrade</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232456.jpeg?1578059646' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>¿Cómo alguien osa pedirle a las cofradías que se comporten como si fueran cualquierotra entidad? ¡Qué atropello!</p><p><strong>etiquetas</strong>: religion, laicismo</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232456" >noticia original</a> (www.diariodecadiz.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232456.jpeg?1578059646" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232456</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232412</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>calamarte</meneame:user>
+		<meneame:clicks>552</meneame:clicks>
+		<meneame:votes>56</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>328</meneame:karma>
+		<meneame:comments>10</meneame:comments>
+		<meneame:url>https://www.niusdiario.es/sociedad/medio-ambiente/sinfo-olivo-castellon-dos-mil-anos-mejor-mediterraneo-milenarios_18_2865195212.html?fbclid=IwAR2DaM_Fu5__X5Ye-5I4whtxNiB0ovByAFmnJ_V8MOjAowNcOKFTkZCBO5k</meneame:url>
+		<title>“Sinfo”, un olivo de Castellón con más de 2.000 años, elegido el mejor del Mediterráneo</title>
+		<link>https://www.meneame.net/story/sinfo-olivo-castellon-mas-2-000-anos-elegido-mejor-mediterraneo</link>
+		<comments>https://www.meneame.net/story/sinfo-olivo-castellon-mas-2-000-anos-elegido-mejor-mediterraneo</comments>
+		<pubDate>Fri, 03 Jan 2020 15:45:03 +0000</pubDate>
+		<dc:creator>calamarte</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[ecologia]]></category>
+		<category><![CDATA[olivos]]></category>
+		<category><![CDATA[castellón]]></category>
+		<category><![CDATA[naturaleza]]></category>
+		<category><![CDATA[biodiversidad]]></category>
+		<guid>https://www.meneame.net/story/sinfo-olivo-castellon-mas-2-000-anos-elegido-mejor-mediterraneo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232412.jpeg?1578052926' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Muchos siglos antes de que fuera bautizado con el nombre de “Sinfo”, en memoria a Sinforosa, la abuela materna de su propietario, este majestuoso olivo ya presidía el territorio de La Sénia. Situado a orillas de la vía augusta romana, en la localidad de Traiguera (Castellón), ha sido testigo silencioso del paso del tiempo. “No es que tenga más años que Matusalén, es anterior a Jesucristo”, comenta Pepita Compte, propietaria junto a su marido del árbol.</p><p><strong>etiquetas</strong>: ecologia, olivos, castellón, naturaleza, biodiversidad</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232412" >noticia original</a> (www.niusdiario.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232412.jpeg?1578052926" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232412</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232442</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>casaseca</meneame:user>
+		<meneame:clicks>393</meneame:clicks>
+		<meneame:votes>149</meneame:votes>
+		<meneame:negatives>7</meneame:negatives>
+		<meneame:karma>555</meneame:karma>
+		<meneame:comments>24</meneame:comments>
+		<meneame:url>https://twitter.com/chikosdelmaiz/status/1213083743872794624?s=20</meneame:url>
+		<title>Tras la censura del Ayuntamiento de Salamanca, Los Chikos del Maíz trasladan su concierto a una sala privada: Potemkim</title>
+		<link>https://www.meneame.net/story/tras-censura-ayuntamiento-salamanca-chikos-maiz-trasladan-sala</link>
+		<comments>https://www.meneame.net/story/tras-censura-ayuntamiento-salamanca-chikos-maiz-trasladan-sala</comments>
+		<pubDate>Fri, 03 Jan 2020 15:50:23 +0000</pubDate>
+		<dc:creator>casaseca</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[ayuntamiento]]></category>
+		<category><![CDATA[salamanca]]></category>
+		<category><![CDATA[potemkim]]></category>
+		<category><![CDATA[los chikos del maíz]]></category>
+		<guid>https://www.meneame.net/story/tras-censura-ayuntamiento-salamanca-chikos-maiz-trasladan-sala</guid>
+		<description><![CDATA[<p>Tras la censura del Ayuntamiento de Salamanca, Los Chikos del Maíz trasladan su concierto a una sala privada: Potemkim y donarán los 500 euros de la rescisión del contrato a la Asociación para la Recuperación de Memoria Histórica</p><p><strong>etiquetas</strong>: ayuntamiento, salamanca, potemkim, los chikos del maíz</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232442" >noticia original</a> (twitter.com)</p>]]></description>
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232442</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232469</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Siento55</meneame:user>
+		<meneame:clicks>566</meneame:clicks>
+		<meneame:votes>73</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>600</meneame:karma>
+		<meneame:comments>31</meneame:comments>
+		<meneame:url>https://cadenaser.com/programa/2020/01/03/la_ventana/1578060461_833572.html</meneame:url>
+		<title>El héroe de Dénia ya tiene 'papeles' en España</title>
+		<link>https://www.meneame.net/story/heroe-denia-ya-tiene-papeles-espana</link>
+		<comments>https://www.meneame.net/story/heroe-denia-ya-tiene-papeles-espana</comments>
+		<pubDate>Fri, 03 Jan 2020 15:05:04 +0000</pubDate>
+		<dc:creator>Siento55</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[papeles]]></category>
+		<category><![CDATA[dénia]]></category>
+		<category><![CDATA[gorgui]]></category>
+		<category><![CDATA[incendio]]></category>
+		<guid>https://www.meneame.net/story/heroe-denia-ya-tiene-papeles-espana</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232469.jpeg?1578061986' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Gorgui Lamine Sow salvó a un hombre de 37 años con movilidad reducida en el incendio de su vivienda.</p><p><strong>etiquetas</strong>: papeles, dénia, gorgui, incendio</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232469" >noticia original</a> (cadenaser.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232469.jpeg?1578061986" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232469</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232223</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Joya</meneame:user>
+		<meneame:clicks>946</meneame:clicks>
+		<meneame:votes>253</meneame:votes>
+		<meneame:negatives>3</meneame:negatives>
+		<meneame:karma>1490</meneame:karma>
+		<meneame:comments>103</meneame:comments>
+		<meneame:url>https://actualidad.rt.com/actualidad/338618-pentagono-confirmar-ataque-muerte-general-iran</meneame:url>
+		<title>Pentágono: Trump &#34;dirigió&#34; el asesinato de un alto comandante iraní para &#34;disuadir futuros ataques</title>
+		<link>https://www.meneame.net/story/trump-dirigio-asesinato-alto-comandante-irani-disuadir-futuros</link>
+		<comments>https://www.meneame.net/story/trump-dirigio-asesinato-alto-comandante-irani-disuadir-futuros</comments>
+		<pubDate>Fri, 03 Jan 2020 14:05:06 +0000</pubDate>
+		<dc:creator>Joya</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[pentágono]]></category>
+		<guid>https://www.meneame.net/story/trump-dirigio-asesinato-alto-comandante-irani-disuadir-futuros</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232223.jpeg?1578060453' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Un importante general iraní y el comandante de la milicia chiita Kataib Hezbolá fallecieron como resultado del ataque efectuado este jueves por EE.UU. cerca del aeropuerto internacional de Bagdad. <a href="/search?w=links&amp;q=%23rel&amp;o=date">#rel</a>: <a href="https://www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-bagdad-qasem" title="www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-bagdad-qasem" rel="nofollow">www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-ba</a></p><p><strong>etiquetas</strong>: pentágono</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232223" >noticia original</a> (actualidad.rt.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232223.jpeg?1578060453" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232223</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232414</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ze7eN</meneame:user>
+		<meneame:clicks>1388</meneame:clicks>
+		<meneame:votes>263</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>1595</meneame:karma>
+		<meneame:comments>199</meneame:comments>
+		<meneame:url>https://www.20minutos.es/noticia/4104740/0/psoe-advierte-al-prc-que-si-no-rectifica-su-no-a-sanchez-habra-roto-el-pacto-de-gobierno-en-cantabria/</meneame:url>
+		<title>El PSOE dará por roto el acuerdo de Gobierno en Cantabria si el PRC no &#34;rectifica&#34;</title>
+		<link>https://www.meneame.net/story/psoe-dara-roto-acuerdo-gobierno-cantabria-prc-no-rectifica</link>
+		<comments>https://www.meneame.net/story/psoe-dara-roto-acuerdo-gobierno-cantabria-prc-no-rectifica</comments>
+		<pubDate>Fri, 03 Jan 2020 13:15:05 +0000</pubDate>
+		<dc:creator>Ze7eN</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[psoe]]></category>
+		<category><![CDATA[prc]]></category>
+		<category><![CDATA[cantabria]]></category>
+		<guid>https://www.meneame.net/story/psoe-dara-roto-acuerdo-gobierno-cantabria-prc-no-rectifica</guid>
+		<description><![CDATA[<p>Así lo ha advertido este viernes, en rueda de prensa, la secretaria de Organización del PSOE de Cantabria y portavoz del grupo socialista en el Parlamento de Cantabria, Noelia Cobo, en su valoración de la decisión adoptada anoche por la Ejecutiva del PRC de votar finalmente 'no' a la investidura de Sánchez.</p><p><strong>etiquetas</strong>: psoe, prc, cantabria</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232414" >noticia original</a> (www.20minutos.es)</p>]]></description>
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232414</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232316</meneame:link_id>
+		<meneame:sub>tecnología</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>arniepye</meneame:user>
+		<meneame:clicks>903</meneame:clicks>
+		<meneame:votes>137</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>278</meneame:karma>
+		<meneame:comments>79</meneame:comments>
+		<meneame:url>https://www.genbeta.com/desarrollo/20-anos-desarrollo-finaliza-soporte-python-2</meneame:url>
+		<title>Tras 20 años de desarrollo, finaliza el soporte de Python 2</title>
+		<link>https://www.meneame.net/story/tras-20-anos-desarrollo-finaliza-soporte-python-2</link>
+		<comments>https://www.meneame.net/story/tras-20-anos-desarrollo-finaliza-soporte-python-2</comments>
+		<pubDate>Fri, 03 Jan 2020 12:10:03 +0000</pubDate>
+		<dc:creator>arniepye</dc:creator>
+		<category><![CDATA[tecnología]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[programación]]></category>
+		<guid>https://www.meneame.net/story/tras-20-anos-desarrollo-finaliza-soporte-python-2</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232316.jpeg?1578043686' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El 1 de enero finalizó oficialmente el soporte a la versión 2.7 del lenguaje de programación Python. La Python Software Foundation, liderada por el creador del lenguaje, Guido van Rossum, anunció que en el futuro dejaría de recibir actualizaciones de seguridad y correcciones de errores. La fecha llevaba pospuesta desde 2015, pero ahora es definitivo.</p><p><strong>etiquetas</strong>: python, programación</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232316" >noticia original</a> (www.genbeta.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232316.jpeg?1578043686" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232316</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232122</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>robustiano</meneame:user>
+		<meneame:clicks>3975</meneame:clicks>
+		<meneame:votes>213</meneame:votes>
+		<meneame:negatives>7</meneame:negatives>
+		<meneame:karma>1279</meneame:karma>
+		<meneame:comments>54</meneame:comments>
+		<meneame:url>https://www.elconfidencial.com/tecnologia/2020-01-02/google-internet-silicon-valley-ross-lajeunesse_2396887/</meneame:url>
+		<title>Acoso, mentiras y racismo: un alto directivo de Google explica por qué dejó la empresa</title>
+		<link>https://www.meneame.net/story/acoso-mentiras-racismo-alto-directivo-google-explica-dejo</link>
+		<comments>https://www.meneame.net/story/acoso-mentiras-racismo-alto-directivo-google-explica-dejo</comments>
+		<pubDate>Fri, 03 Jan 2020 12:05:04 +0000</pubDate>
+		<dc:creator>robustiano</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[directivo de google]]></category>
+		<category><![CDATA[ross lajeunesse]]></category>
+		<category><![CDATA[dont be evil]]></category>
+		<guid>https://www.meneame.net/story/acoso-mentiras-racismo-alto-directivo-google-explica-dejo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232122.jpeg?1577991486' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Tras más de 11 años en el buscador, Ross LaJeunesse, jefe de relaciones internacionales de Google, ha roto su silencio y explicado parte de la cultura laboral tóxica dentro de la empresa.</p><p><strong>etiquetas</strong>: directivo de google, ross lajeunesse, dont be evil</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232122" >noticia original</a> (www.elconfidencial.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232122.jpeg?1577991486" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232122</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232333</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>VicPadawan</meneame:user>
+		<meneame:clicks>1335</meneame:clicks>
+		<meneame:votes>385</meneame:votes>
+		<meneame:negatives>9</meneame:negatives>
+		<meneame:karma>2338</meneame:karma>
+		<meneame:comments>22</meneame:comments>
+		<meneame:url>https://www.elmundotoday.com/2020/01/la-ley-organica-de-proteccion-de-datos-impide-a-los-reyes-magos-saber-si-los-ninos-han-sido-buenos-o-malos/</meneame:url>
+		<title>La Ley Orgánica de Protección de Datos impide a los Reyes Magos saber si los niños han sido buenos</title>
+		<link>https://www.meneame.net/story/ley-organica-proteccion-datos-impide-reyes-magos-saber-ninos-han</link>
+		<comments>https://www.meneame.net/story/ley-organica-proteccion-datos-impide-reyes-magos-saber-ninos-han</comments>
+		<pubDate>Fri, 03 Jan 2020 11:40:04 +0000</pubDate>
+		<dc:creator>VicPadawan</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[reyea]]></category>
+		<category><![CDATA[magos]]></category>
+		<category><![CDATA[protección]]></category>
+		<category><![CDATA[datos]]></category>
+		<guid>https://www.meneame.net/story/ley-organica-proteccion-datos-impide-reyes-magos-saber-ninos-han</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232333.jpeg?1578046086' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La Agencia Española de Protección de Datos (AEPD) ha resuelto que es ilegal que los Reyes Magos almacenen información sobre los actos bondadosos o malvados de los niños sin el consentimiento expreso de estos, dado que estarían violando la Ley de Protección de Datos (LOPD). La decisión se ha tomado después de que el año pasado un niño español denunciara a Sus Majestades los Reyes tras recibir carbón, enfadarse y preguntarse por qué estos sabían si se había portado bien o mal y qué derecho tenían a acumular toda esa información.</p><p><strong>etiquetas</strong>: reyea, magos, protección, datos</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232333" >noticia original</a> (www.elmundotoday.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232333.jpeg?1578046086" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232333</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232243</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>vickilla</meneame:user>
+		<meneame:clicks>1809</meneame:clicks>
+		<meneame:votes>241</meneame:votes>
+		<meneame:negatives>7</meneame:negatives>
+		<meneame:karma>1459</meneame:karma>
+		<meneame:comments>75</meneame:comments>
+		<meneame:url>https://www.lagacetadesalamanca.es/salamanca/no-habra-concierto-de-los-chikos-del-maiz-en-salamanca-el-ayuntamiento-cancela-la-polemica-actuacion-DG1989041</meneame:url>
+		<title>No habrá concierto de Los Chikos del Maíz en Salamanca. El Ayuntamiento cancela la polémica actuación</title>
+		<link>https://www.meneame.net/story/no-habra-concierto-chikos-maiz-salamanca-ayuntamiento-cancela</link>
+		<comments>https://www.meneame.net/story/no-habra-concierto-chikos-maiz-salamanca-ayuntamiento-cancela</comments>
+		<pubDate>Fri, 03 Jan 2020 11:35:23 +0000</pubDate>
+		<dc:creator>vickilla</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[salamanca]]></category>
+		<category><![CDATA[los chikos del maíz]]></category>
+		<guid>https://www.meneame.net/story/no-habra-concierto-chikos-maiz-salamanca-ayuntamiento-cancela</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232243.jpeg?1578036186' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Con un burofax enviado este jueves, el Ayuntamiento de Salamanca cancela de forma oficial el polémico concierto de Los Chikos del Maíz</p><p><strong>etiquetas</strong>: salamanca, los chikos del maíz</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232243" >noticia original</a> (www.lagacetadesalamanca.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232243.jpeg?1578036186" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232243</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232360</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>A_D</meneame:user>
+		<meneame:clicks>1149</meneame:clicks>
+		<meneame:votes>179</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>1284</meneame:karma>
+		<meneame:comments>26</meneame:comments>
+		<meneame:url>https://www.elperiodico.com/es/sanidad/20200103/vall-dhebron-realiza-un-triple-trasplante-a-una-nina-por-primera-vez-en-espana-7793059</meneame:url>
+		<title>Vall d'Hebron realiza un triple trasplante a una niña por primera vez en España</title>
+		<link>https://www.meneame.net/story/vall-d-hebron-realiza-triple-trasplante-nina-primera-vez-espana</link>
+		<comments>https://www.meneame.net/story/vall-d-hebron-realiza-triple-trasplante-nina-primera-vez-espana</comments>
+		<pubDate>Fri, 03 Jan 2020 11:15:19 +0000</pubDate>
+		<dc:creator>A_D</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[vall]]></category>
+		<category><![CDATA[hebron]]></category>
+		<category><![CDATA[trasplante]]></category>
+		<category><![CDATA[corazón]]></category>
+		<category><![CDATA[hígado]]></category>
+		<category><![CDATA[riñón]]></category>
+		<guid>https://www.meneame.net/story/vall-d-hebron-realiza-triple-trasplante-nina-primera-vez-espana</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232360.jpeg?1578047766' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El Hospital Vall d'Hebron de Barcelona, líder europeo en trasplantes, ha realizado un triple trasplante de corazón, riñón e hígado a una niña de 10 años que padece una nefronoptisis tipo 9, una enfermedad minoritaria ultrarrara. Iria, la menor, es el primer paciente pediátrico de España en recibir un triple trasplante de corazón, riñón e hígado por cualquier patología. Y en el mundo, es el primero que se hace por esta patología en concreto.</p><p><strong>etiquetas</strong>: vall, hebron, trasplante, corazón, hígado, riñón</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232360" >noticia original</a> (www.elperiodico.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232360.jpeg?1578047766" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232360</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232328</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Tachy</meneame:user>
+		<meneame:clicks>4521</meneame:clicks>
+		<meneame:votes>334</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>2295</meneame:karma>
+		<meneame:comments>198</meneame:comments>
+		<meneame:url>https://www.elperiodico.com/es/mas-periodico/20191222/entrevista-eva-millet-hiperpaternidad-permite-hijos-aburrirse-7778128?fbclid=IwAR0O4p0-2iJ59m_ZC5J1InoPKFh9hPlTSpKydxxX2kBwIhGfZrisVnoGOEs</meneame:url>
+		<title>&#34;Permite que tu hijo se aburra. Deja de ser su animador sociocultural&#34; (entrevista)</title>
+		<link>https://www.meneame.net/story/permite-tu-hijo-aburra-deja-ser-animador-sociocultural</link>
+		<comments>https://www.meneame.net/story/permite-tu-hijo-aburra-deja-ser-animador-sociocultural</comments>
+		<pubDate>Fri, 03 Jan 2020 10:40:22 +0000</pubDate>
+		<dc:creator>Tachy</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[educación]]></category>
+		<category><![CDATA[eva millet]]></category>
+		<category><![CDATA[hiperpaternidad]]></category>
+		<guid>https://www.meneame.net/story/permite-tu-hijo-aburra-deja-ser-animador-sociocultural</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/52/media_thumb-link-3232328.jpeg?1578045186' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Si cargas con la mochila de tu hijo a la salida del colegio, si tu crío tiene agenda de ministro, si no se aburre nunca, si te provoca ansiedad convertirle en el próximo Messi o Mozart es más que probable que seas un padre o madre helicóptero y hayas caído en las garras de la hiperpaternidad, un fenómeno importado de EEUU y estudiado en profundidad por la periodista Eva Millet.</p><p><strong>etiquetas</strong>: educación,  eva millet, hiperpaternidad</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232328" >noticia original</a> (www.elperiodico.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/52/media_thumb-link-3232328.jpeg?1578045186" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232328</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232158</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>ContinuumST</meneame:user>
+		<meneame:clicks>2192</meneame:clicks>
+		<meneame:votes>161</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>956</meneame:karma>
+		<meneame:comments>25</meneame:comments>
+		<meneame:url>https://www.diariosur.es/internacional/hallada-rusia-sepultura-amazonas-escitas-20200102165627-ntrc.html</meneame:url>
+		<title>Hallada en Rusia la sepultura de cuatro amazonas escitas de más de dos mil años de antigüedad</title>
+		<link>https://www.meneame.net/story/hallada-rusia-sepultura-cuatro-amazonas-escitas-mas-dos-mil-anos</link>
+		<comments>https://www.meneame.net/story/hallada-rusia-sepultura-cuatro-amazonas-escitas-mas-dos-mil-anos</comments>
+		<pubDate>Fri, 03 Jan 2020 09:10:17 +0000</pubDate>
+		<dc:creator>ContinuumST</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[rusia]]></category>
+		<category><![CDATA[amazonas]]></category>
+		<category><![CDATA[guerreras]]></category>
+		<category><![CDATA[vorónezh]]></category>
+		<category><![CDATA[enterramiento]]></category>
+		<category><![CDATA[escita]]></category>
+		<guid>https://www.meneame.net/story/hallada-rusia-sepultura-cuatro-amazonas-escitas-mas-dos-mil-anos</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232158.jpeg?1577995146' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Una expedición arqueológica de la Academia de Ciencias de Rusia, dirigida por Valeri Guliáyev, descubrió el mes pasado en la región de Vorónezh, suroeste del país, un enterramiento de cuatro mujeres guerreras pertenecientes al pueblo escita. Recibieron sepultura hace unos 2.500 años y representan tres generaciones distintas. Vestigios de amazonas escitas se habían encontrado ya, pero no enterradas juntas, con edades diferentes y con sus adornos prácticamente intactos.</p><p><strong>etiquetas</strong>: rusia, amazonas, guerreras, vorónezh, enterramiento, escita</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232158" >noticia original</a> (www.diariosur.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232158.jpeg?1577995146" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232158</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232234</meneame:link_id>
+		<meneame:sub>ocio</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>blodhemn</meneame:user>
+		<meneame:clicks>14923</meneame:clicks>
+		<meneame:votes>372</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>2596</meneame:karma>
+		<meneame:comments>89</meneame:comments>
+		<meneame:url>https://elpais.com/economia/2019/12/27/actualidad/1577462032_632318.html</meneame:url>
+		<title>Y el peor piso de 2019 es...</title>
+		<link>https://www.meneame.net/story/peor-piso-2019-es</link>
+		<comments>https://www.meneame.net/story/peor-piso-2019-es</comments>
+		<pubDate>Fri, 03 Jan 2020 06:55:16 +0000</pubDate>
+		<dc:creator>blodhemn</dc:creator>
+		<category><![CDATA[ocio]]></category>
+		<category><![CDATA[españa]]></category>
+		<category><![CDATA[vivienda]]></category>
+		<category><![CDATA[de mala calidad]]></category>
+		<category><![CDATA[el zulista]]></category>
+		<guid>https://www.meneame.net/story/peor-piso-2019-es</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232234.jpeg?1578031626' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Váter en la cocina y garaje sin ventanas: las pesadillas inmobiliarias del año. La cuenta satírica El Zulista, que denuncia los anuncios inmobiliarios más abusivos del mercado.</p><p><strong>etiquetas</strong>: españa, vivienda, de mala calidad, el zulista</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232234" >noticia original</a> (elpais.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232234.jpeg?1578031626" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232234</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232219</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>ricvalle</meneame:user>
+		<meneame:clicks>1975</meneame:clicks>
+		<meneame:votes>426</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>2949</meneame:karma>
+		<meneame:comments>258</meneame:comments>
+		<meneame:url>https://actualidad.rt.com/actualidad/338615-muerte-general-irani-ataque-misiles-bagdad</meneame:url>
+		<title>Un general iraní muere en el ataque con misiles al aeropuerto de Bagdad (Qasem Soleimani)</title>
+		<link>https://www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-bagdad-qasem</link>
+		<comments>https://www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-bagdad-qasem</comments>
+		<pubDate>Fri, 03 Jan 2020 03:30:33 +0000</pubDate>
+		<dc:creator>ricvalle</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[eeuu]]></category>
+		<category><![CDATA[ataque aéreo]]></category>
+		<category><![CDATA[aeropuerto]]></category>
+		<category><![CDATA[bagdad]]></category>
+		<category><![CDATA[irán]]></category>
+		<category><![CDATA[muerto]]></category>
+		<category><![CDATA[soleimani]]></category>
+		<guid>https://www.meneame.net/story/general-irani-muere-ataque-misiles-aeropuerto-bagdad-qasem</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232219.jpeg?1578016686' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El general iraní Qassem Soleimani falleció este jueves en un ataque de misiles que tuvo lugar en la capital de Irak, Bagdad, informa Reuters citando a un representante de las Fuerzas de Movilización Popular (FMP), una coalición de grupos paramilitares proiraníes. Otra víctima del bombardeo fue el jefe de la organización, Abu Mahdi al Muhandis.  Qasem Soleimani era el comandante de la Fuerza Quds.</p><p><strong>etiquetas</strong>: eeuu, ataque aéreo, aeropuerto, bagdad, irán, muerto, soleimani</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232219" >noticia original</a> (actualidad.rt.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232219.jpeg?1578016686" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232219</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232126</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>minossabe</meneame:user>
+		<meneame:clicks>719</meneame:clicks>
+		<meneame:votes>700</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>4093</meneame:karma>
+		<meneame:comments>101</meneame:comments>
+		<meneame:url>https://elperiodicodelaenergia.com/el-precio-de-la-electricidad-en-2019-fue-un-265-mas-caro-que-el-aleman-y-un-21-superior-al-frances/</meneame:url>
+		<title>El precio de la electricidad en 2019 fue un 26,5% más caro que el alemán y un 21% superior al francés</title>
+		<link>https://www.meneame.net/story/precio-electricidad-2019-fue-26-5-mas-caro-aleman-21-superior</link>
+		<comments>https://www.meneame.net/story/precio-electricidad-2019-fue-26-5-mas-caro-aleman-21-superior</comments>
+		<pubDate>Fri, 03 Jan 2020 02:25:03 +0000</pubDate>
+		<dc:creator>minossabe</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[electricidad]]></category>
+		<category><![CDATA[españa]]></category>
+		<category><![CDATA[precio]]></category>
+		<category><![CDATA[alemania]]></category>
+		<category><![CDATA[francia]]></category>
+		<category><![CDATA[aege]]></category>
+		<category><![CDATA[2019]]></category>
+		<guid>https://www.meneame.net/story/precio-electricidad-2019-fue-26-5-mas-caro-aleman-21-superior</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232126.jpeg?1577989626' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El precio medio del mercado eléctrico diario español en 2019 fue de 47,7 euros por megavatio hora (MWh), lo que representa un 26,5% más que el de Alemania y un 20,9% más caro que el de Francia, según datos de la Asociación de Empresas de Gran Consumo de Energía (AEGE). La industria electro-intensiva considera los precios de la energía «un asunto vital», ya que la electricidad llega a representar el 50% de sus costes de producción.</p><p><strong>etiquetas</strong>: electricidad, españa, precio, alemania, francia, aege, 2019</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232126" >noticia original</a> (elperiodicodelaenergia.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232126.jpeg?1577989626" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232126</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232101</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Stiller</meneame:user>
+		<meneame:clicks>625</meneame:clicks>
+		<meneame:votes>626</meneame:votes>
+		<meneame:negatives>9</meneame:negatives>
+		<meneame:karma>3446</meneame:karma>
+		<meneame:comments>94</meneame:comments>
+		<meneame:url>https://elpais.com/sociedad/2020/01/02/actualidad/1577959010_978204.html</meneame:url>
+		<title>La OMS desmiente a Díaz Ayuso: “La contaminación mata y la evidencia es abrumadora”</title>
+		<link>https://www.meneame.net/story/oms-desmiente-diaz-ayuso-contaminacion-mata-evidencia-abrumadora</link>
+		<comments>https://www.meneame.net/story/oms-desmiente-diaz-ayuso-contaminacion-mata-evidencia-abrumadora</comments>
+		<pubDate>Fri, 03 Jan 2020 01:55:11 +0000</pubDate>
+		<dc:creator>Stiller</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[oms]]></category>
+		<category><![CDATA[salud]]></category>
+		<category><![CDATA[ayuso]]></category>
+		<category><![CDATA[contaminación]]></category>
+		<guid>https://www.meneame.net/story/oms-desmiente-diaz-ayuso-contaminacion-mata-evidencia-abrumadora</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232101.jpeg?1577982486' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>&quot;Nadie ha muerto tampoco de esto [contaminación atmosférica]. No quiero que se genere una alarma de salud pública, porque no la hay. Madrid es una de las ciudades con mayor longevidad del mundo y con uno de los mejores sistemas de transporte y cada vez se están renovando más calderas y vehículos&quot;. A estas declaraciones Isabel Díaz Ayuso, María Neira, directora del departamento de Salud Pública y y Medio Ambiente de la Organización Mundial de la Salud (OMS) desde hace 15 años, zanja: &quot;La contaminación mata&quot;.</p><p><strong>etiquetas</strong>: oms, salud, ayuso, contaminación</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232101" >noticia original</a> (elpais.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232101.jpeg?1577982486" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232101</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232193</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>tdgwho</meneame:user>
+		<meneame:clicks>1757</meneame:clicks>
+		<meneame:votes>361</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>2190</meneame:karma>
+		<meneame:comments>110</meneame:comments>
+		<meneame:url>https://www.eldiario.es/aragon/Teruel-Existe_0_980602587.html</meneame:url>
+		<title>Teruel Existe apoyará la investidura de Pedro Sánchez</title>
+		<link>https://www.meneame.net/story/teruel-existe-apoyara-investidura-pedro-sanchez</link>
+		<comments>https://www.meneame.net/story/teruel-existe-apoyara-investidura-pedro-sanchez</comments>
+		<pubDate>Fri, 03 Jan 2020 00:50:04 +0000</pubDate>
+		<dc:creator>tdgwho</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[teruel existe]]></category>
+		<category><![CDATA[apoya]]></category>
+		<category><![CDATA[investidura]]></category>
+		<guid>https://www.meneame.net/story/teruel-existe-apoyara-investidura-pedro-sanchez</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232193.jpeg?1578001086' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El líder socialista cuenta con 166 apoyos para su investidura y 164 votos en contra, a la espera de conocerse el sentido del voto del BNG y Coalición CanariaERC ha aprobado el acuerdo con el PSOE este jueves, mientras el PRC ha decidido votar en contra una vez ha conocido el contenido del pacto con los republicanosLa calculadora de la investidura: ¿a quién necesitan sumar PSOE y Unidas Podemos?</p><p><strong>etiquetas</strong>: teruel existe, apoya, investidura</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232193" >noticia original</a> (www.eldiario.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232193.jpeg?1578001086" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232193</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232040</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>estabilinchisafew</meneame:user>
+		<meneame:clicks>3433</meneame:clicks>
+		<meneame:votes>150</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>883</meneame:karma>
+		<meneame:comments>20</meneame:comments>
+		<meneame:url>https://www.bbc.com/mundo/vert-fut-50763223?ocid=socialflow_twitter</meneame:url>
+		<title>Matemáticas: cómo nuestra lengua materna afecta a nuestra habilidad para contar y aprender</title>
+		<link>https://www.meneame.net/story/matematicas-como-nuestra-lengua-materna-afecta-nuestra-habilidad</link>
+		<comments>https://www.meneame.net/story/matematicas-como-nuestra-lengua-materna-afecta-nuestra-habilidad</comments>
+		<pubDate>Fri, 03 Jan 2020 04:15:13 +0000</pubDate>
+		<dc:creator>estabilinchisafew</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[matemáticas]]></category>
+		<category><![CDATA[lengua materna]]></category>
+		<guid>https://www.meneame.net/story/matematicas-como-nuestra-lengua-materna-afecta-nuestra-habilidad</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232040.jpeg?1577969347' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Casi todas las culturas en la actualidad usan el mismo sistema numérico decimal, en el que las cantidades se representan utilizando como base aritmética las potencias del número 10. El conjunto de símbolos utilizado se compone de diez cifras que van del 0 al 9. Los sistemas de conteo más lógicos usan palabras que reflejan la estructura de este sistema y tienen reglas regulares y directas, pero muchos idiomas usan convenciones complicadas y desordenadas.</p><p><strong>etiquetas</strong>: matemáticas, lengua materna</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232040" >noticia original</a> (www.bbc.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232040.jpeg?1577969347" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232040</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232154</meneame:link_id>
+		<meneame:sub>tecnología</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>thingoldedoriath</meneame:user>
+		<meneame:clicks>2393</meneame:clicks>
+		<meneame:votes>161</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>1267</meneame:karma>
+		<meneame:comments>51</meneame:comments>
+		<meneame:url>https://hackaday.com/2019/11/17/unix-version-0-running-on-a-pdp-7-in-2019/</meneame:url>
+		<title>UNIX Version 0, ejecutándose en un A PDP-7, en noviembre de 2019</title>
+		<link>https://www.meneame.net/story/unix-version-running-on-pdp-7-in-2019</link>
+		<comments>https://www.meneame.net/story/unix-version-running-on-pdp-7-in-2019</comments>
+		<pubDate>Thu, 02 Jan 2020 23:05:34 +0000</pubDate>
+		<dc:creator>thingoldedoriath</dc:creator>
+		<category><![CDATA[tecnología]]></category>
+		<category><![CDATA[unix]]></category>
+		<category><![CDATA[a pdp-7]]></category>
+		<category><![CDATA[dmr]]></category>
+		<category><![CDATA[yearian]]></category>
+		<category><![CDATA[ritchie]]></category>
+		<guid>https://www.meneame.net/story/unix-version-running-on-pdp-7-in-2019</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232154.jpeg?1577994726' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La máquina que ejecuta la versión 0 de UNIX pertenece a Fred Yearian, un ex ingeniero de Boeing que compró su máquina del canal excedente de la compañía a fines de la década de 1970. Para cargar el sistema operativo, se conectó un emulador de disco a la máquina, y posiblemente por primera vez en muchas décadas se escribió un nuevo controlador de dispositivo UNIX versión 0 para permitir su uso. El primer inicio de sesión fue el usuario &quot;dmr&quot;, un homenaje al cocreador de UNIX Dennis M. Ritchie.</p><p><strong>etiquetas</strong>: unix, a pdp-7, dmr, yearian, ritchie</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232154" >noticia original</a> (hackaday.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232154.jpeg?1577994726" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232154</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231675</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Esteban_Rosador</meneame:user>
+		<meneame:clicks>1383</meneame:clicks>
+		<meneame:votes>213</meneame:votes>
+		<meneame:negatives>6</meneame:negatives>
+		<meneame:karma>824</meneame:karma>
+		<meneame:comments>47</meneame:comments>
+		<meneame:url>https://www.diariodesevilla.es/juzgado_de_guardia/opinion/Inmaculada-Concepcion_0_1423957732.html</meneame:url>
+		<title>Mi colegio no me quiere</title>
+		<link>https://www.meneame.net/story/mi-colegio-no-quiere</link>
+		<comments>https://www.meneame.net/story/mi-colegio-no-quiere</comments>
+		<pubDate>Fri, 03 Jan 2020 00:45:14 +0000</pubDate>
+		<dc:creator>Esteban_Rosador</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[religion]]></category>
+		<category><![CDATA[abogacía]]></category>
+		<category><![CDATA[laicismo]]></category>
+		<guid>https://www.meneame.net/story/mi-colegio-no-quiere</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/4f/media_thumb-link-3231675.jpeg?1577880066' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El autor, abogado que en 2011 llevó hasta el Tribunal Constitucional el patronazgo de la Inmaculada Concepción en el Colegio de Abogados de Sevilla, reflexiona sobre actos convocados de nuevo este mes de diciembre en honor de la Patrona de está corporación, la inmaculada concepción.</p><p><strong>etiquetas</strong>: religion, abogacía, laicismo</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231675" >noticia original</a> (www.diariodesevilla.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/4f/media_thumb-link-3231675.jpeg?1577880066" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231675</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232082</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>enjamaica</meneame:user>
+		<meneame:clicks>924</meneame:clicks>
+		<meneame:votes>519</meneame:votes>
+		<meneame:negatives>3</meneame:negatives>
+		<meneame:karma>3148</meneame:karma>
+		<meneame:comments>112</meneame:comments>
+		<meneame:url>https://www.lavanguardia.com/vida/20200102/472671004074/catalunya-crecen-un-40-las-altas-a-la-cgt-en-catalunya-la-subida-mas-alta-desde-que-hay-registros.html</meneame:url>
+		<title>Crecen un 40% las altas a la CGT en Catalunya, la subida más alta desde que hay registros</title>
+		<link>https://www.meneame.net/story/crecen-40-altas-cgt-catalunya-subida-mas-alta-desde-hay</link>
+		<comments>https://www.meneame.net/story/crecen-40-altas-cgt-catalunya-subida-mas-alta-desde-hay</comments>
+		<pubDate>Thu, 02 Jan 2020 21:10:36 +0000</pubDate>
+		<dc:creator>enjamaica</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[sindicalismo]]></category>
+		<category><![CDATA[sindicatos]]></category>
+		<guid>https://www.meneame.net/story/crecen-40-altas-cgt-catalunya-subida-mas-alta-desde-hay</guid>
+		<description><![CDATA[<p>CGT ha cerrado 2019 con un 40% más de altas que el año anterior, lo que representa la mayor subida en afiliación desde que el sindicato tiene registros, y que, con casi 17.000 afiliados, lo &quot;consolida&quot; como el tercer sindicato de Catalunya.  En 2020, CGT apuesta por &quot;el conflicto como herramienta útil para hacer avanzar a la clase trabajadora&quot;, siguiendo la estela de 2019 como un año de grandes victorias contra las patronales, ha considerado.</p><p><strong>etiquetas</strong>: sindicalismo, sindicatos</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232082" >noticia original</a> (www.lavanguardia.com)</p>]]></description>
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232082</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232152</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Stiller</meneame:user>
+		<meneame:clicks>5177</meneame:clicks>
+		<meneame:votes>441</meneame:votes>
+		<meneame:negatives>5</meneame:negatives>
+		<meneame:karma>2961</meneame:karma>
+		<meneame:comments>315</meneame:comments>
+		<meneame:url>https://www.eldiario.es/cantabria/PRC-Pedro-Sanchez-PSOE-ERC_0_980602563.html</meneame:url>
+		<title>El PRC decide votar en contra de la investidura de Pedro Sánchez tras conocer el pacto del PSOE con ERC</title>
+		<link>https://www.meneame.net/story/prc-decide-votar-contra-investidura-pedro-sanchez-tras-conocer</link>
+		<comments>https://www.meneame.net/story/prc-decide-votar-contra-investidura-pedro-sanchez-tras-conocer</comments>
+		<pubDate>Thu, 02 Jan 2020 20:05:25 +0000</pubDate>
+		<dc:creator>Stiller</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[prc]]></category>
+		<category><![CDATA[investidura]]></category>
+		<category><![CDATA[negación]]></category>
+		<category><![CDATA[revilla]]></category>
+		<guid>https://www.meneame.net/story/prc-decide-votar-contra-investidura-pedro-sanchez-tras-conocer</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232152.jpeg?1577994366' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La ejecutiva del PRC ha aprobado por unanimidad votar en contra de la investidura de Pedro Sánchez tras conocer el contenido del pacto del PSOE con ERC.</p><p><strong>etiquetas</strong>: prc, investidura, negación, revilla</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232152" >noticia original</a> (www.eldiario.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232152.jpeg?1577994366" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232152</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232148</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ratoncolorao</meneame:user>
+		<meneame:clicks>4952</meneame:clicks>
+		<meneame:votes>401</meneame:votes>
+		<meneame:negatives>8</meneame:negatives>
+		<meneame:karma>2597</meneame:karma>
+		<meneame:comments>290</meneame:comments>
+		<meneame:url>https://www.laverdad.es/murcia/ciudad-murcia/tres-detenidos-presunta-20200102193416-nt.html?fbclid=IwAR1TYvqSG5R2nLhQIakvty44h9c3pjMu6fVMXKhrD2bj6Eue7r5NzEx-UhQ</meneame:url>
+		<title>Tres detenidos por la presunta agresión sexual a unas jóvenes norteamericanas en Murcia</title>
+		<link>https://www.meneame.net/story/tres-detenidos-presunta-agresion-sexual-unas-jovenes-murcia</link>
+		<comments>https://www.meneame.net/story/tres-detenidos-presunta-agresion-sexual-unas-jovenes-murcia</comments>
+		<pubDate>Thu, 02 Jan 2020 19:40:20 +0000</pubDate>
+		<dc:creator>Ratoncolorao</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[murcia]]></category>
+		<category><![CDATA[detenidos]]></category>
+		<category><![CDATA[violación]]></category>
+		<category><![CDATA[nochevieja]]></category>
+		<guid>https://www.meneame.net/story/tres-detenidos-presunta-agresion-sexual-unas-jovenes-murcia</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232148.jpeg?1577993047' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Las denunciantes son tres hermanas de 18, 20 y 23 años que entablaron amistad con los jóvenes durante la Nochevieja.</p><p><strong>etiquetas</strong>: murcia, detenidos, violación, nochevieja</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232148" >noticia original</a> (www.laverdad.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232148.jpeg?1577993047" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232148</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232137</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Inutil</meneame:user>
+		<meneame:clicks>1061</meneame:clicks>
+		<meneame:votes>360</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>2343</meneame:karma>
+		<meneame:comments>178</meneame:comments>
+		<meneame:url>https://elpais.com/politica/2020/01/02/actualidad/1577978922_162021.html</meneame:url>
+		<title>ERC acuerda abstenerse y despeja la investidura de Pedro Sánchez</title>
+		<link>https://www.meneame.net/story/erc-acuerda-abstenerse-despeja-investidura-pedro-sanchez</link>
+		<comments>https://www.meneame.net/story/erc-acuerda-abstenerse-despeja-investidura-pedro-sanchez</comments>
+		<pubDate>Thu, 02 Jan 2020 19:20:04 +0000</pubDate>
+		<dc:creator>Inutil</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[investidura]]></category>
+		<category><![CDATA[sánchez]]></category>
+		<category><![CDATA[erc]]></category>
+		<guid>https://www.meneame.net/story/erc-acuerda-abstenerse-despeja-investidura-pedro-sanchez</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232137.jpeg?1577990706' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>ERC ha decidido este jueves abstenerse en la investidura del Pedro Sánchez, lo que despeja el camino para que el 7 de enero el líder del PSOE, Pedro Sánchez, sea reelegido como presidente del Gobierno, tras la segunda votación de investidura en el Congreso de los Diputados.</p><p><strong>etiquetas</strong>: investidura, sánchez, erc</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232137" >noticia original</a> (elpais.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232137.jpeg?1577990706" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232137</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232100</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Nieve</meneame:user>
+		<meneame:clicks>1032</meneame:clicks>
+		<meneame:votes>347</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>2220</meneame:karma>
+		<meneame:comments>36</meneame:comments>
+		<meneame:url>https://elpais.com/economia/2020/01/01/actualidad/1577903425_961642.html</meneame:url>
+		<title>Airbus bate a Boeing como principal fabricante de aviones del mundo</title>
+		<link>https://www.meneame.net/story/airbus-bate-boeing-como-principal-fabricante-aviones-mundo</link>
+		<comments>https://www.meneame.net/story/airbus-bate-boeing-como-principal-fabricante-aviones-mundo</comments>
+		<pubDate>Thu, 02 Jan 2020 18:30:03 +0000</pubDate>
+		<dc:creator>Nieve</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[aeronautica]]></category>
+		<category><![CDATA[entrega]]></category>
+		<category><![CDATA[aviones]]></category>
+		<category><![CDATA[airbus]]></category>
+		<guid>https://www.meneame.net/story/airbus-bate-boeing-como-principal-fabricante-aviones-mundo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232100.jpeg?1577982246' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Airbus se ha convertido en el mayor fabricante de aviones del mundo por primera vez desde 2011 tras entregar 863 aviones en 2019. La cifra bate todos los pronósticos y permite a la compañía europea arrebatar la corona a su rival estadounidense Boeing, según señalaron ayer fuentes del sector. Boeing entregó entre enero y noviembre 345 aviones, sobre todo de larga distancia, menos de la mitad de los 704 del mismo período de 2018, cuando el MAX se había repartido con normalidad. Durante 2018, Boeing había entregado 806 aviones.</p><p><strong>etiquetas</strong>: aeronautica, entrega, aviones, airbus</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232100" >noticia original</a> (elpais.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232100.jpeg?1577982246" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232100</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232109</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Larpeirán</meneame:user>
+		<meneame:clicks>1564</meneame:clicks>
+		<meneame:votes>558</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>3402</meneame:karma>
+		<meneame:comments>61</meneame:comments>
+		<meneame:url>https://www.elconfidencial.com/mundo/2020-01-02/incendios-australia-500-millones-animales-muertos_2395979/</meneame:url>
+		<title>Los incendios que arrasan Australia han matado ya a 500 millones de animales</title>
+		<link>https://www.meneame.net/story/incendios-arrasan-australia-han-matado-ya-500-millones-animales</link>
+		<comments>https://www.meneame.net/story/incendios-arrasan-australia-han-matado-ya-500-millones-animales</comments>
+		<pubDate>Thu, 02 Jan 2020 18:05:25 +0000</pubDate>
+		<dc:creator>Larpeirán</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[australia]]></category>
+		<category><![CDATA[incendios]]></category>
+		<category><![CDATA[animales muertos]]></category>
+		<guid>https://www.meneame.net/story/incendios-arrasan-australia-han-matado-ya-500-millones-animales</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232109.jpeg?1577984826' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Australia vive una de las mayores sequías de su historia y acaban de entrar en la estación del verano austral, por lo que no se prevén lluvias a corto plazo.La ola de incendios que lleva meses asolando Australia se ha cobrado la vida de casi 500 millones de animales, una cifra que asusta y que solo puede aumentar en las próximas semanas dada la peligrosidad de la situación.</p><p><strong>etiquetas</strong>: australia, incendios, animales muertos</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232109" >noticia original</a> (www.elconfidencial.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232109.jpeg?1577984826" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232109</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232113</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ratoncolorao</meneame:user>
+		<meneame:clicks>2845</meneame:clicks>
+		<meneame:votes>779</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>4890</meneame:karma>
+		<meneame:comments>167</meneame:comments>
+		<meneame:url>https://cadenaser.com/ser/2020/01/02/tribunales/1577973168_772913.html</meneame:url>
+		<title>Justicia denuncia a un concejal de Vox por desear la muerte del presidente Pedro Sánchez y de su esposa</title>
+		<link>https://www.meneame.net/story/justicia-denuncia-concejal-vox-desear-muerte-presidente-pedro</link>
+		<comments>https://www.meneame.net/story/justicia-denuncia-concejal-vox-desear-muerte-presidente-pedro</comments>
+		<pubDate>Thu, 02 Jan 2020 17:40:21 +0000</pubDate>
+		<dc:creator>Ratoncolorao</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[vox]]></category>
+		<category><![CDATA[amenaza]]></category>
+		<category><![CDATA[muerte]]></category>
+		<category><![CDATA[teófilo amores]]></category>
+		<guid>https://www.meneame.net/story/justicia-denuncia-concejal-vox-desear-muerte-presidente-pedro</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232113.jpeg?1577985667' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El Ministerio subraya en su escrito ante la Fiscalía que hay &quot;una peligrosa escalada de agresividad verbal como estrategia política en las redes sociales&quot;. El edil asegura que ha sido víctima de un hackeo</p><p><strong>etiquetas</strong>: vox, amenaza, muerte, teófilo amores</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232113" >noticia original</a> (cadenaser.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232113.jpeg?1577985667" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232113</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232112</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>doctoragridulce</meneame:user>
+		<meneame:clicks>3860</meneame:clicks>
+		<meneame:votes>663</meneame:votes>
+		<meneame:negatives>11</meneame:negatives>
+		<meneame:karma>4202</meneame:karma>
+		<meneame:comments>96</meneame:comments>
+		<meneame:url>https://www.nuevatribuna.es/opinion/vicenc-navarro/enorme-dano-causado-economistas-neoliberales/20200102173855169686.html</meneame:url>
+		<title>El enorme daño causado por los economistas neoliberales</title>
+		<link>https://www.meneame.net/story/enorme-dano-causado-economistas-neoliberales-2</link>
+		<comments>https://www.meneame.net/story/enorme-dano-causado-economistas-neoliberales-2</comments>
+		<pubDate>Thu, 02 Jan 2020 17:35:21 +0000</pubDate>
+		<dc:creator>doctoragridulce</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[daño]]></category>
+		<category><![CDATA[economistas]]></category>
+		<category><![CDATA[neoliberales]]></category>
+		<category><![CDATA[joseph stiglitz]]></category>
+		<category><![CDATA[social europe]]></category>
+		<guid>https://www.meneame.net/story/enorme-dano-causado-economistas-neoliberales-2</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232112.jpeg?1577985306' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Joseph Stiglitz (premio Nobel de Economía en el año 2001), escribió un artículo publicado en la revista Social Europe, The end of neoliberalism and the rebirth of history (26.11.19), en el que señalaba las consecuencias negativas de la aplicación de las políticas neoliberales en la calidad democrática de los países a los dos lados del Atlántico Norte (incluyendo España), así como en el bienestar de las clases populares de los países donde tales políticas se han estado aplicando. La evidencia de que ello ha sido así es clara y contundente.</p><p><strong>etiquetas</strong>: daño, economistas, neoliberales, joseph stiglitz, social europe</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232112" >noticia original</a> (www.nuevatribuna.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232112.jpeg?1577985306" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232112</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232019</meneame:link_id>
+		<meneame:sub>tecnología</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>A_D</meneame:user>
+		<meneame:clicks>427</meneame:clicks>
+		<meneame:votes>141</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>219</meneame:karma>
+		<meneame:comments>62</meneame:comments>
+		<meneame:url>https://www.microsiervos.com/archivo/espacio/india-selecciona-astronautas-primera-mision-tripulada.html</meneame:url>
+		<title>India selecciona cuatro astronautas para el entrenamiento final para su primera misión tripulada</title>
+		<link>https://www.meneame.net/story/india-selecciona-cuatro-astronautas-entrenamiento-final-primera</link>
+		<comments>https://www.meneame.net/story/india-selecciona-cuatro-astronautas-entrenamiento-final-primera</comments>
+		<pubDate>Thu, 02 Jan 2020 16:50:03 +0000</pubDate>
+		<dc:creator>A_D</dc:creator>
+		<category><![CDATA[tecnología]]></category>
+		<category><![CDATA[india]]></category>
+		<category><![CDATA[astronautas]]></category>
+		<category><![CDATA[misión]]></category>
+		<category><![CDATA[tripulada]]></category>
+		<guid>https://www.meneame.net/story/india-selecciona-cuatro-astronautas-entrenamiento-final-primera</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232019.jpeg?1577965386' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>En una rueda de prensa el presidente de la ISRO, la Agencia India de Investigación Espacial, acaba de anunciar la selección de cuatro miembros de las Fuerzas Aéreas para recibir entrenamiento avanzado de cara a la primera misión tripulada del país... La India es el cuarto país con un programa espacial tripulado propio tras la Unión Soviética (ahora Rusia, claro), los Estados Unidos y China.</p><p><strong>etiquetas</strong>: india, astronautas, misión, tripulada</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232019" >noticia original</a> (www.microsiervos.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232019.jpeg?1577965386" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232019</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232012</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>abajoseijo</meneame:user>
+		<meneame:clicks>754</meneame:clicks>
+		<meneame:votes>736</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>4262</meneame:karma>
+		<meneame:comments>71</meneame:comments>
+		<meneame:url>https://www.elboletin.com/noticia/178830/sanidad/la-comunidad-de-madrid-deja-sin-gastar-el-65-del-presupuesto-para-reducir-las-listas-de-espera.html</meneame:url>
+		<title>La Comunidad de Madrid deja sin gastar el 65% del presupuesto para reducir las listas de espera</title>
+		<link>https://www.meneame.net/story/comunidad-madrid-deja-sin-gastar-65-presupuesto-reducir-listas</link>
+		<comments>https://www.meneame.net/story/comunidad-madrid-deja-sin-gastar-65-presupuesto-reducir-listas</comments>
+		<pubDate>Thu, 02 Jan 2020 16:00:07 +0000</pubDate>
+		<dc:creator>abajoseijo</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[madrid]]></category>
+		<category><![CDATA[listas de espera]]></category>
+		<category><![CDATA[sanidad]]></category>
+		<guid>https://www.meneame.net/story/comunidad-madrid-deja-sin-gastar-65-presupuesto-reducir-listas</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232012.jpeg?1577964307' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La Comunidad de Madrid dejó sin gastar el 65% del dinero que presupuestó en el plan integral para la reducción de la lista de espera quirúrgica en 2018, según figura en un informe de fiscalización de la Cámara de Cuentas. Al cierre de ese año, el número de pacientes que aguardaba una operación ascendía a 70.520, ahora –según los últimos datos disponibles correspondientes al pasado mes de noviembre- la cifra asciende a 78.663: se ha incrementado un 11,5%.</p><p><strong>etiquetas</strong>: madrid, listas de espera, sanidad</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232012" >noticia original</a> (www.elboletin.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232012.jpeg?1577964307" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232012</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232070</meneame:link_id>
+		<meneame:sub>ocio</meneame:sub>
+		<meneame:status>queued</meneame:status>
+		<meneame:user>Divulgante</meneame:user>
+		<meneame:clicks>10099</meneame:clicks>
+		<meneame:votes>241</meneame:votes>
+		<meneame:negatives>42</meneame:negatives>
+		<meneame:karma>54</meneame:karma>
+		<meneame:comments>66</meneame:comments>
+		<meneame:url>http://blog.marcosmolina.com/2016/07/24/marc-bret-bate-nuevo-record-visibilidad-pirineos-alpes-443-kms/</meneame:url>
+		<title>Récord mundial visibilidad tierra-tierra (Pirineos-Alpes, 440 kms.)</title>
+		<link>https://www.meneame.net/story/record-mundial-visibilidad-tierra-tierra-pirineos-alpes-440-kms</link>
+		<comments>https://www.meneame.net/story/record-mundial-visibilidad-tierra-tierra-pirineos-alpes-440-kms</comments>
+		<pubDate>Thu, 02 Jan 2020 14:02:48 +0000</pubDate>
+		<dc:creator>Divulgante</dc:creator>
+		<category><![CDATA[ocio]]></category>
+		<category><![CDATA[record visibilidad]]></category>
+		<category><![CDATA[pirineos]]></category>
+		<category><![CDATA[alpes]]></category>
+		<guid>https://www.meneame.net/story/record-mundial-visibilidad-tierra-tierra-pirineos-alpes-440-kms</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232070.jpeg?1577973966' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Marc Bret, de Barcelona consiguió el 16 de julio de 2016 lo que parecía imposible: ver y fotografiar las siluetas de las cimas de los Alpes franceses desde los Pirineos, situadas a más de 400 kms. de distancia, batiendo un récord mundial de visibilidad tierra-tierra.</p><p><strong>etiquetas</strong>: record visibilidad, pirineos, alpes</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232070" rel="nofollow">noticia original</a> (blog.marcosmolina.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232070.jpeg?1577973966" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232070</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232056</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>doctoragridulce</meneame:user>
+		<meneame:clicks>2701</meneame:clicks>
+		<meneame:votes>801</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>5041</meneame:karma>
+		<meneame:comments>144</meneame:comments>
+		<meneame:url>https://www.periodicodeibiza.es/noticias/baleares/2020/01/02/1131751/vivienda-baleares-bancos-venden-alquilan-para-darlos-govern.html</meneame:url>
+		<title>Los bancos empiezan a vender o alquilar sus pisos vacíos para no dárselos al Govern</title>
+		<link>https://www.meneame.net/story/bancos-empiezan-vender-alquilar-pisos-vacios-no-darselos-govern</link>
+		<comments>https://www.meneame.net/story/bancos-empiezan-vender-alquilar-pisos-vacios-no-darselos-govern</comments>
+		<pubDate>Thu, 02 Jan 2020 13:45:21 +0000</pubDate>
+		<dc:creator>doctoragridulce</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[bancos]]></category>
+		<category><![CDATA[pisos]]></category>
+		<category><![CDATA[vacíos]]></category>
+		<category><![CDATA[alquilar]]></category>
+		<category><![CDATA[vender]]></category>
+		<category><![CDATA[baleares]]></category>
+		<category><![CDATA[govern]]></category>
+		<category><![CDATA[mallorcaban]]></category>
+		<guid>https://www.meneame.net/story/bancos-empiezan-vender-alquilar-pisos-vacios-no-darselos-govern</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232056.jpeg?1577971387' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Bancos y grandes tenedores de viviendas vacías han comenzado a sacar a la venta o alquiler estos inmuebles para no tener que cedérselos al Govern de Baleares durante los próximos siete años. La Conselleria d’Habitatge ha detectado que una parte de las viviendas registradas el año pasado por el Govern, un total de 1.039, ya están en el mercado porque los grandes tenedores han optado por mover los activos ante la presión del Govern.</p><p><strong>etiquetas</strong>: bancos, pisos, vacíos, alquilar, vender, baleares, govern, mallorcaban</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232056" >noticia original</a> (www.periodicodeibiza.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232056.jpeg?1577971387" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232056</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232023</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Suker</meneame:user>
+		<meneame:clicks>1303</meneame:clicks>
+		<meneame:votes>796</meneame:votes>
+		<meneame:negatives>3</meneame:negatives>
+		<meneame:karma>4996</meneame:karma>
+		<meneame:comments>415</meneame:comments>
+		<meneame:url>https://www.eldiario.es/politica/ejecucion-euroorden-Puigdemont-Comin-parlamentaria_0_980601980.html</meneame:url>
+		<title>La justicia belga suspende la euroorden contra Puigdemont y Comín por su inmunidad parlamentaria</title>
+		<link>https://www.meneame.net/story/justicia-belga-suspende-euroorden-contra-puigdemont-comin</link>
+		<comments>https://www.meneame.net/story/justicia-belga-suspende-euroorden-contra-puigdemont-comin</comments>
+		<pubDate>Thu, 02 Jan 2020 12:30:21 +0000</pubDate>
+		<dc:creator>Suker</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[puigdemont]]></category>
+		<category><![CDATA[comin]]></category>
+		<category><![CDATA[euroorden]]></category>
+		<guid>https://www.meneame.net/story/justicia-belga-suspende-euroorden-contra-puigdemont-comin</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232023.jpeg?1577966166' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La justicia belga ha decidido dejar en suspenso la orden de detención europea dictada por Pablo Llarena contra Carles Puigdemont y Toni Comín. El juez que debía resolver si acordaba su entrega a España considera que, tras la sentencia del Tribunal de Justicia de la Unión Europea (TJUE), ambos gozan de la inmunidad que les otorga su acta de eurodiputados.</p><p><strong>etiquetas</strong>: puigdemont, comin, euroorden</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232023" >noticia original</a> (www.eldiario.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232023.jpeg?1577966166" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232023</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232021</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Condetino</meneame:user>
+		<meneame:clicks>7135</meneame:clicks>
+		<meneame:votes>223</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>1732</meneame:karma>
+		<meneame:comments>57</meneame:comments>
+		<meneame:url>https://www.xataka.com/drones/esta-magia-detras-espectacular-coreografia-que-enjambre-2-000-drones-ilumino-noche-shanghai</meneame:url>
+		<title>Esta es la magia detrás de la espectacular coreografía en que un enjambre de 2.000 drones iluminó la noche de Shanghai</title>
+		<link>https://www.meneame.net/story/esta-magia-detras-espectacular-coreografia-enjambre-2-000-drones</link>
+		<comments>https://www.meneame.net/story/esta-magia-detras-espectacular-coreografia-enjambre-2-000-drones</comments>
+		<pubDate>Thu, 02 Jan 2020 12:20:03 +0000</pubDate>
+		<dc:creator>Condetino</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[magia]]></category>
+		<category><![CDATA[espectacular]]></category>
+		<category><![CDATA[coreografía]]></category>
+		<category><![CDATA[drones]]></category>
+		<category><![CDATA[shanghai]]></category>
+		<guid>https://www.meneame.net/story/esta-magia-detras-espectacular-coreografia-enjambre-2-000-drones</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232021.jpeg?1577966226' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La llegada del año nuevo ha sido celebrada en todo el mundo con todo tipo de espectáculos. Lo más habitual es hacer uso de fuegos artificiales, pero desde hace tiempo los drones son una alternativa que puede llegar a ser aún más espectactular.</p><p><strong>etiquetas</strong>: magia, espectacular, coreografía, drones, shanghai</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232021" >noticia original</a> (www.xataka.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232021.jpeg?1577966226" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232021</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232025</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Khirs</meneame:user>
+		<meneame:clicks>2044</meneame:clicks>
+		<meneame:votes>677</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>4223</meneame:karma>
+		<meneame:comments>69</meneame:comments>
+		<meneame:url>http://www.diariodevalladolid.es/noticias/valladolid/absuelto-policia-acusado-inventar-juicio-agredio-manifestante_169490.html</meneame:url>
+		<title>Absuelto el policía acusado de inventar en juicio que le agredió un manifestante</title>
+		<link>https://www.meneame.net/story/absuelto-policia-acusado-inventar-juicio-agredio-manifestante</link>
+		<comments>https://www.meneame.net/story/absuelto-policia-acusado-inventar-juicio-agredio-manifestante</comments>
+		<pubDate>Thu, 02 Jan 2020 12:15:24 +0000</pubDate>
+		<dc:creator>Khirs</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[policia]]></category>
+		<category><![CDATA[juicio]]></category>
+		<category><![CDATA[antidisturbios]]></category>
+		<category><![CDATA[valladolid]]></category>
+		<guid>https://www.meneame.net/story/absuelto-policia-acusado-inventar-juicio-agredio-manifestante</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232025.jpeg?1577966406' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La Audiencia de Valladolid ha absuelto al subinspector del Cuerpo Nacional de Policía (CNP), Ángel Luis G.M, quien el 2 de febrero de 2014 cargó contra un grupo de manifestantes ante el restaurante La Parrilla de San Lorenzo, donde comían políticos del PP, de mentir en el juicio contra varios manifestantes.</p><p><strong>etiquetas</strong>: policia, juicio, antidisturbios, valladolid</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232025" >noticia original</a> (www.diariodevalladolid.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232025.jpeg?1577966406" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232025</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231915</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Condetino</meneame:user>
+		<meneame:clicks>2460</meneame:clicks>
+		<meneame:votes>297</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>1480</meneame:karma>
+		<meneame:comments>43</meneame:comments>
+		<meneame:url>https://www.lavanguardia.com/historiayvida/historia-contemporanea/20200102/472660041088/isaac-asimov-ciencia-ficcion-guerra-fria.html</meneame:url>
+		<title>Isaac Asimov, de la marginación a la gloria</title>
+		<link>https://www.meneame.net/story/isaac-asimov-marginacion-gloria</link>
+		<comments>https://www.meneame.net/story/isaac-asimov-marginacion-gloria</comments>
+		<pubDate>Thu, 02 Jan 2020 13:20:17 +0000</pubDate>
+		<dc:creator>Condetino</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[isaac asimov]]></category>
+		<category><![CDATA[marginación]]></category>
+		<category><![CDATA[gloria]]></category>
+		<guid>https://www.meneame.net/story/isaac-asimov-marginacion-gloria</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231915.jpeg?1577951226' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Pasados cien años desde su nacimiento, ¿cómo contemplamos hoy en día su vida y qué influencia mantiene su obra?</p><p><strong>etiquetas</strong>: isaac asimov, marginación, gloria</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231915" >noticia original</a> (www.lavanguardia.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231915.jpeg?1577951226" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231915</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3232005</meneame:link_id>
+		<meneame:sub>tecnología</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>blodhemn</meneame:user>
+		<meneame:clicks>10108</meneame:clicks>
+		<meneame:votes>273</meneame:votes>
+		<meneame:negatives>1</meneame:negatives>
+		<meneame:karma>299</meneame:karma>
+		<meneame:comments>82</meneame:comments>
+		<meneame:url>https://www.adslzone.net/listas/mejores-webs/trabajar-en-casa/</meneame:url>
+		<title>Trabajar sin salir de casa: las mejores webs para encontrar empleo en remoto</title>
+		<link>https://www.meneame.net/story/trabajar-sin-salir-casa-mejores-webs-encontrar-empleo-remoto</link>
+		<comments>https://www.meneame.net/story/trabajar-sin-salir-casa-mejores-webs-encontrar-empleo-remoto</comments>
+		<pubDate>Thu, 02 Jan 2020 11:35:03 +0000</pubDate>
+		<dc:creator>blodhemn</dc:creator>
+		<category><![CDATA[tecnología]]></category>
+		<category><![CDATA[lista]]></category>
+		<category><![CDATA[mejores]]></category>
+		<category><![CDATA[webs]]></category>
+		<category><![CDATA[buscar]]></category>
+		<category><![CDATA[empleo]]></category>
+		<category><![CDATA[en remoto]]></category>
+		<category><![CDATA[freelance]]></category>
+		<guid>https://www.meneame.net/story/trabajar-sin-salir-casa-mejores-webs-encontrar-empleo-remoto</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/51/media_thumb-link-3232005.jpeg?1577963467' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Los avances en las comunicaciones hacen que existan muchos puestos de trabajo que se pueden realizar en remoto, sin movernos de la comodidad de nuestro hogar. El único reto es encontrarlos, pero el interés por trabajar en casa no ha pasado desapercibido para muchos portales especializados en empleo de estas características. En este reportaje se listan las mejores webs donde rastrear empleos desde casa o freelance, pero antes, os plantean la realidad y los condicionantes que supone tener la oficina sin salir de vuestro domicilio</p><p><strong>etiquetas</strong>: lista, mejores, webs, buscar, empleo, en remoto, freelance</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3232005" >noticia original</a> (www.adslzone.net)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/51/media_thumb-link-3232005.jpeg?1577963467" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3232005</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231853</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Quinqui</meneame:user>
+		<meneame:clicks>3439</meneame:clicks>
+		<meneame:votes>233</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>1512</meneame:karma>
+		<meneame:comments>9</meneame:comments>
+		<meneame:url>https://www.cuestioneslaborales.es/que-hacer-si-la-empresa-no-da-la-documentacion-para-el-paro/</meneame:url>
+		<title>Que hacer si la empresa no da la documentación para el paro</title>
+		<link>https://www.meneame.net/story/hacer-empresa-no-da-documentacion-paro</link>
+		<comments>https://www.meneame.net/story/hacer-empresa-no-da-documentacion-paro</comments>
+		<pubDate>Thu, 02 Jan 2020 11:05:02 +0000</pubDate>
+		<dc:creator>Quinqui</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[derecho]]></category>
+		<category><![CDATA[laboral]]></category>
+		<category><![CDATA[empleo]]></category>
+		<category><![CDATA[paro]]></category>
+		<guid>https://www.meneame.net/story/hacer-empresa-no-da-documentacion-paro</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231853.jpeg?1577916366' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Opciones del trabajador y paso a seguir para no perder la prestación por desempleo por incumplimiento de la empresa al no remitir el certificado.</p><p><strong>etiquetas</strong>: derecho, laboral, empleo, paro</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231853" >noticia original</a> (www.cuestioneslaborales.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231853.jpeg?1577916366" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231853</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231946</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ripio</meneame:user>
+		<meneame:clicks>1715</meneame:clicks>
+		<meneame:votes>105</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>950</meneame:karma>
+		<meneame:comments>9</meneame:comments>
+		<meneame:url>https://www.labrujulaverde.com/2020/01/el-lugar-donde-estuvo-el-faro-mas-antiguo-del-mundo</meneame:url>
+		<title>El lugar donde estuvo el faro más antiguo del mundo</title>
+		<link>https://www.meneame.net/story/lugar-donde-estuvo-faro-mas-antiguo-mundo</link>
+		<comments>https://www.meneame.net/story/lugar-donde-estuvo-faro-mas-antiguo-mundo</comments>
+		<pubDate>Thu, 02 Jan 2020 10:50:10 +0000</pubDate>
+		<dc:creator>Ripio</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[arqueología]]></category>
+		<category><![CDATA[navegación]]></category>
+		<category><![CDATA[historia]]></category>
+		<category><![CDATA[faro]]></category>
+		<category><![CDATA[mirmex]]></category>
+		<guid>https://www.meneame.net/story/lugar-donde-estuvo-faro-mas-antiguo-mundo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231946.jpeg?1577956266' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Las indicaciones dadas por Heródoto permitieron, hace ya mucho, identificar el lugar que denomina Mirmex con el actual arrecife Lefteris. Habría sido mandada construir en 480 a.C. por el rey persa Jerjes para advertir a sus marineros que el estrecho era prácticamente intransitable, con arrecifes en los que incluso pequeños barcos de poca profundidad podrían encallar. Los grandes bloques de dolomita, puestos unos encima de otros, habrían formado una brillante columna de piedra blanca a modo de advertencia.</p><p><strong>etiquetas</strong>: arqueología, navegación, historia, faro, mirmex</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231946" >noticia original</a> (www.labrujulaverde.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231946.jpeg?1577956266" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231946</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231913</meneame:link_id>
+		<meneame:sub>tecnología</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>kikox1</meneame:user>
+		<meneame:clicks>1216</meneame:clicks>
+		<meneame:votes>224</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>1451</meneame:karma>
+		<meneame:comments>21</meneame:comments>
+		<meneame:url>https://www.notiulti.com/el-congreso-requiere-una-investigacion-del-vertedero-nuclear-de-las-islas-marshall-2/</meneame:url>
+		<title>El Congreso requiere una investigación del vertedero nuclear de las Islas Marshall</title>
+		<link>https://www.meneame.net/story/congreso-requiere-investigacion-vertedero-nuclear-islas-marshall</link>
+		<comments>https://www.meneame.net/story/congreso-requiere-investigacion-vertedero-nuclear-islas-marshall</comments>
+		<pubDate>Thu, 02 Jan 2020 10:40:14 +0000</pubDate>
+		<dc:creator>kikox1</dc:creator>
+		<category><![CDATA[tecnología]]></category>
+		<category><![CDATA[congreso]]></category>
+		<category><![CDATA[nuclear]]></category>
+		<category><![CDATA[marshall]]></category>
+		<guid>https://www.meneame.net/story/congreso-requiere-investigacion-vertedero-nuclear-islas-marshall</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231913.jpeg?1577951586' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El Congreso [de EE. UU.] exige que el Departamento de Energía investigue un viejo y agrietado vertedero de desechos nucleares de EE. UU. Amenazado por el cambio climático y el aumento de los mares en las Islas Marshall. La investigación fue aplaudida por al menos un representante de las Islas Marshall, que continúa luchando con el legado radiactivo de las pruebas nucleares de EE. UU. La nación isleña se encuentra en una parte remota del Pacífico central, a 5.000 millas al suroeste de Los Ángeles.</p><p><strong>etiquetas</strong>: congreso, nuclear, marshall</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231913" >noticia original</a> (www.notiulti.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231913.jpeg?1577951586" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231913</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231919</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Pirostido</meneame:user>
+		<meneame:clicks>9153</meneame:clicks>
+		<meneame:votes>511</meneame:votes>
+		<meneame:negatives>23</meneame:negatives>
+		<meneame:karma>3062</meneame:karma>
+		<meneame:comments>57</meneame:comments>
+		<meneame:url>https://www.20minutos.es/gonzoo/noticia/4102508/0/el-policia-que-recibio-el-mensaje-jod-cerdo-lo-falsifico-el-mismo-para-hacer-un-viral-y-le-han-pillado/</meneame:url>
+		<title>El policía que recibió el mensaje &#34;jod... cerdo&#34; lo falsificó él mismo para hacer un viral y le han pillado</title>
+		<link>https://www.meneame.net/story/policia-recibio-mensaje-jod-cerdo-falsifico-mismo-hacer-viral</link>
+		<comments>https://www.meneame.net/story/policia-recibio-mensaje-jod-cerdo-falsifico-mismo-hacer-viral</comments>
+		<pubDate>Thu, 02 Jan 2020 10:05:03 +0000</pubDate>
+		<dc:creator>Pirostido</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[policía]]></category>
+		<category><![CDATA[mcdonalds]]></category>
+		<category><![CDATA[estafa]]></category>
+		<guid>https://www.meneame.net/story/policia-recibio-mensaje-jod-cerdo-falsifico-mismo-hacer-viral</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231919.jpeg?1577951646' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El restaurante revisó las imágenes de seguridad y comprobó que ningún empleado escribió eso</p><p><strong>etiquetas</strong>: policía, mcdonalds, estafa</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231919" >noticia original</a> (www.20minutos.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231919.jpeg?1577951646" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231919</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231928</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ripio</meneame:user>
+		<meneame:clicks>4212</meneame:clicks>
+		<meneame:votes>477</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>3163</meneame:karma>
+		<meneame:comments>153</meneame:comments>
+		<meneame:url>https://www.lainformacion.com/empresas/acuerdo-gobierno-carga-electricas-recibo-luz/6532154/</meneame:url>
+		<title>El que más gasta, más paga: el Gobierno 'toca' el recibo de la luz para ajustarlo al consumo</title>
+		<link>https://www.meneame.net/story/mas-gasta-mas-paga-gobierno-toca-recibo-luz-ajustarlo-consumo</link>
+		<comments>https://www.meneame.net/story/mas-gasta-mas-paga-gobierno-toca-recibo-luz-ajustarlo-consumo</comments>
+		<pubDate>Thu, 02 Jan 2020 09:10:03 +0000</pubDate>
+		<dc:creator>Ripio</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[economía]]></category>
+		<category><![CDATA[luz]]></category>
+		<category><![CDATA[consumo]]></category>
+		<category><![CDATA[recibo]]></category>
+		<guid>https://www.meneame.net/story/mas-gasta-mas-paga-gobierno-toca-recibo-luz-ajustarlo-consumo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231928.jpeg?1577953326' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>El acuerdo de Gobierno contiene varias cargas de profundidad para las grandes compañías eléctricas. Para el usuario de a pie hay una propuesta de especial interés y es revisar la composición de la parte fija y variable de la factura para “reducir el porcentaje que representa el término fijo de potencia” y que pese más la energía consumida. Relacionada: <a href="https://www.meneame.net/story/cambios-factura-luz-2020" title="www.meneame.net/story/cambios-factura-luz-2020" rel="nofollow">www.meneame.net/story/cambios-factura-luz-2020</a></p><p><strong>etiquetas</strong>: economía,  luz, consumo, recibo</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231928" >noticia original</a> (www.lainformacion.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231928.jpeg?1577953326" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231928</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231926</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Condetino</meneame:user>
+		<meneame:clicks>2170</meneame:clicks>
+		<meneame:votes>538</meneame:votes>
+		<meneame:negatives>3</meneame:negatives>
+		<meneame:karma>3402</meneame:karma>
+		<meneame:comments>85</meneame:comments>
+		<meneame:url>https://www.lavanguardia.com/vida/20200102/472669161780/padres-olalla-pineiro-buscan-implantes-auditivos.html</meneame:url>
+		<title>Unos padres buscan desesperadamente los implantes auditivos de su hija de dos años</title>
+		<link>https://www.meneame.net/story/unos-padres-buscan-desesperadamente-implantes-auditivos-hija-dos</link>
+		<comments>https://www.meneame.net/story/unos-padres-buscan-desesperadamente-implantes-auditivos-hija-dos</comments>
+		<pubDate>Thu, 02 Jan 2020 08:40:03 +0000</pubDate>
+		<dc:creator>Condetino</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[padres]]></category>
+		<category><![CDATA[buscan]]></category>
+		<category><![CDATA[implantes]]></category>
+		<category><![CDATA[auditivos]]></category>
+		<category><![CDATA[hija]]></category>
+		<guid>https://www.meneame.net/story/unos-padres-buscan-desesperadamente-implantes-auditivos-hija-dos</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231926.jpeg?1577952786' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Olalla Piñeiro tiene solo dos años y es sorda como sus padres y sus hermanos. El pasado julio fue operada para que le pusieran unos implantes cocleares que le permiten escuchar. Ya estaba empezando a oír y a adaptarse a su nueva vida, pero desde el 20 de diciembre los progresos se fueron al traste cuando esta familia gallega perdió el estuche donde guardan los implantes auditivos. Son únicos y solo sirven para ella porque están hechos a medida. Además tienen un precio de 16.000 euros</p><p><strong>etiquetas</strong>: padres, buscan, implantes, auditivos, hija</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231926" >noticia original</a> (www.lavanguardia.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231926.jpeg?1577952786" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231926</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231911</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>abelongi</meneame:user>
+		<meneame:clicks>2936</meneame:clicks>
+		<meneame:votes>821</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>5132</meneame:karma>
+		<meneame:comments>105</meneame:comments>
+		<meneame:url>https://www.eldiario.es/sociedad/ficticio-reciclaje-interior-IFEMA-sale_0_976052768.html</meneame:url>
+		<title>El desmontaje de la COP25 en Ifema revela la falta de reciclaje: la basura acabó mezclada en un mismo contenedor</title>
+		<link>https://www.meneame.net/story/desmontaje-cop25-ifema-revela-falta-reciclaje-basura-acabo-mismo</link>
+		<comments>https://www.meneame.net/story/desmontaje-cop25-ifema-revela-falta-reciclaje-basura-acabo-mismo</comments>
+		<pubDate>Thu, 02 Jan 2020 07:35:03 +0000</pubDate>
+		<dc:creator>abelongi</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[coop25]]></category>
+		<category><![CDATA[reciclaje]]></category>
+		<guid>https://www.meneame.net/story/desmontaje-cop25-ifema-revela-falta-reciclaje-basura-acabo-mismo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231911.jpeg?1577949246' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Las imágenes son elocuentes: contenedores de vidrio repletos de plantas, los de madera con plásticos, telas y otros objetos o cables asomando de los espacios para papel y cartón &quot;En los pabellones la basura sí se divide en bolsas de colores según el residuo. El problema viene después: todo lo que has separado va al mismo contenedor&quot;, explica María, ex trabajadora de limpieza en el centro de convenciones  Tanto Ifema como FCC y Clece, las encargadas de gestionar los residuos, niegan tener conocimiento de estas prácticas, defienden su gestión</p><p><strong>etiquetas</strong>: coop25, reciclaje</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231911" >noticia original</a> (www.eldiario.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231911.jpeg?1577949246" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231911</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231897</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>queued</meneame:status>
+		<meneame:user>blodhemn</meneame:user>
+		<meneame:clicks>5077</meneame:clicks>
+		<meneame:votes>191</meneame:votes>
+		<meneame:negatives>33</meneame:negatives>
+		<meneame:karma>12</meneame:karma>
+		<meneame:comments>91</meneame:comments>
+		<meneame:url>https://www.thevalkyriesvigil.com/la-sociedad-vikinga-no-tenia-igualdad-de-genero/</meneame:url>
+		<title>No, la sociedad vikinga no tenía igualdad de género. Un poquito de por favor cuando hacemos divulgación</title>
+		<link>https://www.meneame.net/story/no-sociedad-vikinga-no-tenia-igualdad-genero-poquito-favor</link>
+		<comments>https://www.meneame.net/story/no-sociedad-vikinga-no-tenia-igualdad-genero-poquito-favor</comments>
+		<pubDate>Thu, 02 Jan 2020 06:06:31 +0000</pubDate>
+		<dc:creator>blodhemn</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[vikingos]]></category>
+		<category><![CDATA[igualdad de género]]></category>
+		<category><![CDATA[mala praxis divulgativa]]></category>
+		<guid>https://www.meneame.net/story/no-sociedad-vikinga-no-tenia-igualdad-genero-poquito-favor</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231897.jpeg?1577945347' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>No, las mujeres vikingas no vivieron en una sociedad en la que se gozaba de igualdad de género. Una vez más, la mala praxis divulgativa hace de las suyas. (Contiene enlaces a otros artículos relacionados).</p><p><strong>etiquetas</strong>: vikingos, igualdad de género, mala praxis divulgativa</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231897" rel="nofollow">noticia original</a> (www.thevalkyriesvigil.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231897.jpeg?1577945347" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231897</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231689</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Mascachapas33</meneame:user>
+		<meneame:clicks>1654</meneame:clicks>
+		<meneame:votes>330</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>1824</meneame:karma>
+		<meneame:comments>62</meneame:comments>
+		<meneame:url>https://cadenaser.com/ser/2020/01/01/economia/1577879998_152404.html</meneame:url>
+		<title>Renfe y ADIF cerrarán las taquillas de venta de billetes en un centenar de estaciones en toda España</title>
+		<link>https://www.meneame.net/story/renfe-adif-cerraran-taquillas-venta-billetes-centenar-estaciones</link>
+		<comments>https://www.meneame.net/story/renfe-adif-cerraran-taquillas-venta-billetes-centenar-estaciones</comments>
+		<pubDate>Thu, 02 Jan 2020 04:00:10 +0000</pubDate>
+		<dc:creator>Mascachapas33</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[renfe]]></category>
+		<category><![CDATA[adif]]></category>
+		<category><![CDATA[tren]]></category>
+		<category><![CDATA[taquilla]]></category>
+		<guid>https://www.meneame.net/story/renfe-adif-cerraran-taquillas-venta-billetes-centenar-estaciones</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/4f/media_thumb-link-3231689.jpeg?1577882527' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Las taquillas con personal para la venta de billetes serán sustituidas por máquinas expendedoras. El plan de cierre comienza este 1 de enero y está previsto que se concluya antes del marzo de 2020.</p><p><strong>etiquetas</strong>: renfe, adif, tren, taquilla</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231689" >noticia original</a> (cadenaser.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/4f/media_thumb-link-3231689.jpeg?1577882527" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231689</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231790</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Condetino</meneame:user>
+		<meneame:clicks>2847</meneame:clicks>
+		<meneame:votes>240</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>1611</meneame:karma>
+		<meneame:comments>61</meneame:comments>
+		<meneame:url>https://www.cope.es/actualidad/economia/noticias/normalidad-ap-7-tras-gratuidad-cenas-musica-para-celebrarlo-20200101_584550</meneame:url>
+		<title>Normalidad en la AP-7 tras su gratuidad y cenas y música para celebrarlo</title>
+		<link>https://www.meneame.net/story/normalidad-ap-7-tras-gratuidad-cenas-musica-celebrarlo</link>
+		<comments>https://www.meneame.net/story/normalidad-ap-7-tras-gratuidad-cenas-musica-celebrarlo</comments>
+		<pubDate>Thu, 02 Jan 2020 01:30:03 +0000</pubDate>
+		<dc:creator>Condetino</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[normalidad]]></category>
+		<category><![CDATA[ap-7]]></category>
+		<category><![CDATA[gratuidad]]></category>
+		<category><![CDATA[cena]]></category>
+		<category><![CDATA[s  música]]></category>
+		<guid>https://www.meneame.net/story/normalidad-ap-7-tras-gratuidad-cenas-musica-celebrarlo</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231790.jpeg?1577904547' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>La autopista AP-7 ha vivido con normalidad las primeras horas de su gratuidad desde la pasada medianoche, tras 48 años de pago de peajes, y a su paso por la Comunidad Valenciana varias plataformas y movimientos ciudadanos han celebrado con cenas de fin de año y música en los propios peajes esta liberalización.</p><p><strong>etiquetas</strong>: normalidad,  ap-7,  gratuidad,  cena, s  música</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231790" >noticia original</a> (www.cope.es)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231790.jpeg?1577904547" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231790</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231631</meneame:link_id>
+		<meneame:sub>cultura</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ripio</meneame:user>
+		<meneame:clicks>2129</meneame:clicks>
+		<meneame:votes>121</meneame:votes>
+		<meneame:negatives>0</meneame:negatives>
+		<meneame:karma>622</meneame:karma>
+		<meneame:comments>30</meneame:comments>
+		<meneame:url>https://www.lavanguardia.com/historiayvida/historia-antigua/20191228/472505855539/iberos-arqueologia-cultura.html</meneame:url>
+		<title>¿Qué hacían los iberos aparte de pelear?</title>
+		<link>https://www.meneame.net/story/hacian-iberos-aparte-pelear</link>
+		<comments>https://www.meneame.net/story/hacian-iberos-aparte-pelear</comments>
+		<pubDate>Thu, 02 Jan 2020 09:40:13 +0000</pubDate>
+		<dc:creator>Ripio</dc:creator>
+		<category><![CDATA[cultura]]></category>
+		<category><![CDATA[historia]]></category>
+		<category><![CDATA[iberos]]></category>
+		<guid>https://www.meneame.net/story/hacian-iberos-aparte-pelear</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/4f/media_thumb-link-3231631.jpeg?1577870406' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Ganaron fama en el Mediterráneo por su destreza en la lucha, pero sus intercambios comerciales, sistemas de escritura y arte demuestran que fueron mucho más que guerreros. La primera vez que aparecen mencionados es en la Ora maritima de Avieno, un texto del siglo IV, que se supone basado en un itinerario doscientos años más antiguo escrito por marinos de Massalia (la moderna Marsella).</p><p><strong>etiquetas</strong>: historia, iberos</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231631" >noticia original</a> (www.lavanguardia.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/4f/media_thumb-link-3231631.jpeg?1577870406" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231631</wfw:commentRss>	</item>
+
+	<item>
+		<meneame:link_id>3231832</meneame:link_id>
+		<meneame:sub>actualidad</meneame:sub>
+		<meneame:status>published</meneame:status>
+		<meneame:user>Ratoncolorao</meneame:user>
+		<meneame:clicks>1385</meneame:clicks>
+		<meneame:votes>936</meneame:votes>
+		<meneame:negatives>2</meneame:negatives>
+		<meneame:karma>5419</meneame:karma>
+		<meneame:comments>60</meneame:comments>
+		<meneame:url>https://cadenaser.com/programa/2020/01/01/hora_25/1577902939_165909.html</meneame:url>
+		<title>Los neumólogos, a Díaz Ayuso: la contaminación sí mata</title>
+		<link>https://www.meneame.net/story/neumologos-diaz-ayuso-contaminacion-mata</link>
+		<comments>https://www.meneame.net/story/neumologos-diaz-ayuso-contaminacion-mata</comments>
+		<pubDate>Thu, 02 Jan 2020 00:00:03 +0000</pubDate>
+		<dc:creator>Ratoncolorao</dc:creator>
+		<category><![CDATA[actualidad]]></category>
+		<category><![CDATA[ayuso]]></category>
+		<category><![CDATA[contaminación]]></category>
+		<category><![CDATA[neumólogos]]></category>
+		<guid>https://www.meneame.net/story/neumologos-diaz-ayuso-contaminacion-mata</guid>
+		<description><![CDATA[<img src='https://mnmstatic.net/cache/31/50/media_thumb-link-3231832.jpeg?1577913306' width='155' height='155' alt='' class='thumbnail' style='float:right;margin-left: 3px' align='right' hspace='3'/><p>Los neumólogos desmienten Isabel Díaz Ayuso, después de que haya asegurado en la Cadena Ser que nadie muere por la contaminación en Madrid.</p><p><strong>etiquetas</strong>: ayuso, contaminación, neumólogos</p><p>&#187;&nbsp;<a href="http://www.meneame.net/go?id=3231832" >noticia original</a> (cadenaser.com)</p>]]></description>
+		<media:thumbnail url="https://mnmstatic.net/cache/31/50/media_thumb-link-3231832.jpeg?1577913306" width='155' height='155' />
+		<wfw:commentRss>http://www.meneame.net/comments_rss?id=3231832</wfw:commentRss>	</item>
+
+</channel>
+</rss>

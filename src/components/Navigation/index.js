@@ -3,11 +3,11 @@ import { withFirebase } from "../Firebase";
 import { AuthUserContext } from "../Session";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
-import Tabs from "./Tabs";
 import {
   AppHeader,
   HeaderBar,
   HamburgerBox,
+  HamburgerButton,
   HamburgerInner,
   Nav,
   NavItem,
@@ -27,14 +27,7 @@ const Navigation = ({ authUser, firebase }) => {
     <AuthUserContext.Consumer>
       {authUser => (
         <AppHeader>
-          <HeaderBar>
-            <Tabs />
-            <NavButton onClick={() => setMenuActive(!isMenuActive)}>
-              <HamburgerBox>
-                <HamburgerInner isActive={isMenuActive} />
-              </HamburgerBox>
-            </NavButton>
-          </HeaderBar>
+          <HeaderBar />
           <Nav isActive={isMenuActive}>
             <NavItem>
               {authUser && (
@@ -110,6 +103,11 @@ const Navigation = ({ authUser, firebase }) => {
               </Fragment>
             )}
           </Nav>
+          <HamburgerButton onClick={() => setMenuActive(!isMenuActive)}>
+            <HamburgerBox>
+              <HamburgerInner isActive={isMenuActive} />
+            </HamburgerBox>
+          </HamburgerButton>
         </AppHeader>
       )}
     </AuthUserContext.Consumer>

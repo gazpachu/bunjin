@@ -89,22 +89,25 @@ class Firebase {
     });
 
   // *** User API ***
-
-  user = uid => this.db.doc(`users/${uid}`);
-
+  user = uId => this.db.doc(`users/${uId}`);
   users = () => this.db.collection("users");
 
+  // *** Dashboards API ***
+  dashboard = uId => this.db.doc(`dashboards/${uId}`);
+  dashboards = () => this.db.collection("dashboards");
+  userDashboards = uId =>
+    this.db.collection("dashboards").where("userId", "==", uId);
+
   // *** Tabs API ***
-
-  tab = uid => this.db.doc(`tabs/${uid}`);
-
+  tab = tId => this.db.doc(`tabs/${tId}`);
   tabs = () => this.db.collection("tabs");
+  dashboardTabs = dId =>
+    this.db.collection("tabs").where("dashboardId", "==", dId);
 
   // *** Feeds API ***
-
-  feed = uid => this.db.doc(`feeds/${uid}`);
-
+  feed = fId => this.db.doc(`feeds/${fId}`);
   feeds = () => this.db.collection("feeds");
+  tabFeeds = tId => this.db.collection("feeds").where("tabId", "==", tId);
 }
 
 export default Firebase;

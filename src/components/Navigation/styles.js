@@ -9,7 +9,7 @@ import {
   fontSizes,
   growOnHover
 } from "../../common/common.styles";
-import { ReactComponent as AdminSvg } from "../../assets/img/admin.svg";
+import { ReactComponent as AdminSvg } from "../../assets/img/cog.svg";
 import { ReactComponent as DashboardSvg } from "../../assets/img/dashboard.svg";
 import { ReactComponent as LoginSvg } from "../../assets/img/login.svg";
 import { ReactComponent as LogoutSvg } from "../../assets/img/logout.svg";
@@ -21,12 +21,9 @@ export const AppHeader = styled.header`
 `;
 
 export const HeaderBar = styled.div`
-  position: absolute;
-  z-index: 1;
   text-align: center;
   background-color: ${darken(0.04, colors.bg)};
   color: white;
-  padding: 0 ${spacing.l3};
   height: ${headerHeight};
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
@@ -36,22 +33,27 @@ export const HeaderBar = styled.div`
   width: 100%;
 `;
 
-export const NavButton = styled.button`
-  background: none;
-  border: none;
-  padding: 0;
-  outline: none;
-  cursor: pointer;
-  line-height: 0px;
-  color: white;
-  font-weight: lighter;
-`;
-
 export const HamburgerBox = styled.div`
   position: relative;
   display: inline-block;
   width: 30px;
   height: 24px;
+`;
+
+export const NavButton = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 0px;
+  color: white;
+  font-weight: lighter;
+`;
+
+export const HamburgerButton = styled(NavButton)`
+  position: absolute;
+  z-index: 2;
+  left: ${spacing.l3};
+  top: ${spacing.l2};
 `;
 
 const HamburgerBar = css`
@@ -119,6 +121,7 @@ export const HamburgerInner = styled.div`
 
 export const Nav = styled.ul`
   position: absolute;
+  z-index: 1;
   left: 0;
   transition: top 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   top: -100vh;
@@ -126,19 +129,15 @@ export const Nav = styled.ul`
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  height: ${`calc(100vh - ${parseInt(headerHeight)}px)`};
+  background-color: rgba(0, 0, 0, 0.95);
+  height: 100vh;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  ${({ isActive }) =>
-    isActive &&
-    `
-      top: ${headerHeight};
-    `};
+  ${({ isActive }) => isActive && `top: 0;`};
 `;
 
 export const NavItem = styled.li`

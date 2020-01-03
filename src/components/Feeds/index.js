@@ -1,73 +1,88 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import rssParser from "rss-parser";
+import Feed from "./Feed";
 import { Form, FormInput, Button } from "../../common/common.styles";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
-import Feed from "./Feed";
+import { FeedGrid } from "./styles";
 
 class Feeds extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      text: "",
+      url: "",
       loading: false,
-      feeds: [],
-      limit: 5
+      feeds: []
     };
+
+    this.parser = new rssParser();
   }
 
   componentDidMount() {
     this.onListenForFeeds();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.selectedTab !== this.props.selectedTab) {
+      this.onListenForFeeds();
+    }
+  }
+
   onListenForFeeds = () => {
-    this.setState({ loading: true });
+    const { selectedTab } = this.props;
 
-    this.unsubscribe = this.props.firebase
-      .feeds()
-      .orderBy("createdAt", "desc")
-      .limit(this.state.limit)
-      .onSnapshot(snapshot => {
-        if (snapshot.size) {
-          let feeds = [];
-          snapshot.forEach(doc => feeds.push({ ...doc.data(), uid: doc.id }));
+    if (selectedTab) {
+      this.setState({ loading: true });
 
-          this.setState({
-            feeds: feeds.reverse(),
-            loading: false
-          });
-        } else {
-          this.setState({ feeds: null, loading: false });
-        }
-      });
+      this.unsubscribe = this.props.firebase
+        .tabFeeds(selectedTab)
+        .orderBy("createdAt", "desc")
+        .onSnapshot(snapshot => {
+          if (snapshot.size) {
+            let feeds = [];
+            snapshot.forEach(doc => feeds.push({ ...doc.data(), uid: doc.id }));
+
+            this.setState({
+              feeds: feeds.reverse(),
+              loading: false
+            });
+          } else {
+            this.setState({ feeds: null, loading: false });
+          }
+        });
+    }
   };
 
   componentWillUnmount() {
     this.unsubscribe();
   }
 
-  onChangeText = event => {
-    this.setState({ text: event.target.value });
+  onChangeUrl = event => {
+    this.setState({ url: event.target.value });
   };
 
   onCreateFeed = (event, authUser) => {
+    const { selectedTab } = this.props;
+
     this.props.firebase.feeds().add({
-      text: this.state.text,
+      url: this.state.url,
+      tabId: selectedTab,
       userId: authUser.uid,
       createdAt: this.props.firebase.fieldValue.serverTimestamp()
     });
 
-    this.setState({ text: "" });
+    this.setState({ url: "" });
 
     event.preventDefault();
   };
 
-  onEditFeed = (feed, text) => {
+  onEditFeed = (feed, url) => {
     const { uid, ...feedSnapshot } = feed;
 
     this.props.firebase.feed(feed.uid).update({
       ...feedSnapshot,
-      text,
+      url,
       editedAt: this.props.firebase.fieldValue.serverTimestamp()
     });
   };
@@ -76,37 +91,26 @@ class Feeds extends Component {
     this.props.firebase.feed(uid).delete();
   };
 
-  onNextPage = () => {
-    this.setState(state => ({ limit: state.limit + 5 }), this.onListenForFeeds);
-  };
-
   render() {
-    const { text, feeds, loading } = this.state;
+    const { url, feeds, loading } = this.state;
 
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <div>
-            {!loading && feeds && (
-              <Button type="button" onClick={this.onNextPage}>
-                More
-              </Button>
-            )}
-
+          <Fragment>
             {loading && <div>Loading ...</div>}
 
             {feeds && (
-              <ul>
+              <FeedGrid>
                 {feeds.map(feed => (
                   <Feed
                     authUser={authUser}
                     key={feed.uid}
                     feed={feed}
-                    onEditFeed={this.onEditFeed}
-                    onRemoveFeed={this.onRemoveFeed}
+                    parser={this.parser}
                   />
                 ))}
-              </ul>
+              </FeedGrid>
             )}
 
             {!feeds && <div>There are no feeds ...</div>}
@@ -114,12 +118,13 @@ class Feeds extends Component {
             <Form onSubmit={event => this.onCreateFeed(event, authUser)}>
               <FormInput
                 type="text"
-                value={text}
-                onChange={this.onChangeText}
+                value={url}
+                onChange={this.onChangeUrl}
+                placeholder="Feed URL"
               />
-              <Button type="submit">Send</Button>
+              <Button type="submit">Add new feed</Button>
             </Form>
-          </div>
+          </Fragment>
         )}
       </AuthUserContext.Consumer>
     );
