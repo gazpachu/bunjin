@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import dayjs from "dayjs";
 import { withFirebase } from "../Firebase";
+import FeedSettings from "./FeedSettings";
 import {
   FeedBox,
   FeedHeader,
@@ -12,7 +13,9 @@ import {
   ExternalLink,
   ItemTitle,
   Snippet,
-  Error
+  Error,
+  SettingsButton,
+  SettingsIcon
 } from "./styles";
 
 class Feed extends Component {
@@ -20,7 +23,8 @@ class Feed extends Component {
     super(props);
 
     this.state = {
-      caching: false
+      caching: false,
+      isSettingsActive: false
     };
   }
 
@@ -90,40 +94,57 @@ class Feed extends Component {
 
   render() {
     const { feed } = this.props;
+    const { isSettingsActive } = this.state;
     const data = feed.cache;
 
     return (
       <FeedBox>
         <FeedHeader>
-          {data && data.image && (
-            <FeedImage
-              src={data.image.url}
-              title={data.image.title}
-            ></FeedImage>
-          )}
-          <FeedTitle>{data && data.title}</FeedTitle>
+          <FeedTitle>
+            {data && data.image && (
+              <FeedImage
+                src={data.image.url}
+                title={data.image.title}
+              ></FeedImage>
+            )}
+            {data && data.title}
+          </FeedTitle>
+          <SettingsButton
+            onClick={() =>
+              this.setState({ isSettingsActive: !isSettingsActive })
+            }
+          >
+            <SettingsIcon />
+          </SettingsButton>
         </FeedHeader>
         <FeedWrapper>
-          {data && !data.error ? (
-            <FeedList>
-              {data.items.map(item => (
-                <FeedItem key={item.guid || item.id}>
-                  <ExternalLink
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`${dayjs(item.pubDate).format("DD MMM YYYY")}: ${
-                      item.title
-                    } - ${item.contentSnippet}`}
-                  >
-                    <ItemTitle>{item.title}</ItemTitle> -{" "}
-                    <Snippet>{item.contentSnippet}</Snippet>
-                  </ExternalLink>
-                </FeedItem>
-              ))}
-            </FeedList>
-          ) : (
-            <Error>{data.error}</Error>
+          {isSettingsActive && (
+            <FeedSettings feed={feed} isActive={isSettingsActive} />
+          )}
+          {!isSettingsActive && (
+            <Fragment>
+              {data && !data.error ? (
+                <FeedList>
+                  {data.items.map(item => (
+                    <FeedItem key={item.guid || item.id}>
+                      <ExternalLink
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`${dayjs(item.pubDate).format("DD MMM YYYY")}: ${
+                          item.title
+                        } - ${item.contentSnippet}`}
+                      >
+                        <ItemTitle>{item.title}</ItemTitle> -{" "}
+                        <Snippet>{item.contentSnippet}</Snippet>
+                      </ExternalLink>
+                    </FeedItem>
+                  ))}
+                </FeedList>
+              ) : (
+                <Error>{data.error}</Error>
+              )}
+            </Fragment>
           )}
         </FeedWrapper>
       </FeedBox>

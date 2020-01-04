@@ -7,6 +7,7 @@ import {
   Form,
   FormInput
 } from "../../common/common.styles";
+import { ReactComponent as CogSvg } from "../../assets/img/cog.svg";
 
 export const GridWrapper = styled.div`
   padding-top: ${spacing.l3};
@@ -45,12 +46,13 @@ export const FeedHeader = styled.div`
   border-top-right-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const FeedImage = styled.img`
   width: 16px;
   height: 16px;
-  vertical-align: middle;
+  vertical-align: sub;
   border-radius: 3px;
   margin-right: ${spacing.l2};
 `;
@@ -61,7 +63,7 @@ export const FeedTitle = styled.span`
 
 export const FeedWrapper = styled.div`
   padding: ${spacing.l2} 0;
-  max-height: 200px;
+  height: 200px;
   overflow: scroll;
   font-size: ${fontSizes.l5};
   line-height: 1.2em;
@@ -96,4 +98,33 @@ export const Snippet = styled.span`
 
 export const Error = styled.span`
   padding: ${spacing.l1} ${spacing.l3};
+`;
+
+export const SettingsButton = styled.button``;
+
+export const SettingsIcon = styled(CogSvg)`
+  fill: white;
+  width: 16px;
+  height: 16px;
+`;
+
+export const FeedSettingsWrapper = styled.div`
+  display: none;
+  padding: 0 ${spacing.l3};
+
+  ${({ isActive }) =>
+    isActive &&
+    `
+    display: block;
+  `};
+`;
+
+export const FeedSettingsForm = styled(Form)`
+  max-width: initial;
+  margin: initial;
+`;
+
+export const OrderInput = styled(FormInput)`
+  width: 60px;
+  margin-right: ${spacing.l2};
 `;

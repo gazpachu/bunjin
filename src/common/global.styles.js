@@ -32,8 +32,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
+    border: none;
+    background: none;
     outline: none;
     cursor: pointer;
+    padding: 0;
+    line-height: 0;
   }
 `;
 

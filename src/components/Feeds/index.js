@@ -71,6 +71,7 @@ class Feeds extends Component {
 
     this.props.firebase.feeds().add({
       url: this.state.url,
+      order: 1,
       tabId: selectedTab.uid,
       userId: authUser.uid,
       createdAt: this.props.firebase.fieldValue.serverTimestamp()
@@ -79,20 +80,6 @@ class Feeds extends Component {
     this.setState({ url: "" });
 
     event.preventDefault();
-  };
-
-  onEditFeed = (feed, url) => {
-    const { uid, ...feedSnapshot } = feed;
-
-    this.props.firebase.feed(feed.uid).update({
-      ...feedSnapshot,
-      url,
-      editedAt: this.props.firebase.fieldValue.serverTimestamp()
-    });
-  };
-
-  onRemoveFeed = uid => {
-    this.props.firebase.feed(uid).delete();
   };
 
   render() {

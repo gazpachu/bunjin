@@ -87,8 +87,6 @@ export const NewTabForm = styled(Form)`
 `;
 
 export const ToggleSettings = styled.button`
-  background: none;
-  border: none;
   width: 15px;
   height: 15px;
 

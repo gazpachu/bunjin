@@ -41,10 +41,6 @@ export const HamburgerBox = styled.div`
 `;
 
 export const NavButton = styled.button`
-  background: none;
-  border: none;
-  padding: 0;
-  line-height: 0px;
   color: white;
   font-weight: lighter;
 `;

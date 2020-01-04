@@ -56,14 +56,13 @@ export const Overlay = styled.div`
 `;
 
 export const button = props => css`
-  outline: none;
   background-color: ${props.color ? colors[props.color] : colors.green};
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   color: white;
+  line-height: inherit;
   font-size: ${props.size === "small" ? "11px" : "14px"};
   padding: ${props.size === "small" ? "5px" : "10px 20px"};
-  cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease-in;
 
