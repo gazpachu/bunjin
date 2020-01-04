@@ -1,8 +1,13 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { compose } from "recompose";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import { Form, FormInput, Button } from "../../common/common.styles";
+import {
+  PageContainer,
+  Form,
+  FormInput,
+  Button
+} from "../../common/common.styles";
 import {
   AuthUserContext,
   withAuthorization,
@@ -106,7 +111,7 @@ class DashboardsBase extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <Fragment>
+          <PageContainer>
             {!loading && dashboards.length > limit && (
               <Button type="button" onClick={this.onNextPage}>
                 Load More
@@ -138,7 +143,7 @@ class DashboardsBase extends Component {
               />
               <Button type="submit">Add new dashboard</Button>
             </Form>
-          </Fragment>
+          </PageContainer>
         )}
       </AuthUserContext.Consumer>
     );

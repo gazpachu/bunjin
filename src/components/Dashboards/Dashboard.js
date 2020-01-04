@@ -9,13 +9,17 @@ import {
   withEmailVerification
 } from "../Session";
 import Feeds from "../Feeds";
-import Tabs from "./Tabs";
+import Tabs from "../Tabs";
 import { DashboardSelect } from "./styles";
 
 const DashboardPage = ({ match }) => (
   <AuthUserContext.Consumer>
     {authUser => (
-      <Dashboard authUser={authUser} dashboardId={match.params.dashboardId} />
+      <Dashboard
+        authUser={authUser}
+        dashboardId={match.params.dashboardId}
+        tabId={match.params.tabId}
+      />
     )}
   </AuthUserContext.Consumer>
 );
@@ -36,8 +40,7 @@ class DashboardBase extends Component {
   }
 
   componentDidMount() {
-    const { dashboardId } = this.props;
-    const { authUser } = this.props;
+    const { dashboardId, authUser } = this.props;
 
     if (authUser && dashboardId) {
       this.props.firebase
@@ -70,18 +73,18 @@ class DashboardBase extends Component {
   };
 
   loadTabs(id) {
-    const { dashboardId } = this.props;
-    const { authUser } = this.props;
+    const { dashboardId, tabId, authUser } = this.props;
     const dId = id || dashboardId;
 
     this.props.firebase.dashboardTabs(dId).onSnapshot(tabsSnapshot => {
       if (tabsSnapshot.size) {
         let tabs = [];
         tabsSnapshot.forEach(doc => tabs.push({ ...doc.data(), uid: doc.id }));
+        const foundTab = tabs.find(tab => tab.uid === tabId);
         this.setState({
           tabs: tabs.reverse(),
           loading: false,
-          selectedTab: tabs[0]
+          selectedTab: foundTab ? foundTab : tabs[0]
         });
       } else {
         this.props.firebase.tabs().add({
@@ -103,10 +106,10 @@ class DashboardBase extends Component {
       selectedDashboard,
       selectedTab
     } = this.state;
-    const { authUser, dashboardId } = this.props;
+    const { authUser, dashboardId, history } = this.props;
 
     return (
-      <div>
+      <Fragment>
         {loading && <div>Loading ...</div>}
         {dashboards && (
           <Fragment>
@@ -115,7 +118,12 @@ class DashboardBase extends Component {
               dashboardId={dashboardId}
               authUser={authUser}
               selectedTab={selectedTab}
-              setActiveTab={selectedTab => this.setState({ selectedTab })}
+              setActiveTab={selectedTab => {
+                this.setState({ selectedTab });
+                history.push(
+                  `${ROUTES.DASHBOARDS}/${dashboardId}/${selectedTab.uid}`
+                );
+              }}
             />
             <DashboardSelect
               value={selectedDashboard}
@@ -130,7 +138,7 @@ class DashboardBase extends Component {
             <Feeds selectedTab={selectedTab} />
           </Fragment>
         )}
-      </div>
+      </Fragment>
     );
   }
 }

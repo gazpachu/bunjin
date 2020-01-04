@@ -26,8 +26,7 @@ const Navigation = ({ authUser, firebase }) => {
   return (
     <AuthUserContext.Consumer>
       {authUser => (
-        <AppHeader>
-          <HeaderBar />
+        <Fragment>
           <Nav isActive={isMenuActive}>
             <NavItem>
               {authUser && (
@@ -108,7 +107,7 @@ const Navigation = ({ authUser, firebase }) => {
               <HamburgerInner isActive={isMenuActive} />
             </HamburgerBox>
           </HamburgerButton>
-        </AppHeader>
+        </Fragment>
       )}
     </AuthUserContext.Consumer>
   );

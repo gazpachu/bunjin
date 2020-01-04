@@ -7,11 +7,11 @@ export const headerHeight = "40px";
 export const colors = {
   primary: "#7e5bef",
   secondary: "#888",
-  bg: "#242424",
+  bg: "rgba(0,0,0,0.2)",
   bg2: "#3a3a3a",
   red: "#c74343",
   green: "#30b182",
-  border: "rgba(255,255,255,0.2)"
+  border: "rgba(255,255,255,0.1)"
 };
 
 export const breakpoints = {
@@ -34,12 +34,16 @@ export const fontSizes = {
   l5: "0.8em"
 };
 
+export const MainContainer = styled.section`
+  color: white;
+  min-height: 100vh;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  text-align: center;
+`;
+
 export const PageContainer = styled.section`
   padding: 0 ${spacing.l3};
-  color: white;
-  min-height: calc(100vh - ${headerHeight});
-  background: ${colors.bg};
-  text-align: center;
 `;
 
 export const Overlay = styled.div`

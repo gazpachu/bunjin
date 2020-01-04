@@ -50,7 +50,11 @@ class Feed extends Component {
     const date1 = dayjs(feed.cachedAt ? feed.cachedAt.toDate() : "");
     const date2 = dayjs();
 
-    if (!feed.cache || date2.diff(date1, "minute") > maxCacheMinutes) {
+    if (
+      !feed.cache ||
+      feed.cache.error ||
+      date2.diff(date1, "minute") > maxCacheMinutes
+    ) {
       this.reloadData();
     }
   }

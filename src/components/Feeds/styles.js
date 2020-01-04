@@ -33,13 +33,15 @@ export const AddFeedInput = styled(FormInput)`
 
 export const FeedBox = styled.div`
   border-radius: 5px;
-  border: 1px solid ${colors.border};
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+  background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
 `;
 
 export const FeedHeader = styled.div`
   height: 30px;
-  background-color: ${darken(0.04, colors.bg)};
+  background-color: rgba(0, 0, 0, 0.2);
   padding: ${spacing.l2} ${spacing.l3};
   border-bottom: 1px solid ${colors.border};
   border-top-left-radius: 5px;
@@ -82,7 +84,7 @@ export const FeedItem = styled.li`
   text-overflow: ellipsis;
 
   &:hover {
-    background-color: ${colors.bg2};
+    background-color: rgba(0, 0, 0, 0.2);
   }
 `;
 

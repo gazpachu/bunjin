@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
-import { darken } from "polished";
 import { Link } from "react-router-dom";
 import {
-  colors,
-  headerHeight,
   breakpoints,
   spacing,
   fontSizes,
@@ -14,24 +11,6 @@ import { ReactComponent as DashboardSvg } from "../../assets/img/dashboard.svg";
 import { ReactComponent as LoginSvg } from "../../assets/img/login.svg";
 import { ReactComponent as LogoutSvg } from "../../assets/img/logout.svg";
 import { ReactComponent as UserSvg } from "../../assets/img/user.svg";
-
-export const AppHeader = styled.header`
-  position: relative;
-  height: ${headerHeight};
-`;
-
-export const HeaderBar = styled.div`
-  text-align: center;
-  background-color: ${darken(0.04, colors.bg)};
-  color: white;
-  height: ${headerHeight};
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-`;
 
 export const HamburgerBox = styled.div`
   position: relative;

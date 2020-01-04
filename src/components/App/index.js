@@ -12,26 +12,32 @@ import AccountPage from "../Account";
 import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
-import { PageContainer } from "../../common/common.styles";
+import { MainContainer } from "../../common/common.styles";
 
 const App = () => (
   <Router>
     <div>
       <GlobalStyles />
-      <Navigation />
-      <PageContainer>
+      <MainContainer>
+        <Navigation />
         <Route exact path={ROUTES.LANDING} component={LandingPage} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
         <Route
+          exact
           path={`${ROUTES.DASHBOARDS}/:dashboardId`}
+          component={DashboardPage}
+        />
+        <Route
+          exact
+          path={`${ROUTES.DASHBOARDS}/:dashboardId/:tabId`}
           component={DashboardPage}
         />
         <Route exact path={ROUTES.DASHBOARDS} component={DashboardsPage} />
         <Route path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
-      </PageContainer>
+      </MainContainer>
     </div>
   </Router>
 );

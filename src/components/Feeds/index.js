@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import rssParser from "rss-parser";
 import Feed from "./Feed";
-import { Button } from "../../common/common.styles";
+import { PageContainer, Button } from "../../common/common.styles";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
 import { GridWrapper, FeedGrid, AddFeedForm, AddFeedInput } from "./styles";
@@ -90,32 +90,36 @@ class Feeds extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <GridWrapper>
-            {feeds && (
-              <FeedGrid>
-                {feeds.map(feed => (
-                  <Feed
-                    authUser={authUser}
-                    key={feed.uid}
-                    feed={feed}
-                    parser={this.parser}
-                  />
-                ))}
-              </FeedGrid>
-            )}
+          <PageContainer>
+            <GridWrapper>
+              {feeds && (
+                <FeedGrid>
+                  {feeds.map(feed => (
+                    <Feed
+                      authUser={authUser}
+                      key={feed.uid}
+                      feed={feed}
+                      parser={this.parser}
+                    />
+                  ))}
+                </FeedGrid>
+              )}
 
-            {!feeds && <div>There are no feeds ...</div>}
+              {!feeds && <div>There are no feeds ...</div>}
 
-            <AddFeedForm onSubmit={event => this.onCreateFeed(event, authUser)}>
-              <AddFeedInput
-                type="text"
-                value={url}
-                onChange={this.onChangeUrl}
-                placeholder="Feed URL"
-              />
-              <Button type="submit">Add new feed</Button>
-            </AddFeedForm>
-          </GridWrapper>
+              <AddFeedForm
+                onSubmit={event => this.onCreateFeed(event, authUser)}
+              >
+                <AddFeedInput
+                  type="text"
+                  value={url}
+                  onChange={this.onChangeUrl}
+                  placeholder="Feed URL"
+                />
+                <Button type="submit">Add new feed</Button>
+              </AddFeedForm>
+            </GridWrapper>
+          </PageContainer>
         )}
       </AuthUserContext.Consumer>
     );
