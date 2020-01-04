@@ -22,7 +22,8 @@ export const spacing = {
   l1: "4px",
   l2: "8px",
   l3: "16px",
-  l4: "32px"
+  l4: "32px",
+  l5: "64px"
 };
 
 export const fontSizes = {
@@ -30,11 +31,11 @@ export const fontSizes = {
   l2: "2em",
   l3: "1.5em",
   l4: "1em",
-  l5: "0.9em"
+  l5: "0.8em"
 };
 
 export const PageContainer = styled.section`
-  padding: ${spacing.l3};
+  padding: 0 ${spacing.l3};
   color: white;
   min-height: calc(100vh - ${headerHeight});
   background: ${colors.bg};
@@ -99,7 +100,7 @@ export const formElement = css`
   color: #333;
   border-radius: 5px;
   padding: 8px;
-  line-height: 25px;
+  line-height: 20px;
   outline: none;
   width: 100%;
 `;

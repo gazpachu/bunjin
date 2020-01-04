@@ -81,7 +81,7 @@ class DashboardBase extends Component {
         this.setState({
           tabs: tabs.reverse(),
           loading: false,
-          selectedTab: tabs[0].uid
+          selectedTab: tabs[0]
         });
       } else {
         this.props.firebase.tabs().add({

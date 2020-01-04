@@ -1,90 +1,68 @@
-import React, { Component, Fragment } from "react";
-import { withFirebase } from "../Firebase";
-import { TabsNav, TabItem, NewTabItem, NewTabForm } from "./styles";
-import { FormInput, Button } from "../../common/common.styles";
+import React, { Fragment, useState } from "react";
+import TabSettings from "./TabSettings";
+import { TabsNav, TabItem, NewTabItem, ToggleSettings } from "./styles";
 
-class NewTabBase extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "",
-      isAddTabFormActive: false
-    };
-  }
-
-  onChangeName = event => {
-    this.setState({ name: event.target.value });
-  };
-
-  onCreateTab = (event, authUser) => {
-    const { dashboardId } = this.props;
-
-    if (dashboardId && authUser) {
-      this.props.firebase.tabs().add({
-        name: this.state.name,
-        dashboardId: dashboardId,
-        userId: authUser.uid,
-        createdAt: this.props.firebase.fieldValue.serverTimestamp()
-      });
-
-      this.setState({ name: "", isAddTabFormActive: false });
-    }
-
-    event.preventDefault();
-  };
-
-  render() {
-    const { tab, authUser } = this.props;
-    const { name, isAddTabFormActive } = this.state;
-
-    return (
-      <Fragment>
-        <NewTabItem
-          onClick={() =>
-            this.setState({ isAddTabFormActive: !isAddTabFormActive })
-          }
-        >
-          {tab && tab.name}
-        </NewTabItem>
-        {isAddTabFormActive && (
-          <NewTabForm onSubmit={event => this.onCreateTab(event, authUser)}>
-            <FormInput
-              type="text"
-              value={name}
-              autoFocus
-              onChange={this.onChangeName}
-              placeholder="Tab name"
-            />
-            <Button type="submit">Add new tab</Button>
-          </NewTabForm>
-        )}
-      </Fragment>
-    );
-  }
-}
-
-const NewTab = withFirebase(NewTabBase);
-
-const Tab = ({ tab, isActive, setActiveTab }) => (
-  <TabItem isActive={isActive} onClick={() => setActiveTab(tab.uid)}>
+const Tab = ({
+  tab,
+  isActive,
+  setActiveTab,
+  toggleSettings,
+  isSettingsActive
+}) => (
+  <TabItem isActive={isActive} onClick={() => setActiveTab(tab)}>
     {tab && tab.name}
+    {isActive && (
+      <ToggleSettings onClick={toggleSettings} isActive={isSettingsActive} />
+    )}
   </TabItem>
 );
 
-const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => (
-  <TabsNav>
-    {tabs &&
-      tabs.map((tab, index) => (
-        <Tab
-          key={tab.uid}
-          tab={tab}
-          isActive={selectedTab === tab.uid}
-          setActiveTab={setActiveTab}
-        />
-      ))}
-    <NewTab authUser={authUser} tab={{ name: "+" }} dashboardId={dashboardId} />
-  </TabsNav>
-);
+const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => {
+  const [isSettingsActive, toggleSettings] = useState(false);
+  const [isAddNew, toggleAddNew] = useState(false);
+
+  return (
+    <Fragment>
+      <TabsNav>
+        {tabs &&
+          tabs.map((tab, index) => (
+            <Tab
+              key={tab.uid}
+              tab={tab}
+              isActive={!isAddNew && selectedTab.uid === tab.uid}
+              isSettingsActive={isSettingsActive}
+              setActiveTab={tab => {
+                setActiveTab(tab);
+                toggleSettings(false);
+                toggleAddNew(false);
+              }}
+              toggleSettings={event => {
+                toggleSettings(!isSettingsActive);
+                toggleAddNew(false);
+                event.stopPropagation();
+              }}
+            />
+          ))}
+        <NewTabItem
+          isActive={isAddNew}
+          onClick={() => {
+            toggleSettings(!isSettingsActive);
+            toggleAddNew(true);
+          }}
+        >
+          +
+        </NewTabItem>
+      </TabsNav>
+      <TabSettings
+        tab={selectedTab}
+        isActive={isSettingsActive}
+        dashboardId={dashboardId}
+        authUser={authUser}
+        isAddNew={isAddNew}
+        toggleSettings={toggleSettings}
+      />
+    </Fragment>
+  );
+};
 
 export default Tabs;

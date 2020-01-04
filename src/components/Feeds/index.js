@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import rssParser from "rss-parser";
 import Feed from "./Feed";
-import { Form, FormInput, Button } from "../../common/common.styles";
+import { Button } from "../../common/common.styles";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
-import { FeedGrid } from "./styles";
+import { GridWrapper, FeedGrid, AddFeedForm, AddFeedInput } from "./styles";
 
 class Feeds extends Component {
   constructor(props) {
@@ -12,11 +12,13 @@ class Feeds extends Component {
 
     this.state = {
       url: "",
-      loading: false,
+      loading: true,
       feeds: []
     };
 
-    this.parser = new rssParser();
+    this.parser = new rssParser({
+      defaultRSS: 2.0
+    });
   }
 
   componentDidMount() {
@@ -24,7 +26,11 @@ class Feeds extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.selectedTab !== this.props.selectedTab) {
+    if (
+      (prevProps.selectedTab &&
+        prevProps.selectedTab.uid !== this.props.selectedTab.uid) ||
+      (!prevProps.selectedTab && this.props.selectedTab)
+    ) {
       this.onListenForFeeds();
     }
   }
@@ -33,10 +39,8 @@ class Feeds extends Component {
     const { selectedTab } = this.props;
 
     if (selectedTab) {
-      this.setState({ loading: true });
-
       this.unsubscribe = this.props.firebase
-        .tabFeeds(selectedTab)
+        .tabFeeds(selectedTab.uid)
         .orderBy("createdAt", "desc")
         .onSnapshot(snapshot => {
           if (snapshot.size) {
@@ -55,7 +59,7 @@ class Feeds extends Component {
   };
 
   componentWillUnmount() {
-    this.unsubscribe();
+    if (this.unsubscribe) this.unsubscribe();
   }
 
   onChangeUrl = event => {
@@ -67,7 +71,7 @@ class Feeds extends Component {
 
     this.props.firebase.feeds().add({
       url: this.state.url,
-      tabId: selectedTab,
+      tabId: selectedTab.uid,
       userId: authUser.uid,
       createdAt: this.props.firebase.fieldValue.serverTimestamp()
     });
@@ -94,12 +98,12 @@ class Feeds extends Component {
   render() {
     const { url, feeds, loading } = this.state;
 
+    if (loading) return <GridWrapper>Loading ...</GridWrapper>;
+
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <Fragment>
-            {loading && <div>Loading ...</div>}
-
+          <GridWrapper>
             {feeds && (
               <FeedGrid>
                 {feeds.map(feed => (
@@ -115,16 +119,16 @@ class Feeds extends Component {
 
             {!feeds && <div>There are no feeds ...</div>}
 
-            <Form onSubmit={event => this.onCreateFeed(event, authUser)}>
-              <FormInput
+            <AddFeedForm onSubmit={event => this.onCreateFeed(event, authUser)}>
+              <AddFeedInput
                 type="text"
                 value={url}
                 onChange={this.onChangeUrl}
                 placeholder="Feed URL"
               />
               <Button type="submit">Add new feed</Button>
-            </Form>
-          </Fragment>
+            </AddFeedForm>
+          </GridWrapper>
         )}
       </AuthUserContext.Consumer>
     );

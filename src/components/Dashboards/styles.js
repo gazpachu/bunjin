@@ -5,7 +5,8 @@ import {
   spacing,
   headerHeight,
   Select,
-  Form
+  Form,
+  FormInput
 } from "../../common/common.styles";
 
 export const DashboardList = styled.ul`
@@ -28,8 +29,8 @@ export const DashboardButton = styled.button`
 export const DashboardSelect = styled(Select)`
   position: absolute;
   text-align-last: right;
-  top: ${spacing.l2};
-  right: ${spacing.l3};
+  top: 6px;
+  right: 70px;
 `;
 
 export const TabsNav = styled.ul`
@@ -38,7 +39,7 @@ export const TabsNav = styled.ul`
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0 auto 0 60px;
+  margin: 0 auto 0 ${spacing.l3};
 `;
 
 export const TabItem = styled.li`
@@ -67,6 +68,13 @@ export const NewTabItem = styled(TabItem)`
   font-size: 30px;
   border-width: 1px;
   padding-top: 2px;
+
+  ${({ isActive }) =>
+    isActive &&
+    `
+    border-bottom-width: 0;
+    padding-top: 3px;
+  `}
 `;
 
 export const NewTabForm = styled(Form)`
@@ -76,4 +84,54 @@ export const NewTabForm = styled(Form)`
   background-color: ${colors.bg};
   padding: ${spacing.l3};
   border: 1px solid ${colors.border};
+`;
+
+export const ToggleSettings = styled.button`
+  background: none;
+  border: none;
+  width: 15px;
+  height: 15px;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    position: absolute;
+    top: 25px;
+
+    ${({ isActive }) => isActive && `transform: rotate(180deg);`}
+  }
+`;
+
+export const TabSettingsWrapper = styled.div`
+  width: 100%;
+  border-bottom: 1px solid ${colors.border};
+  position: absolute;
+  background-color: ${colors.bg};
+  left: 0;
+  padding: ${spacing.l3};
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  ${({ isActive }) =>
+    isActive &&
+    `
+    display: flex;
+  `}
+`;
+
+export const TabSettingsForm = styled(Form)`
+  width: auto;
+  max-width: initial;
+  margin: initial;
+`;
+
+export const TabNameInput = styled(FormInput)`
+  max-width: 200px;
+  margin-right: ${spacing.l2};
+  margin-bottom: 0;
 `;

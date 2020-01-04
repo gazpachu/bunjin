@@ -52,7 +52,7 @@ export const NavButton = styled.button`
 export const HamburgerButton = styled(NavButton)`
   position: absolute;
   z-index: 2;
-  left: ${spacing.l3};
+  right: ${spacing.l3};
   top: ${spacing.l2};
 `;
 
@@ -126,7 +126,6 @@ export const Nav = styled.ul`
   transition: top 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   top: -100vh;
   list-style-type: none;
-  padding: 0;
   margin: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.95);

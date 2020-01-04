@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Form, FormInput, Button, Overlay } from "../../common/common.styles";
+import { withFirebase } from "../Firebase";
+import { Button } from "../../common/common.styles";
+import { TabSettingsWrapper, TabSettingsForm, TabNameInput } from "./styles";
 
 class TabSettings extends Component {
   constructor(props) {
@@ -10,49 +12,99 @@ class TabSettings extends Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.tab !== this.props.tab) {
+      this.setState({ name: this.props.tab.name });
+    }
+  }
+
   onChangeName = event => {
     this.setState({ name: event.target.value });
   };
 
-  onCreateTab = (event, authUser) => {
-    this.props.firebase.tabs().add({
-      name: this.state.name,
-      userId: authUser.uid,
-      createdAt: this.props.firebase.fieldValue.serverTimestamp()
+  onCreateTab = event => {
+    const { dashboardId, authUser, toggleSettings } = this.props;
+
+    if (dashboardId && authUser) {
+      this.props.firebase.tabs().add({
+        name: this.state.name,
+        dashboardId: dashboardId,
+        userId: authUser.uid,
+        createdAt: this.props.firebase.fieldValue.serverTimestamp()
+      });
+
+      this.setState({ name: "", isAddTabFormActive: false });
+    }
+
+    event.preventDefault();
+    toggleSettings();
+  };
+
+  onEditTab = event => {
+    const { tab, toggleSettings } = this.props;
+    const { name } = this.state;
+
+    if (!tab) return;
+
+    this.props.firebase.tab(tab.uid).update({
+      ...tab,
+      name,
+      editedAt: this.props.firebase.fieldValue.serverTimestamp()
     });
 
     this.setState({ name: "" });
 
     event.preventDefault();
+    toggleSettings();
   };
 
-  onEditTab = (tab, name) => {
-    const { uid, ...tabSnapshot } = tab;
+  onRemoveTab = () => {
+    const { tab, toggleSettings } = this.props;
+    if (!tab) return;
+    this.props.firebase
+      .tab(tab.uid)
+      .delete()
+      .then(() =>
+        this.props.firebase.tabFeeds(tab.uid).onSnapshot(snapshot => {
+          if (snapshot.size) {
+            snapshot.forEach(doc => {
+              doc.ref.delete();
+            });
+          }
+        })
+      );
 
-    this.props.firebase.tab(tab.uid).update({
-      ...tabSnapshot,
-      name,
-      editedAt: this.props.firebase.fieldValue.serverTimestamp()
-    });
-  };
-
-  onRemoveTab = uid => {
-    this.props.firebase.tab(uid).delete();
+    toggleSettings();
   };
 
   render() {
-    const { authUser } = this.props;
+    const { isActive, isAddNew } = this.props;
     const { name } = this.state;
 
     return (
-      <Overlay>
-        <Form onSubmit={event => this.onCreateTabb(event, authUser)}>
-          <FormInput type="text" value={name} onChange={this.onChangeName} />
-          <Button type="submit">Send</Button>
-        </Form>
-      </Overlay>
+      <TabSettingsWrapper isActive={isActive}>
+        <TabSettingsForm
+          onSubmit={event => {
+            isAddNew ? this.onCreateTab(event) : this.onEditTab(event);
+          }}
+        >
+          <TabNameInput
+            type="text"
+            value={name}
+            onChange={this.onChangeName}
+            placeholder="Tab name"
+            autoFocus
+          />
+          <Button type="submit">{isAddNew ? "Add new" : "Rename"} tab</Button>
+        </TabSettingsForm>
+        {!isAddNew && (
+          <Button color="red" onClick={this.onRemoveTab}>
+            Remove tab
+          </Button>
+        )}
+      </TabSettingsWrapper>
     );
   }
 }
 
-export default TabSettings;
+export default withFirebase(TabSettings);
