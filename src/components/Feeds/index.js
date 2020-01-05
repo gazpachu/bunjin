@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import rssParser from "rss-parser";
 import Feed from "./Feed";
-import { PageContainer, Button } from "../../common/common.styles";
+import { PageContainer } from "../../common/common.styles";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
-import { GridWrapper, FeedGrid, AddFeedForm, AddFeedInput } from "./styles";
+import {
+  GridWrapper,
+  FeedGrid,
+  AddFeedForm,
+  AddFeedInput,
+  AddFeedButton
+} from "./styles";
 
 class Feeds extends Component {
   constructor(props) {
@@ -116,7 +122,7 @@ class Feeds extends Component {
                   onChange={this.onChangeUrl}
                   placeholder="Feed URL"
                 />
-                <Button type="submit">Add new feed</Button>
+                <AddFeedButton type="submit">Add new feed</AddFeedButton>
               </AddFeedForm>
             </GridWrapper>
           </PageContainer>

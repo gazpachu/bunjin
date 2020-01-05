@@ -4,7 +4,9 @@ import {
   spacing,
   fontSizes,
   Form,
-  FormInput
+  FormInput,
+  Button,
+  breakpoints
 } from "../../common/common.styles";
 import { ReactComponent as CogSvg } from "../../assets/img/cog.svg";
 
@@ -15,27 +17,53 @@ export const GridWrapper = styled.div`
 export const FeedGrid = styled.div`
   display: grid;
   grid-gap: ${spacing.l3};
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+
+  @media (min-width: ${breakpoints.mobile}) {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
 `;
 
 export const AddFeedForm = styled(Form)`
   margin: ${spacing.l5} auto;
   display: flex;
   align-items: center;
+  max-width: 500px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    padding: ${spacing.l3};
+    margin: ${spacing.l3} auto;
+  }
 `;
 
 export const AddFeedInput = styled(FormInput)`
   margin-bottom: 0;
   margin-right: ${spacing.l2};
-  width: auto;
+  flex-grow: 2;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-right: 0;
+    margin-bottom: ${spacing.l2};
+    flex-grow: 1;
+  }
+`;
+
+export const AddFeedButton = styled(Button)`
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 export const FeedBox = styled.div`
-  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    border-radius: 5px;
+  }
 `;
 
 export const FeedHeader = styled.div`
@@ -43,11 +71,14 @@ export const FeedHeader = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   padding: ${spacing.l2} ${spacing.l3};
   border-bottom: 1px solid ${colors.border};
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 `;
 
 export const FeedImage = styled.img`

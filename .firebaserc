@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "shinban",
-    "shinban": "shinbanapp"
+    "default": "bunjin",
+    "bunjin": "bunjinapp"
   }
 }

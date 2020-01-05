@@ -9,14 +9,17 @@ import {
 
 export const TabsNav = styled.ul`
   padding: 0;
+  padding-right: 65px;
   list-style-type: none;
   margin: 0;
   text-align: left;
   display: flex;
   border-bottom: 1px solid ${colors.border};
+  overflow: scroll;
 `;
 
 export const TabItem = styled.li`
+  position: relative;
   height: ${parseInt(headerHeight) - 1}px;
   line-height: ${parseInt(headerHeight) - 3}px;
   display: inline-block;
@@ -24,6 +27,7 @@ export const TabItem = styled.li`
   cursor: pointer;
   white-space: nowrap;
   color: white;
+  transition: color 300ms ease;
 
   &:last-child {
     width: 100%;
@@ -32,7 +36,6 @@ export const TabItem = styled.li`
   ${({ isActive }) =>
     !isActive &&
     `
-    transition: all 0.5 ease;
     background-color: rgba(0,0,0,.2);
     color: grey;
 

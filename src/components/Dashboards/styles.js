@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { colors, spacing, Select } from "../../common/common.styles";
+import {
+  breakpoints,
+  colors,
+  spacing,
+  Select
+} from "../../common/common.styles";
 
 export const DashboardList = styled.ul`
   padding: 0;
@@ -23,4 +28,8 @@ export const DashboardSelect = styled(Select)`
   text-align-last: right;
   top: 6px;
   right: 70px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
+  }
 `;

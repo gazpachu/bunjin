@@ -43,7 +43,9 @@ export const MainContainer = styled.section`
 `;
 
 export const PageContainer = styled.section`
-  padding: 0 ${spacing.l3};
+  @media (min-width: ${breakpoints.mobile}) {
+    padding: 0 ${spacing.l3};
+  }
 `;
 
 export const Overlay = styled.div`
@@ -69,6 +71,7 @@ export const button = props => css`
   padding: ${props.size === "small" ? "5px" : "10px 20px"};
   white-space: nowrap;
   transition: all 0.2s ease-in;
+  width: ${props.shouldFitContainer ? "100%" : "auto"};
 
   &:hover {
     background: ${props.color
@@ -108,10 +111,7 @@ export const formElement = css`
   width: 100%;
 `;
 
-export const Form = styled.form`
-  max-width: 300px;
-  margin: 0 auto;
-`;
+export const Form = styled.form``;
 
 export const FormInput = styled.input`
   ${formElement};
