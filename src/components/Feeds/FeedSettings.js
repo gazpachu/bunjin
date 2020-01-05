@@ -6,9 +6,10 @@ import { FeedSettingsWrapper, FeedSettingsForm, OrderInput } from "./styles";
 class FeedSettings extends Component {
   constructor(props) {
     super(props);
+    const { feed } = this.props;
 
     this.state = {
-      order: 1
+      order: feed ? feed.order : 1
     };
   }
 

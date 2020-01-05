@@ -41,14 +41,14 @@ class Feeds extends Component {
     if (selectedTab) {
       this.unsubscribe = this.props.firebase
         .tabFeeds(selectedTab.uid)
-        .orderBy("createdAt", "desc")
+        .orderBy("order", "asc")
         .onSnapshot(snapshot => {
           if (snapshot.size) {
             let feeds = [];
             snapshot.forEach(doc => feeds.push({ ...doc.data(), uid: doc.id }));
 
             this.setState({
-              feeds: feeds.reverse(),
+              feeds: feeds,
               loading: false
             });
           } else {

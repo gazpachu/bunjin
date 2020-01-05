@@ -4,8 +4,6 @@ import { AuthUserContext } from "../Session";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
 import {
-  AppHeader,
-  HeaderBar,
   HamburgerBox,
   HamburgerButton,
   HamburgerInner,
