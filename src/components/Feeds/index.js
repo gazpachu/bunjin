@@ -19,6 +19,7 @@ class Feeds extends Component {
     this.state = {
       url: "",
       loading: true,
+      updating: false,
       feeds: []
     };
 
@@ -42,12 +43,11 @@ class Feeds extends Component {
   }
 
   onListenForFeeds = () => {
-    const { selectedTab } = this.props;
+    const { selectedTab, firebase } = this.props;
 
     if (selectedTab) {
-      this.unsubscribe = this.props.firebase
+      this.unsubscribeFeeds = firebase
         .tabFeeds(selectedTab.uid)
-        .orderBy("order", "asc")
         .onSnapshot(snapshot => {
           if (snapshot.size) {
             let feeds = [];
@@ -65,7 +65,7 @@ class Feeds extends Component {
   };
 
   componentWillUnmount() {
-    if (this.unsubscribe) this.unsubscribe();
+    this.unsubscribeFeeds && this.unsubscribeFeeds();
   }
 
   onChangeUrl = event => {
@@ -73,22 +73,75 @@ class Feeds extends Component {
   };
 
   onCreateFeed = (event, authUser) => {
-    const { selectedTab } = this.props;
+    const { firebase, selectedTab } = this.props;
+    const { url } = this.state;
 
-    this.props.firebase.feeds().add({
-      url: this.state.url,
-      order: 1,
-      tabId: selectedTab.uid,
-      userId: authUser.uid,
-      createdAt: this.props.firebase.fieldValue.serverTimestamp()
-    });
+    this.setState({ updating: true });
+    console.log(url);
+    firebase
+      .findFeed(url)
+      .get()
+      .then(snapshot => {
+        if (!snapshot.size) {
+          firebase
+            .feeds()
+            .add({
+              url,
+              userId: authUser.uid,
+              tabs: [selectedTab.uid],
+              createdAt: firebase.getTimestamp()
+            })
+            .then(addedFeed => {
+              this.addFeedToTab(addedFeed.id);
+            })
+            .catch(error => {
+              this.setState({ updating: false });
+            });
+        } else {
+          const data = snapshot.docs[0].data();
+          data.tabs.push(selectedTab.uid);
+          firebase
+            .feed(snapshot.docs[0].id)
+            .update({
+              ...data,
+              editedAt: firebase.fieldValue.serverTimestamp()
+            })
+            .then(addedFeed => {
+              this.addFeedToTab(snapshot.docs[0].id);
+            })
+            .catch(error => {
+              this.setState({ updating: false });
+            });
+        }
+      });
 
     this.setState({ url: "" });
-
     event.preventDefault();
   };
 
+  addFeedToTab = feedId => {
+    const { firebase, selectedTab } = this.props;
+
+    if (feedId) {
+      const feeds = [...selectedTab.feeds];
+      feeds.push({
+        uid: feedId
+      });
+
+      firebase
+        .tab(selectedTab.uid)
+        .update({
+          ...selectedTab,
+          feeds,
+          editedAt: firebase.fieldValue.serverTimestamp()
+        })
+        .then(() => this.setState({ updating: false }))
+        .catch(() => this.setState({ updating: false }));
+    }
+  };
+
   render() {
+    const { selectedTab } = this.props;
     const { url, feeds, loading } = this.state;
 
     if (loading) return <GridWrapper>Loading ...</GridWrapper>;
@@ -105,6 +158,7 @@ class Feeds extends Component {
                       authUser={authUser}
                       key={feed.uid}
                       feed={feed}
+                      tab={selectedTab}
                       parser={this.parser}
                     />
                   ))}

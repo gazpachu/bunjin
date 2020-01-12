@@ -24,15 +24,15 @@ class FeedSettings extends Component {
   };
 
   onEditFeed = event => {
-    const { feed } = this.props;
+    const { feed, firebase } = this.props;
     const { order } = this.state;
 
     if (!feed) return;
 
-    this.props.firebase.feed(feed.uid).update({
+    firebase.feed(feed.uid).update({
       ...feed,
       order,
-      editedAt: this.props.firebase.fieldValue.serverTimestamp()
+      editedAt: firebase.fieldValue.serverTimestamp()
     });
 
     this.setState({ order: "" });
@@ -41,9 +41,21 @@ class FeedSettings extends Component {
   };
 
   onRemoveFeed = () => {
-    const { feed } = this.props;
+    const { feed, tab, firebase } = this.props;
+
     if (!feed) return;
-    this.props.firebase.feed(feed.uid).delete();
+    if (feed.tabs.length > 1) {
+      const updatedFeed = { ...feed };
+      const index = updatedFeed.tabs.indexOf(tab.uid);
+      updatedFeed.tabs.splice(index, 1);
+
+      firebase.feed(feed.uid).update({
+        ...updatedFeed,
+        editedAt: firebase.fieldValue.serverTimestamp()
+      });
+    } else {
+      firebase.feed(feed.uid).delete();
+    }
   };
 
   render() {

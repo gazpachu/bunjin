@@ -32,6 +32,10 @@ class Firebase {
     this.twitterProvider = new app.auth.TwitterAuthProvider();
   }
 
+  /* Firebase APIs */
+
+  getTimestamp = () => app.firestore.Timestamp.now();
+
   // *** Auth API ***
 
   doCreateUserWithEmailAndPassword = (email, password) =>
@@ -107,7 +111,9 @@ class Firebase {
   // *** Feeds API ***
   feed = fId => this.db.doc(`feeds/${fId}`);
   feeds = () => this.db.collection("feeds");
-  tabFeeds = tId => this.db.collection("feeds").where("tabId", "==", tId);
+  tabFeeds = tabId =>
+    this.db.collection("feeds").where("tabs", "array-contains", tabId);
+  findFeed = url => this.db.collection("feeds").where("url", "==", url);
 }
 
 export default Firebase;

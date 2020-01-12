@@ -112,7 +112,7 @@ class DashboardsBase extends Component {
       <AuthUserContext.Consumer>
         {authUser => (
           <PageContainer>
-            {!loading && dashboards.length > limit && (
+            {!loading && dashboards && dashboards.length > limit && (
               <Button type="button" onClick={this.onNextPage}>
                 Load More
               </Button>

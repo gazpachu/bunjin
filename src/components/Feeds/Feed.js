@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import dayjs from "dayjs";
+import sanitizeHtml from "sanitize-html";
 import { withFirebase } from "../Firebase";
 import FeedSettings from "./FeedSettings";
 import {
@@ -42,13 +43,13 @@ class Feed extends Component {
   };
 
   checkCache() {
-    const { feed } = this.props;
+    const { feed, firebase } = this.props;
     const { caching } = this.state;
 
     if (!feed || caching) return;
     const maxCacheMinutes = 15;
     const date1 = dayjs(feed.cachedAt ? feed.cachedAt.toDate() : "");
-    const date2 = dayjs();
+    const date2 = dayjs(firebase.getTimestamp().toDate());
 
     if (
       !feed.cache ||
@@ -60,8 +61,9 @@ class Feed extends Component {
   }
 
   reloadData() {
-    const { feed, parser } = this.props;
+    const { feed, parser, firebase } = this.props;
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    const maxCachedItems = 50;
 
     if (!feed || !parser) return;
 
@@ -73,12 +75,24 @@ class Feed extends Component {
           error: String(err)
         };
 
-        this.props.firebase
+        if (feed.cache && !feed.cache.error) {
+          if (
+            feed.cache.items.length + feedData.items.length <=
+            maxCachedItems
+          ) {
+            feedData.items.concat(feed.cache.items);
+          } else {
+            const itemsToSlice = maxCachedItems - feedData.items.length;
+            feedData.items.concat(feed.cache.items.slice(0, itemsToSlice + 1));
+          }
+        }
+
+        firebase
           .feed(feed.uid)
           .update({
             ...feed,
             cache: err ? failedData : feedData,
-            cachedAt: this.props.firebase.fieldValue.serverTimestamp()
+            cachedAt: firebase.fieldValue.serverTimestamp()
           })
           .then(() => {
             this.setState({
@@ -97,7 +111,7 @@ class Feed extends Component {
   }
 
   render() {
-    const { feed } = this.props;
+    const { feed, tab } = this.props;
     const { isSettingsActive } = this.state;
     const data = feed.cache;
 
@@ -123,30 +137,40 @@ class Feed extends Component {
         </FeedHeader>
         <FeedWrapper>
           {isSettingsActive && (
-            <FeedSettings feed={feed} isActive={isSettingsActive} />
+            <FeedSettings feed={feed} tab={tab} isActive={isSettingsActive} />
           )}
           {!isSettingsActive && (
             <Fragment>
               {data && !data.error ? (
                 <FeedList>
-                  {data.items.map(item => (
-                    <FeedItem key={item.guid || item.id}>
-                      <ExternalLink
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={`${dayjs(item.pubDate).format("DD MMM YYYY")}: ${
-                          item.title
-                        } - ${item.contentSnippet}`}
-                      >
-                        <ItemTitle>{item.title}</ItemTitle> -{" "}
-                        <Snippet>{item.contentSnippet}</Snippet>
-                      </ExternalLink>
-                    </FeedItem>
-                  ))}
+                  {data.items.map(item => {
+                    const snippet = sanitizeHtml(
+                      item.contentSnippet || item["content:encoded"],
+                      { allowedTags: [], allowedAttributes: {} }
+                    ).substring(0, 100);
+                    return (
+                      <FeedItem key={item.guid || item.id}>
+                        <ExternalLink
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={`${dayjs(item.pubDate).format(
+                            "DD MMM YYYY"
+                          )}: ${item.title} - ${snippet}`}
+                        >
+                          <ItemTitle>{item.title}</ItemTitle> -{" "}
+                          <Snippet
+                            dangerouslySetInnerHTML={{
+                              __html: snippet
+                            }}
+                          />
+                        </ExternalLink>
+                      </FeedItem>
+                    );
+                  })}
                 </FeedList>
               ) : (
-                <Error>{data.error}</Error>
+                <Error>{data && data.error}</Error>
               )}
             </Fragment>
           )}

@@ -60,6 +60,10 @@ const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => {
         authUser={authUser}
         isAddNew={isAddNew}
         toggleSettings={toggleSettings}
+        setActiveTab={tab => {
+          toggleAddNew(false);
+          setActiveTab(tab);
+        }}
       />
     </Fragment>
   );

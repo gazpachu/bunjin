@@ -14,13 +14,7 @@ import { DashboardSelect } from "./styles";
 
 const DashboardPage = ({ match }) => (
   <AuthUserContext.Consumer>
-    {authUser => (
-      <Dashboard
-        authUser={authUser}
-        dashboardId={match.params.dashboardId}
-        tabId={match.params.tabId}
-      />
-    )}
+    {authUser => <Dashboard authUser={authUser} />}
   </AuthUserContext.Consumer>
 );
 
@@ -28,22 +22,22 @@ class DashboardBase extends Component {
   constructor(props) {
     super(props);
 
-    const { dashboardId } = this.props;
+    const { match } = this.props;
 
     this.state = {
       loading: false,
       dashboards: null,
       tabs: [],
-      selectedDashboard: dashboardId,
+      selectedDashboard: match.params.dashboardId,
       selectedTab: null
     };
   }
 
   componentDidMount() {
-    const { dashboardId, authUser } = this.props;
+    const { match, authUser, firebase } = this.props;
 
-    if (authUser && dashboardId) {
-      this.props.firebase
+    if (authUser && match.params.dashboardId) {
+      this.unsubscribeDashboards = firebase
         .dashboards(authUser.uid)
         .orderBy("createdAt", "desc")
         .onSnapshot(dashboardsSnapshot => {
@@ -66,6 +60,11 @@ class DashboardBase extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.unsubscribeDashboards && this.unsubscribeDashboards();
+    this.unsubscribeTabs && this.unsubscribeTabs();
+  }
+
   handleChange = event => {
     this.setState({ selectedDashboard: event.target.value });
     this.props.history.push(`${ROUTES.DASHBOARDS}/${event.target.value}`);
@@ -73,29 +72,41 @@ class DashboardBase extends Component {
   };
 
   loadTabs(id) {
-    const { dashboardId, tabId, authUser } = this.props;
-    const dId = id || dashboardId;
+    const { match, authUser, firebase } = this.props;
+    const dId = id || match.params.dashboardId;
 
-    this.props.firebase.dashboardTabs(dId).onSnapshot(tabsSnapshot => {
-      if (tabsSnapshot.size) {
-        let tabs = [];
-        tabsSnapshot.forEach(doc => tabs.push({ ...doc.data(), uid: doc.id }));
-        const foundTab = tabs.find(tab => tab.uid === tabId);
-        this.setState({
-          tabs: tabs.reverse(),
-          loading: false,
-          selectedTab: foundTab ? foundTab : tabs[0]
-        });
-      } else {
-        this.props.firebase.tabs().add({
-          name: "My Tab",
-          dashboardId: dId,
-          userId: authUser.uid,
-          createdAt: this.props.firebase.fieldValue.serverTimestamp()
-        });
-        this.setState({ tabs: null, loading: false });
-      }
-    });
+    this.unsubscribeTabs = firebase
+      .dashboardTabs(dId)
+      .orderBy("createdAt")
+      .onSnapshot(tabsSnapshot => {
+        const { selectedTab } = this.state;
+        const { match } = this.props;
+
+        if (tabsSnapshot.size) {
+          let tabs = [];
+          tabsSnapshot.forEach(doc =>
+            tabs.push({ ...doc.data(), uid: doc.id })
+          );
+          const preferredTabId = selectedTab
+            ? selectedTab.uid
+            : match.params.tabId;
+          const foundTab = tabs.find(tab => tab.uid === preferredTabId);
+          this.setState({
+            tabs: tabs,
+            loading: false,
+            selectedTab: foundTab ? foundTab : tabs[0]
+          });
+        } else {
+          firebase.tabs().add({
+            name: "My Tab",
+            dashboardId: dId,
+            feeds: [],
+            userId: authUser.uid,
+            createdAt: firebase.fieldValue.serverTimestamp()
+          });
+          this.setState({ tabs: null, loading: false });
+        }
+      });
   }
 
   render() {
@@ -106,7 +117,7 @@ class DashboardBase extends Component {
       selectedDashboard,
       selectedTab
     } = this.state;
-    const { authUser, dashboardId, history } = this.props;
+    const { authUser, match, history } = this.props;
 
     return (
       <Fragment>
@@ -115,26 +126,30 @@ class DashboardBase extends Component {
           <Fragment>
             <Tabs
               tabs={tabs}
-              dashboardId={dashboardId}
+              dashboardId={match.params.dashboardId}
               authUser={authUser}
               selectedTab={selectedTab}
-              setActiveTab={selectedTab => {
-                this.setState({ selectedTab });
-                history.push(
-                  `${ROUTES.DASHBOARDS}/${dashboardId}/${selectedTab.uid}`
-                );
+              setActiveTab={activeTab => {
+                const tab = activeTab || tabs[0];
+                this.setState({ selectedTab: tab }, () => {
+                  history.push(
+                    `${ROUTES.DASHBOARDS}/${match.params.dashboardId}/${tab.uid}`
+                  );
+                });
               }}
             />
-            <DashboardSelect
-              value={selectedDashboard}
-              onChange={this.handleChange}
-            >
-              {dashboards.map(dashboard => (
-                <option key={dashboard.uid} value={dashboard.uid}>
-                  {dashboard.name}
-                </option>
-              ))}
-            </DashboardSelect>
+            {dashboards && dashboards.length > 1 && (
+              <DashboardSelect
+                value={selectedDashboard}
+                onChange={this.handleChange}
+              >
+                {dashboards.map(dashboard => (
+                  <option key={dashboard.uid} value={dashboard.uid}>
+                    {dashboard.name}
+                  </option>
+                ))}
+              </DashboardSelect>
+            )}
             <Feeds selectedTab={selectedTab} />
           </Fragment>
         )}
