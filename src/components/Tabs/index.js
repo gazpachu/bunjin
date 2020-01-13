@@ -25,6 +25,7 @@ const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => {
     <Fragment>
       <TabsNav>
         {tabs &&
+          selectedTab &&
           tabs.map((tab, index) => (
             <Tab
               key={tab.uid}

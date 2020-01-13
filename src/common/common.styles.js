@@ -125,6 +125,8 @@ export const FormButton = styled.button`
 `;
 
 export const Select = styled.select`
+  font-size: ${({ size }) => (size === "small" ? "11px" : "14px")};
+  padding: ${({ size }) => (size === "small" ? "5px" : "10px 20px")};
   appearance: none;
   background: none;
   color: white;
@@ -137,7 +139,10 @@ export const Select = styled.select`
   border-radius: 4px;
   background-image: linear-gradient(45deg, transparent 50%, white 50%),
     linear-gradient(135deg, white 50%, transparent 50%);
-  background-position: calc(100% - 5px) calc(13px), calc(100%) calc(13px);
+  background-position: ${({ size }) =>
+    size === "small"
+      ? "calc(100% - 5px) calc(13px), calc(100%) calc(13px)"
+      : "calc(100% - 5px) calc(18px), calc(100%) calc(18px)"};
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 `;

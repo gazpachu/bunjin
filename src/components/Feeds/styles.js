@@ -5,6 +5,7 @@ import {
   fontSizes,
   Form,
   FormInput,
+  Select,
   Button,
   breakpoints
 } from "../../common/common.styles";
@@ -156,7 +157,12 @@ export const FeedSettingsForm = styled(Form)`
   margin: initial;
 `;
 
-export const OrderInput = styled(FormInput)`
+export const OrderLabel = styled.span`
+  margin-right: ${spacing.l2};
+`;
+
+export const OrderSelect = styled(Select)`
   width: 60px;
   margin-right: ${spacing.l2};
+  margin-bottom: ${spacing.l2};
 `;

@@ -1,77 +1,107 @@
 import React, { Component } from "react";
 import { withFirebase } from "../Firebase";
 import { Button } from "../../common/common.styles";
-import { FeedSettingsWrapper, FeedSettingsForm, OrderInput } from "./styles";
+import {
+  FeedSettingsWrapper,
+  FeedSettingsForm,
+  OrderLabel,
+  OrderSelect
+} from "./styles";
 
 class FeedSettings extends Component {
   constructor(props) {
     super(props);
-    const { feed } = this.props;
+    const { tab, feed } = this.props;
+    const order = tab.feeds.find(item => item.uid === feed.uid).order;
 
     this.state = {
-      order: feed ? feed.order : 1
+      selectedOrder: order ? order : 1,
+      options: this.buildOptions()
     };
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.feed !== this.props.feed) {
-      this.setState({ order: this.props.feed.order });
+  buildOptions = () => {
+    const { tab } = this.props;
+    const options = [];
+    for (let i = 1; i < tab.feeds.length + 1; i += 1) {
+      options.push({ label: i, value: i });
     }
-  }
-
-  onChangeOrder = event => {
-    this.setState({ order: event.target.value });
+    return options;
   };
 
-  onEditFeed = event => {
-    const { feed, firebase } = this.props;
-    const { order } = this.state;
+  handleChange = event => {
+    this.setState({ selectedOrder: event.target.value });
+    const { tab, feed, firebase } = this.props;
 
-    if (!feed) return;
+    if (!tab) return;
 
-    firebase.feed(feed.uid).update({
-      ...feed,
-      order,
-      editedAt: firebase.fieldValue.serverTimestamp()
+    tab.feeds.find(item => item.uid === feed.uid).order = parseInt(
+      event.target.value
+    );
+
+    tab.feeds.sort((a, b) => {
+      let comparison = 0;
+      if (a.order > b.order) {
+        comparison = 1;
+      } else if (a.order < b.order) {
+        comparison = -1;
+      }
+      return comparison;
     });
 
-    this.setState({ order: "" });
-
-    event.preventDefault();
+    firebase.tab(tab.uid).update({
+      ...tab,
+      editedAt: firebase.fieldValue.serverTimestamp()
+    });
   };
 
   onRemoveFeed = () => {
-    const { feed, tab, firebase } = this.props;
+    const { feed, tab, firebase, closeSettings } = this.props;
 
     if (!feed) return;
-    if (feed.tabs.length > 1) {
-      const updatedFeed = { ...feed };
-      const index = updatedFeed.tabs.indexOf(tab.uid);
-      updatedFeed.tabs.splice(index, 1);
 
-      firebase.feed(feed.uid).update({
-        ...updatedFeed,
-        editedAt: firebase.fieldValue.serverTimestamp()
-      });
-    } else {
-      firebase.feed(feed.uid).delete();
+    const updatedTab = { ...tab };
+    const index = updatedTab.feeds.findIndex(x => x.uid === feed.uid);
+    updatedTab.feeds.splice(index, 1);
+
+    firebase.tab(tab.uid).update({
+      ...updatedTab,
+      editedAt: firebase.fieldValue.serverTimestamp()
+    });
+
+    if (updatedTab.feeds.findIndex(x => x.uid === feed.uid) === -1) {
+      if (feed.tabs.length > 1) {
+        const updatedFeed = { ...feed };
+        const index = updatedFeed.tabs.indexOf(tab.uid);
+        updatedFeed.tabs.splice(index, 1);
+
+        firebase.feed(feed.uid).update({
+          ...updatedFeed,
+          editedAt: firebase.fieldValue.serverTimestamp()
+        });
+      } else {
+        firebase.feed(feed.uid).delete();
+      }
     }
+
+    closeSettings();
   };
 
   render() {
     const { isActive } = this.props;
-    const { order } = this.state;
+    const { selectedOrder, options } = this.state;
 
     return (
       <FeedSettingsWrapper isActive={isActive}>
         <FeedSettingsForm onSubmit={event => this.onEditFeed(event)}>
-          <OrderInput
-            type="number"
-            value={order}
-            onChange={this.onChangeOrder}
-            autoFocus
-          />
-          <Button type="submit">Change order</Button>
+          <OrderLabel>Order</OrderLabel>
+          <OrderSelect value={selectedOrder} onChange={this.handleChange}>
+            {options.map(option => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </OrderSelect>
         </FeedSettingsForm>
         <Button color="red" onClick={this.onRemoveFeed}>
           Remove feed

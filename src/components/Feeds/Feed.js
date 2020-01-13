@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import dayjs from "dayjs";
+import uniqBy from "lodash.uniqby";
 import sanitizeHtml from "sanitize-html";
 import { withFirebase } from "../Firebase";
 import FeedSettings from "./FeedSettings";
@@ -22,9 +23,11 @@ import {
 class Feed extends Component {
   constructor(props) {
     super(props);
+    const { feed } = this.props;
 
     this.state = {
       caching: false,
+      feed,
       isSettingsActive: false
     };
   }
@@ -70,38 +73,51 @@ class Feed extends Component {
     this.setState({ caching: true }, () => {
       // CORS_PROXY + feed.url, "http://localhost:3000/feed.xml"
       parser.parseURL(CORS_PROXY + feed.url, (err, feedData) => {
+        let filteredData = feedData;
         const failedData = {
           title: feed.url,
           error: String(err)
         };
 
-        if (feed.cache && !feed.cache.error) {
+        if (feed.cache && feedData.items && !feed.cache.error) {
           if (
             feed.cache.items.length + feedData.items.length <=
             maxCachedItems
           ) {
-            feedData.items.concat(feed.cache.items);
+            filteredData.items = uniqBy(
+              feedData.items.concat(feed.cache.items),
+              "link"
+            );
           } else {
             const itemsToSlice = maxCachedItems - feedData.items.length;
-            feedData.items.concat(feed.cache.items.slice(0, itemsToSlice + 1));
+            filteredData.items = uniqBy(
+              feedData.items.concat(
+                feed.cache.items.slice(0, itemsToSlice + 1)
+              ),
+              "link"
+            );
           }
         }
 
+        const newFeed = {
+          ...feed,
+          cache: err ? failedData : filteredData,
+          cachedAt: firebase.fieldValue.serverTimestamp()
+        };
+
         firebase
           .feed(feed.uid)
-          .update({
-            ...feed,
-            cache: err ? failedData : feedData,
-            cachedAt: firebase.fieldValue.serverTimestamp()
-          })
+          .update(newFeed)
           .then(() => {
             this.setState({
+              feed: newFeed,
               caching: false
             });
             console.log(`Cached: ${feedData.title}`);
           })
           .catch(error => {
             this.setState({
+              feed: null,
               caching: false
             });
             console.log(`Error caching ${failedData.title}: ${error}`);
@@ -111,9 +127,9 @@ class Feed extends Component {
   }
 
   render() {
-    const { feed, tab } = this.props;
-    const { isSettingsActive } = this.state;
-    const data = feed.cache;
+    const { tab } = this.props;
+    const { isSettingsActive, feed } = this.state;
+    const data = feed ? feed.cache : null;
 
     return (
       <FeedBox>
@@ -137,19 +153,24 @@ class Feed extends Component {
         </FeedHeader>
         <FeedWrapper>
           {isSettingsActive && (
-            <FeedSettings feed={feed} tab={tab} isActive={isSettingsActive} />
+            <FeedSettings
+              feed={feed}
+              tab={tab}
+              isActive={isSettingsActive}
+              closeSettings={() => this.setState({ isSettingsActive: false })}
+            />
           )}
           {!isSettingsActive && (
             <Fragment>
-              {data && !data.error ? (
+              {data && data.items && !data.error ? (
                 <FeedList>
-                  {data.items.map(item => {
+                  {data.items.map((item, index) => {
                     const snippet = sanitizeHtml(
                       item.contentSnippet || item["content:encoded"],
                       { allowedTags: [], allowedAttributes: {} }
                     ).substring(0, 100);
                     return (
-                      <FeedItem key={item.guid || item.id}>
+                      <FeedItem key={`${item.guid || item.id}-${index}`}>
                         <ExternalLink
                           href={item.link}
                           target="_blank"
