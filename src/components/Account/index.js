@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { compose } from "recompose";
 import { NavItem } from "../Navigation/styles";
 import { AccountNav } from "./styles";
+import PublicLayout from "../PublicLayout/";
 import { Form, FormInput, Button } from "../../common/common.styles";
 import {
   AuthUserContext,
@@ -33,11 +34,11 @@ const SIGN_IN_METHODS = [
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
-      <div>
+      <PublicLayout>
         <h1>{authUser.email}</h1>
         <PasswordChangeForm />
         <LoginManagement authUser={authUser} />
-      </div>
+      </PublicLayout>
     )}
   </AuthUserContext.Consumer>
 );

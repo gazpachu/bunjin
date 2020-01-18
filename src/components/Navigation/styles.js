@@ -29,6 +29,7 @@ export const HamburgerButton = styled(NavButton)`
   z-index: 2;
   right: ${spacing.l3};
   top: ${spacing.l2};
+  ${({ isDark }) => isDark && `color: #2c292d`}
 `;
 
 const HamburgerBar = css`

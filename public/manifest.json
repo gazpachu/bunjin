@@ -1,6 +1,6 @@
 {
-  "short_name": "bunjin",
-  "name": "RSS Reader",
+  "short_name": "Bunjin",
+  "name": "RSS News Reader",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#FFFFFF",
+  "background_color": "#485461"
 }

@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
+import PublicLayout from "../PublicLayout/";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
+import { SignInLink } from "../SignIn/";
 import { Form, FormInput, FormButton } from "../../common/common.styles.js";
 
 const SignUpPage = () => (
-  <div>
-    <h1>Sign Up</h1>
+  <PublicLayout>
     <SignUpForm />
-  </div>
+    <SignInLink />
+  </PublicLayout>
 );
 
 const INITIAL_STATE = {

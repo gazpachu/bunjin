@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-
-import { withFirebase } from '../Firebase';
+import React, { Component } from "react";
+import Spinner from "../Spinner/";
+import { withFirebase } from "../Firebase";
 
 class UserItem extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class UserItem extends Component {
     this.state = {
       loading: false,
       user: null,
-      ...props.location.state,
+      ...props.location.state
     };
   }
 
@@ -25,7 +25,7 @@ class UserItem extends Component {
       .onSnapshot(snapshot => {
         this.setState({
           user: snapshot.data(),
-          loading: false,
+          loading: false
         });
       });
   }
@@ -44,7 +44,7 @@ class UserItem extends Component {
     return (
       <div>
         <h2>User ({this.props.match.params.id})</h2>
-        {loading && <div>Loading ...</div>}
+        {loading && <Spinner centered />}
 
         {user && (
           <div>
@@ -58,10 +58,7 @@ class UserItem extends Component {
               <strong>Username:</strong> {user.username}
             </span>
             <span>
-              <button
-                type="button"
-                onClick={this.onSendPasswordResetEmail}
-              >
+              <button type="button" onClick={this.onSendPasswordResetEmail}>
                 Send Password Reset
               </button>
             </span>

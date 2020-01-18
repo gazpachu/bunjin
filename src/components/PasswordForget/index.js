@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withFirebase } from "../Firebase";
+import PublicLayout from "../PublicLayout/";
 import * as ROUTES from "../../constants/routes";
+import { SignInLink } from "../SignIn/";
 import { Form, FormInput, FormButton } from "../../common/common.styles.js";
 
 const PasswordForgetPage = () => (
-  <div>
-    <h1>Forgot Password?</h1>
+  <PublicLayout>
     <PasswordForgetForm />
-  </div>
+    <SignInLink />
+  </PublicLayout>
 );
 
 const INITIAL_STATE = {

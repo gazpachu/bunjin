@@ -15,6 +15,7 @@ import {
 } from "../Session";
 import { withFirebase } from "../Firebase";
 import { DashboardList, DashboardButton } from "./styles";
+import Spinner from "../Spinner/";
 
 const DashboardsPage = () => (
   <AuthUserContext.Consumer>
@@ -118,7 +119,7 @@ class DashboardsBase extends Component {
               </Button>
             )}
 
-            {loading && <div>Loading ...</div>}
+            {loading && <Spinner centered />}
 
             {dashboards && (
               <DashboardList>

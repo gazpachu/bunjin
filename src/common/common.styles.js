@@ -101,9 +101,9 @@ export const ButtonIcon = styled.button`
 `;
 
 export const formElement = css`
-  background-color: white;
-  border: 1px solid ${colors.secondary};
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: white;
   border-radius: 5px;
   padding: 8px;
   line-height: 20px;

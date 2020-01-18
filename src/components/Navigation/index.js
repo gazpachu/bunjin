@@ -18,7 +18,7 @@ import {
   LogoutIcon
 } from "./styles";
 
-const Navigation = ({ authUser, firebase }) => {
+const Navigation = ({ authUser, firebase, isDark }) => {
   const [isMenuActive, setMenuActive] = useState(0);
 
   return (
@@ -100,7 +100,10 @@ const Navigation = ({ authUser, firebase }) => {
               </Fragment>
             )}
           </Nav>
-          <HamburgerButton onClick={() => setMenuActive(!isMenuActive)}>
+          <HamburgerButton
+            onClick={() => setMenuActive(!isMenuActive)}
+            isDark={isDark}
+          >
             <HamburgerBox>
               <HamburgerInner isActive={isMenuActive} />
             </HamburgerBox>

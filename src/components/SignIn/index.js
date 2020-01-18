@@ -1,29 +1,37 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import { SignUpLink } from "../SignUp";
+import PublicLayout from "../PublicLayout/";
 import { PasswordForgetLink } from "../PasswordForget";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
+import Spinner from "../Spinner/";
 import { EmailIcon, GoogleIcon, FacebookIcon, TwitterIcon } from "./styles";
 import { Form, FormInput, FormButton } from "../../common/common.styles.js";
 
+const SignInLink = () => (
+  <p>
+    Already have an account? <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+  </p>
+);
+
 const SignInPage = () => (
-  <div>
-    <h1>Sign In</h1>
+  <PublicLayout>
     <SignInForm />
     <SignInGoogle />
     <SignInFacebook />
     <SignInTwitter />
     <PasswordForgetLink />
     <SignUpLink />
-  </div>
+  </PublicLayout>
 );
 
 const INITIAL_STATE = {
   email: "",
   password: "",
-  error: null
+  error: null,
+  loading: false
 };
 
 const ERROR_CODE_ACCOUNT_EXISTS =
@@ -46,14 +54,15 @@ class SignInFormBase extends Component {
   onSubmit = event => {
     const { email, password } = this.state;
 
+    this.setState({ loading: true });
     this.props.firebase
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.DASHBOARDS);
+        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
       })
       .catch(error => {
-        this.setState({ error });
+        this.setState({ error, loading: false });
       });
 
     event.preventDefault();
@@ -64,7 +73,7 @@ class SignInFormBase extends Component {
   };
 
   render() {
-    const { email, password, error } = this.state;
+    const { email, password, error, loading } = this.state;
 
     const isInvalid = password === "" || email === "";
 
@@ -84,10 +93,14 @@ class SignInFormBase extends Component {
           type="password"
           placeholder="Password"
         />
-        <FormButton disabled={isInvalid} type="submit">
-          <EmailIcon />
-          Sign In with Email
-        </FormButton>
+        {!loading ? (
+          <FormButton disabled={isInvalid} type="submit">
+            <EmailIcon />
+            Sign In with Email
+          </FormButton>
+        ) : (
+          <Spinner centered />
+        )}
 
         {error && <p>{error.message}</p>}
       </Form>
@@ -99,10 +112,11 @@ class SignInGoogleBase extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { error: null };
+    this.state = { error: null, loading: false };
   }
 
   onSubmit = event => {
+    this.setState({ loading: true });
     this.props.firebase
       .doSignInWithGoogle()
       .then(socialAuthUser => {
@@ -118,7 +132,7 @@ class SignInGoogleBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(ROUTES.DASHBOARDS);
+        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -132,14 +146,18 @@ class SignInGoogleBase extends Component {
   };
 
   render() {
-    const { error } = this.state;
+    const { error, loading } = this.state;
 
     return (
       <Form onSubmit={this.onSubmit}>
-        <FormButton type="submit">
-          <GoogleIcon />
-          Sign In with Google
-        </FormButton>
+        {!loading ? (
+          <FormButton type="submit">
+            <GoogleIcon />
+            Sign In with Google
+          </FormButton>
+        ) : (
+          <Spinner />
+        )}
 
         {error && <p>{error.message}</p>}
       </Form>
@@ -151,10 +169,11 @@ class SignInFacebookBase extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { error: null };
+    this.state = { error: null, loading: false };
   }
 
   onSubmit = event => {
+    this.setState({ loading: true });
     this.props.firebase
       .doSignInWithFacebook()
       .then(socialAuthUser => {
@@ -170,7 +189,7 @@ class SignInFacebookBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(ROUTES.DASHBOARDS);
+        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -184,14 +203,18 @@ class SignInFacebookBase extends Component {
   };
 
   render() {
-    const { error } = this.state;
+    const { error, loading } = this.state;
 
     return (
       <Form onSubmit={this.onSubmit}>
-        <FormButton type="submit">
-          <FacebookIcon />
-          Sign In with Facebook
-        </FormButton>
+        {!loading ? (
+          <FormButton type="submit">
+            <FacebookIcon />
+            Sign In with Facebook
+          </FormButton>
+        ) : (
+          <Spinner />
+        )}
 
         {error && <p>{error.message}</p>}
       </Form>
@@ -203,10 +226,11 @@ class SignInTwitterBase extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { error: null };
+    this.state = { error: null, loading: false };
   }
 
   onSubmit = event => {
+    this.setState({ loading: true });
     this.props.firebase
       .doSignInWithTwitter()
       .then(socialAuthUser => {
@@ -222,7 +246,7 @@ class SignInTwitterBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(ROUTES.DASHBOARDS);
+        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -236,14 +260,18 @@ class SignInTwitterBase extends Component {
   };
 
   render() {
-    const { error } = this.state;
+    const { error, loading } = this.state;
 
     return (
       <Form onSubmit={this.onSubmit}>
-        <FormButton type="submit">
-          <TwitterIcon />
-          Sign In with Twitter
-        </FormButton>
+        {!loading ? (
+          <FormButton type="submit">
+            <TwitterIcon />
+            Sign In with Twitter
+          </FormButton>
+        ) : (
+          <Spinner />
+        )}
 
         {error && <p>{error.message}</p>}
       </Form>
@@ -261,4 +289,4 @@ const SignInTwitter = compose(withRouter, withFirebase)(SignInTwitterBase);
 
 export default SignInPage;
 
-export { SignInForm, SignInGoogle, SignInFacebook, SignInTwitter };
+export { SignInForm, SignInGoogle, SignInFacebook, SignInTwitter, SignInLink };

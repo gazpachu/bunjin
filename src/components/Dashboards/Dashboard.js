@@ -11,6 +11,7 @@ import {
 import Feeds from "../Feeds";
 import AddFeed from "../Feeds/AddFeed";
 import Tabs from "../Tabs";
+import Spinner from "../Spinner";
 import { DashboardSelect } from "./styles";
 
 const DashboardPage = ({ match }) => (
@@ -191,7 +192,6 @@ class DashboardBase extends Component {
 
     return (
       <Fragment>
-        {loadingDashboard && <div>Loading dashboard...</div>}
         {dashboard && (
           <Fragment>
             <Tabs
@@ -213,7 +213,7 @@ class DashboardBase extends Component {
                 ))}
               </DashboardSelect>
             )} */}
-            {loadingFeeds && <div>Loading feeds...</div>}
+            {(loadingDashboard || loadingFeeds) && <Spinner centered />}
             <Feeds
               feeds={feeds}
               selectedTab={selectedTab}

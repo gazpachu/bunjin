@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
 import { AddFeedForm, AddFeedInput, AddFeedButton } from "./styles";
+import Spinner from "../Spinner/";
 
 class AddFeed extends Component {
   constructor(props) {
@@ -99,7 +100,7 @@ class AddFeed extends Component {
       <AuthUserContext.Consumer>
         {authUser => (
           <Fragment>
-            {loading && <div>Loading feeds...</div>}
+            {loading && <Spinner centered />}
             {!loading && (
               <AddFeedForm
                 onSubmit={event => this.onCreateFeed(event, authUser)}
