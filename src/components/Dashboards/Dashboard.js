@@ -12,7 +12,7 @@ import Feeds from "../Feeds";
 import AddFeed from "../Feeds/AddFeed";
 import Tabs from "../Tabs";
 import Spinner from "../Spinner";
-import { DashboardSelect } from "./styles";
+// import { DashboardSelect } from "./styles";
 
 const DashboardPage = ({ match }) => (
   <AuthUserContext.Consumer>
@@ -89,9 +89,7 @@ class DashboardBase extends Component {
         if (tabsSnapshot.size) {
           console.log("Loaded Tabs");
           let tabs = [];
-          tabsSnapshot.forEach(doc =>
-            tabs.push({ ...doc.data(), uid: doc.id })
-          );
+          tabsSnapshot.forEach(doc => tabs.push({ ...doc.data(), id: doc.id }));
           this.setState({ tabs, loadingDashboard: false }, () =>
             this.loadTab()
           );
@@ -107,10 +105,15 @@ class DashboardBase extends Component {
               createdAt: firebase.fieldValue.serverTimestamp()
             })
             .then(addedTab => {
-              this.setState(
-                { tabs: addedTab.data(), loadingDashboard: false },
-                () => this.loadTab()
-              );
+              if (addedTab.exists) {
+                this.setState(
+                  {
+                    tabs: [{ ...addedTab.data(), id: addedTab.id }],
+                    loadingDashboard: false
+                  },
+                  () => this.loadTab()
+                );
+              }
             });
         }
       });
@@ -119,25 +122,25 @@ class DashboardBase extends Component {
   loadTab = id => {
     const { match, firebase, history } = this.props;
     const { tabs, selectedTab } = this.state;
-    this.setState({ loadingFeeds: true });
 
     if (tabs.length === 0) return;
 
-    let tabId = tabs[0].uid;
+    this.setState({ loadingFeeds: true });
+
+    let tabId = tabs[0].id;
     if (match.params && match.params.tabId) tabId = match.params.tabId;
-    if (selectedTab && selectedTab.uid) tabId = selectedTab.uid;
+    if (selectedTab && selectedTab.id) tabId = selectedTab.id;
     if (id) tabId = id;
     if (!tabId) return;
 
-    if (!match.params || !match.params.tabId) {
+    if (!match.params || !match.params.tabId || tabId !== match.params.tabId) {
       history.push(`${ROUTES.DASHBOARDS}/${match.params.dashboardId}/${tabId}`);
-      return;
     }
 
     this.unsubscribeTab = firebase.tab(tabId).onSnapshot(tabSnapshot => {
       if (tabSnapshot.exists) {
         console.log("Loaded Tab");
-        const selectedTab = tabSnapshot.data();
+        const selectedTab = { ...tabSnapshot.data(), id: tabSnapshot.id };
         this.setState({ selectedTab, loadingFeeds: false }, () => {
           this.loadFeeds();
         });
@@ -151,15 +154,19 @@ class DashboardBase extends Component {
   loadFeeds = () => {
     const { firebase } = this.props;
     const { selectedTab } = this.state;
+
+    if (!selectedTab || !selectedTab.id) {
+      console.log("Wrong tab or tab id");
+      return;
+    }
+
     this.setState({ loadingFeeds: true });
 
-    if (!selectedTab) return;
-
     firebase
-      .tabFeeds(selectedTab.uid)
+      .tabFeeds(selectedTab.id)
       .get()
       .then(snapshot => {
-        if (snapshot.size) {
+        if (snapshot.size && selectedTab.feeds) {
           console.log("Loaded Feeds");
           let feeds = selectedTab.feeds.filter(feed =>
             snapshot.docs.find(item => item.id === feed.uid)
@@ -199,7 +206,9 @@ class DashboardBase extends Component {
               dashboardId={match.params.dashboardId}
               authUser={authUser}
               selectedTab={selectedTab}
-              setActiveTab={activeTab => this.loadTab(activeTab.uid)}
+              setActiveTab={activeTab =>
+                this.loadTab(activeTab ? activeTab.id : null)
+              }
             />
             {/* {dashboards && dashboards.length > 1 && (
               <DashboardSelect

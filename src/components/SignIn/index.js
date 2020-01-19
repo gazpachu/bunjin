@@ -59,7 +59,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
+        this.props.history.push(`${ROUTES.DASHBOARDS}`);
       })
       .catch(error => {
         this.setState({ error, loading: false });
@@ -132,7 +132,7 @@ class SignInGoogleBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
+        this.props.history.push(`${ROUTES.DASHBOARDS}`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -156,7 +156,7 @@ class SignInGoogleBase extends Component {
             Sign In with Google
           </FormButton>
         ) : (
-          <Spinner />
+          <Spinner centered />
         )}
 
         {error && <p>{error.message}</p>}
@@ -189,7 +189,7 @@ class SignInFacebookBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
+        this.props.history.push(`${ROUTES.DASHBOARDS}`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -213,7 +213,7 @@ class SignInFacebookBase extends Component {
             Sign In with Facebook
           </FormButton>
         ) : (
-          <Spinner />
+          <Spinner centered />
         )}
 
         {error && <p>{error.message}</p>}
@@ -246,7 +246,7 @@ class SignInTwitterBase extends Component {
       })
       .then(() => {
         this.setState({ error: null });
-        this.props.history.push(`${ROUTES.DASHBOARDS}/new`);
+        this.props.history.push(`${ROUTES.DASHBOARDS}`);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
@@ -270,7 +270,7 @@ class SignInTwitterBase extends Component {
             Sign In with Twitter
           </FormButton>
         ) : (
-          <Spinner />
+          <Spinner centered />
         )}
 
         {error && <p>{error.message}</p>}

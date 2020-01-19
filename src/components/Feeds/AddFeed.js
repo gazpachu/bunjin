@@ -22,6 +22,11 @@ class AddFeed extends Component {
     const { firebase, selectedTab } = this.props;
     const { url } = this.state;
 
+    if (!selectedTab || !selectedTab.id) {
+      console.log("Wrong tab or tab id");
+      return;
+    }
+
     this.setState({ loading: true });
     firebase
       .findFeed(url)
@@ -33,7 +38,7 @@ class AddFeed extends Component {
             .add({
               url,
               userId: authUser.uid,
-              tabs: [selectedTab.uid],
+              tabs: [selectedTab.id],
               createdAt: firebase.getTimestamp()
             })
             .then(addedFeed => {
@@ -44,8 +49,8 @@ class AddFeed extends Component {
             });
         } else {
           const data = snapshot.docs[0].data();
-          if (data.tabs.indexOf(selectedTab.uid) === -1) {
-            data.tabs.push(selectedTab.uid);
+          if (data.tabs.indexOf(selectedTab.id) === -1) {
+            data.tabs.push(selectedTab.id);
             firebase
               .feed(snapshot.docs[0].id)
               .update({
@@ -72,14 +77,14 @@ class AddFeed extends Component {
     const { firebase, selectedTab } = this.props;
 
     if (feedId) {
-      const feeds = [...selectedTab.feeds];
+      const feeds = selectedTab.feeds ? [...selectedTab.feeds] : [];
       feeds.push({
         uid: feedId,
         order: 1
       });
 
       firebase
-        .tab(selectedTab.uid)
+        .tab(selectedTab.id)
         .update({
           ...selectedTab,
           feeds,

@@ -66,7 +66,7 @@ class Feed extends Component {
   reloadData() {
     const { feed, parser, firebase } = this.props;
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-    const maxCachedItems = 50;
+    const maxCachedItems = 30;
 
     if (!feed || !parser) return;
 
@@ -102,7 +102,7 @@ class Feed extends Component {
         const newFeed = {
           ...feed,
           cache: err ? failedData : filteredData,
-          cachedAt: firebase.fieldValue.serverTimestamp()
+          cachedAt: firebase.getTimestamp().toDate()
         };
 
         firebase

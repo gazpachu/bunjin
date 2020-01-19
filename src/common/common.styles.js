@@ -105,8 +105,8 @@ export const formElement = css`
   border: 1px solid rgba(0, 0, 0, 0.4);
   color: white;
   border-radius: 5px;
-  padding: 8px;
-  line-height: 20px;
+  padding: 6px 8px;
+  line-height: 22px;
   outline: none;
   width: 100%;
 `;

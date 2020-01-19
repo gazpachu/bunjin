@@ -9,8 +9,7 @@ import * as ROUTES from "../../constants/routes";
 
 const AdminPage = () => (
   <PublicLayout>
-    <h1>Admin</h1>
-    <p>The Admin Page is accessible by every signed in admin user.</p>
+    <p>The Admin Page is only accessible by users with admin role</p>
 
     <Switch>
       <Route exact path={ROUTES.ADMIN_DETAILS} component={UserItem} />

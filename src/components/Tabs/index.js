@@ -28,9 +28,9 @@ const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => {
           selectedTab &&
           tabs.map((tab, index) => (
             <Tab
-              key={tab.uid}
+              key={tab.id}
               tab={tab}
-              isActive={!isAddNew && selectedTab.uid === tab.uid}
+              isActive={!isAddNew && selectedTab.id === tab.id}
               isSettingsActive={isSettingsActive}
               setActiveTab={tab => {
                 setActiveTab(tab);
@@ -61,10 +61,6 @@ const Tabs = ({ tabs, dashboardId, authUser, selectedTab, setActiveTab }) => {
         authUser={authUser}
         isAddNew={isAddNew}
         toggleSettings={toggleSettings}
-        setActiveTab={tab => {
-          toggleAddNew(false);
-          setActiveTab(tab);
-        }}
       />
     </Fragment>
   );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Spinner from "../Spinner/";
 import { withFirebase } from "../Firebase";
+import { Button } from "../../common/common.styles";
 
 class UserItem extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class UserItem extends Component {
     this.state = {
       loading: false,
       user: null,
+      sent: false,
       ...props.location.state
     };
   }
@@ -35,33 +37,33 @@ class UserItem extends Component {
   }
 
   onSendPasswordResetEmail = () => {
-    this.props.firebase.doPasswordReset(this.state.user.email);
+    this.setState({ sent: true }, () =>
+      this.props.firebase.doPasswordReset(this.state.user.email)
+    );
   };
 
   render() {
-    const { user, loading } = this.state;
+    const { user, loading, sent } = this.state;
 
     return (
       <div>
-        <h2>User ({this.props.match.params.id})</h2>
+        <h4>User ({this.props.match.params.id})</h4>
         {loading && <Spinner centered />}
 
         {user && (
           <div>
-            <span>
+            <p>
               <strong>ID:</strong> {user.uid}
-            </span>
-            <span>
+              <br />
               <strong>E-Mail:</strong> {user.email}
-            </span>
-            <span>
+              <br />
               <strong>Username:</strong> {user.username}
-            </span>
-            <span>
-              <button type="button" onClick={this.onSendPasswordResetEmail}>
+            </p>
+            {!sent && (
+              <Button type="button" onClick={this.onSendPasswordResetEmail}>
                 Send Password Reset
-              </button>
-            </span>
+              </Button>
+            )}
           </div>
         )}
       </div>

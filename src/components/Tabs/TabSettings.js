@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { compose } from "recompose";
+import { withRouter } from "react-router-dom";
+import * as ROUTES from "../../constants/routes";
 import { withFirebase } from "../Firebase";
 import { Button } from "../../common/common.styles";
 import { TabSettingsWrapper, TabSettingsForm, TabNameInput } from "./styles";
@@ -13,7 +16,7 @@ class TabSettings extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.tab !== this.props.tab) {
+    if (prevProps.tab !== this.props.tab && this.props.tab) {
       this.setState({ name: this.props.tab.name });
     }
     if (prevProps.isAddNew !== this.props.isAddNew) {
@@ -34,7 +37,8 @@ class TabSettings extends Component {
       authUser,
       toggleSettings,
       firebase,
-      setActiveTab
+      history,
+      match
     } = this.props;
 
     if (dashboardId && authUser) {
@@ -48,7 +52,12 @@ class TabSettings extends Component {
       firebase
         .tabs()
         .add(newTab)
-        .then(createdTab => setActiveTab({ ...newTab, uid: createdTab.id }));
+        .then(createdTab => {
+          console.log(createdTab.id);
+          return history.push(
+            `${ROUTES.DASHBOARDS}/${match.params.dashboardId}/${createdTab.id}`
+          );
+        });
 
       this.setState({ name: "", isAddTabFormActive: false });
     }
@@ -61,9 +70,9 @@ class TabSettings extends Component {
     const { tab, toggleSettings, firebase } = this.props;
     const { name } = this.state;
 
-    if (!tab) return;
+    if (!tab || !tab.id) return;
 
-    firebase.tab(tab.uid).update({
+    firebase.tab(tab.id).update({
       ...tab,
       name,
       editedAt: firebase.fieldValue.serverTimestamp()
@@ -76,15 +85,16 @@ class TabSettings extends Component {
   };
 
   onRemoveTab = () => {
-    const { tab, toggleSettings, firebase, setActiveTab } = this.props;
+    const { tab, toggleSettings, firebase, history, match } = this.props;
 
-    if (!tab) return;
+    if (!tab || !tab.id) return;
+
     firebase
-      .tab(tab.uid)
+      .tab(tab.id)
       .delete()
       .then(() => {
         firebase
-          .tabFeeds(tab.uid)
+          .tabFeeds(tab.id)
           .get()
           .then(snapshot => {
             if (snapshot.size) {
@@ -93,14 +103,14 @@ class TabSettings extends Component {
               const batch = firebase.db.batch();
               snapshot.docs.map(doc => {
                 const data = doc.data();
-                const index = data.tabs.indexOf(tab.uid);
+                const index = data.tabs.indexOf(tab.id);
                 data.tabs.splice(index, 1);
 
                 return batch.update(doc.ref, { ...data });
               });
               batch.commit();
             }
-            setActiveTab(null);
+            history.push(`${ROUTES.DASHBOARDS}/${match.params.dashboardId}`);
           });
       });
 
@@ -139,4 +149,4 @@ class TabSettings extends Component {
   }
 }
 
-export default withFirebase(TabSettings);
+export default compose(withRouter, withFirebase)(TabSettings);

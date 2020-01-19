@@ -23,6 +23,7 @@ const SpinnerWrapper = styled.div`
   position: relative;
   animation: ${SpinnerAnim} 2.5s infinite linear both;
   ${({ centered }) => centered && `margin: 20px auto`};
+  mix-blend-mode: difference;
 `;
 
 const Dot = styled.div`

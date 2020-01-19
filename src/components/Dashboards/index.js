@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { compose } from "recompose";
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import {
-  PageContainer,
-  Form,
-  FormInput,
-  Button
-} from "../../common/common.styles";
+import PublicLayout from "../PublicLayout/";
+import { Form, FormInput, Button } from "../../common/common.styles";
 import {
   AuthUserContext,
   withAuthorization,
@@ -48,7 +45,7 @@ class DashboardsBase extends Component {
   }
 
   onListenForDashboards = () => {
-    const { authUser } = this.props;
+    const { authUser, history } = this.props;
     if (authUser) {
       this.setState({ loading: true });
 
@@ -68,11 +65,16 @@ class DashboardsBase extends Component {
               loading: false
             });
           } else {
-            this.props.firebase.dashboards().add({
-              name: "My Dashboard",
-              userId: authUser.uid,
-              createdAt: this.props.firebase.fieldValue.serverTimestamp()
-            });
+            this.props.firebase
+              .dashboards()
+              .add({
+                name: "My Dashboard",
+                userId: authUser.uid,
+                createdAt: this.props.firebase.fieldValue.serverTimestamp()
+              })
+              .then(newDashboard =>
+                history.push(`${ROUTES.DASHBOARDS}/${newDashboard.id}`)
+              );
             this.setState({ dashboards: null, loading: false });
           }
         });
@@ -112,7 +114,7 @@ class DashboardsBase extends Component {
     return (
       <AuthUserContext.Consumer>
         {authUser => (
-          <PageContainer>
+          <PublicLayout>
             {!loading && dashboards && dashboards.length > limit && (
               <Button type="button" onClick={this.onNextPage}>
                 Load More
@@ -142,16 +144,16 @@ class DashboardsBase extends Component {
                 onChange={this.onChangeName}
                 placeholder="Dashboard name"
               />
-              <Button type="submit">Add new dashboard</Button>
+              <Button type="submit">Create new dashboard</Button>
             </Form>
-          </PageContainer>
+          </PublicLayout>
         )}
       </AuthUserContext.Consumer>
     );
   }
 }
 
-const Dashboards = withFirebase(DashboardsBase);
+const Dashboards = compose(withRouter, withFirebase)(DashboardsBase);
 
 const condition = authUser => !!authUser;
 

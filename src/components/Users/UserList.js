@@ -43,16 +43,13 @@ class UserList extends Component {
         <ul>
           {users.map(user => (
             <li key={user.uid}>
-              <span>
+              <p>
                 <strong>ID:</strong> {user.uid}
-              </span>
-              <span>
+                <br />
                 <strong>E-Mail:</strong> {user.email}
-              </span>
-              <span>
+                <br />
                 <strong>Username:</strong> {user.username}
-              </span>
-              <span>
+                <br />
                 <Link
                   to={{
                     pathname: `${ROUTES.ADMIN}/${user.uid}`,
@@ -61,7 +58,7 @@ class UserList extends Component {
                 >
                   Details
                 </Link>
-              </span>
+              </p>
             </li>
           ))}
         </ul>
