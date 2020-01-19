@@ -23,7 +23,7 @@ service cloud.firestore {
     // Rules
     match /users/{userId} {
         allow list: if isAdmin();
-        allow get, update, delete: if isSelf() || isAdmin();
+        allow get, set, update, delete: if isSelf() || isAdmin();
         allow create: if signedIn();
     }
 

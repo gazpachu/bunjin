@@ -5,6 +5,7 @@ import PublicLayout from "../PublicLayout/";
 import * as ROUTES from "../../constants/routes";
 import * as ROLES from "../../constants/roles";
 import { SignInLink } from "../SignIn/";
+import Spinner from "../Spinner/";
 import { Form, FormInput, FormButton } from "../../common/common.styles.js";
 
 const SignUpPage = () => (
@@ -20,7 +21,8 @@ const INITIAL_STATE = {
   passwordOne: "",
   passwordTwo: "",
   isAdmin: false,
-  error: null
+  error: null,
+  loading: false
 };
 
 const ERROR_CODE_ACCOUNT_EXISTS = "auth/email-already-in-use";
@@ -41,12 +43,14 @@ class SignUpFormBase extends Component {
   }
 
   onSubmit = event => {
-    const { username, email, passwordOne, isAdmin } = this.state;
+    const { username, email, passwordOne } = this.state;
     const roles = {};
 
-    if (isAdmin) {
-      roles[ROLES.ADMIN] = ROLES.ADMIN;
-    }
+    // if (isAdmin) {
+    //   roles[ROLES.ADMIN] = ROLES.ADMIN;
+    // }
+
+    this.setState({ loading: true });
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -73,7 +77,7 @@ class SignUpFormBase extends Component {
           error.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
 
-        this.setState({ error });
+        this.setState({ error, loading: false });
       });
 
     event.preventDefault();
@@ -88,7 +92,14 @@ class SignUpFormBase extends Component {
   };
 
   render() {
-    const { username, email, passwordOne, passwordTwo, error } = this.state;
+    const {
+      username,
+      email,
+      passwordOne,
+      passwordTwo,
+      error,
+      loading
+    } = this.state;
 
     const isInvalid =
       passwordOne !== passwordTwo ||
@@ -138,6 +149,8 @@ class SignUpFormBase extends Component {
         <FormButton disabled={isInvalid} type="submit">
           Sign Up
         </FormButton>
+
+        {loading && <Spinner centered />}
 
         {error && <p>{error.message}</p>}
       </Form>

@@ -79,7 +79,7 @@ class Feed extends Component {
           error: String(err)
         };
 
-        if (feed.cache && feedData.items && !feed.cache.error) {
+        if (feedData && feed.cache && feedData.items && !feed.cache.error) {
           if (
             feed.cache.items.length + feedData.items.length <=
             maxCachedItems
@@ -113,7 +113,9 @@ class Feed extends Component {
               feed: newFeed,
               caching: false
             });
-            console.log(`Cached: ${feedData.title}`);
+            console.log(
+              `Cached: ${feedData ? feedData.title : failedData.title}`
+            );
           })
           .catch(error => {
             this.setState({

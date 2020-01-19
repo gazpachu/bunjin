@@ -3,6 +3,7 @@ import { AuthUserContext } from "../Session";
 import { withFirebase } from "../Firebase";
 import { AddFeedForm, AddFeedInput, AddFeedButton } from "./styles";
 import Spinner from "../Spinner/";
+import Recommendations from "../Recommendations";
 
 class AddFeed extends Component {
   constructor(props) {
@@ -16,6 +17,13 @@ class AddFeed extends Component {
 
   onChangeUrl = event => {
     this.setState({ url: event.target.value });
+  };
+
+  linkClicked = (event, authUser) => {
+    this.setState({ url: event.target.href }, () =>
+      this.onCreateFeed(event, authUser)
+    );
+    event.preventDefault();
   };
 
   onCreateFeed = (event, authUser) => {
@@ -70,7 +78,7 @@ class AddFeed extends Component {
       });
 
     this.setState({ url: "" });
-    event.preventDefault();
+    event && event.preventDefault();
   };
 
   addFeedToTab = feedId => {
@@ -107,17 +115,22 @@ class AddFeed extends Component {
           <Fragment>
             {loading && <Spinner centered />}
             {!loading && (
-              <AddFeedForm
-                onSubmit={event => this.onCreateFeed(event, authUser)}
-              >
-                <AddFeedInput
-                  type="text"
-                  value={url}
-                  onChange={this.onChangeUrl}
-                  placeholder="Feed URL"
+              <Fragment>
+                <AddFeedForm
+                  onSubmit={event => this.onCreateFeed(event, authUser)}
+                >
+                  <AddFeedInput
+                    type="text"
+                    value={url}
+                    onChange={this.onChangeUrl}
+                    placeholder="Feed URL"
+                  />
+                  <AddFeedButton type="submit">Add new feed</AddFeedButton>
+                </AddFeedForm>
+                <Recommendations
+                  linkClicked={event => this.linkClicked(event, authUser)}
                 />
-                <AddFeedButton type="submit">Add new feed</AddFeedButton>
-              </AddFeedForm>
+              </Fragment>
             )}
           </Fragment>
         )}

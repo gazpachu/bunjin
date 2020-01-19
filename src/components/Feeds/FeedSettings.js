@@ -12,10 +12,13 @@ class FeedSettings extends Component {
   constructor(props) {
     super(props);
     const { tab, feed } = this.props;
-    const order = tab.feeds.find(item => item.uid === feed.uid).order;
+    const order =
+      tab.feeds && feed
+        ? tab.feeds.find(item => item.uid === feed.uid).order
+        : 1;
 
     this.state = {
-      selectedOrder: order ? order : 1,
+      selectedOrder: order,
       options: this.buildOptions()
     };
   }
@@ -23,7 +26,7 @@ class FeedSettings extends Component {
   buildOptions = () => {
     const { tab } = this.props;
     const options = [];
-    for (let i = 1; i < tab.feeds.length + 1; i += 1) {
+    for (let i = 1; i < (tab.feeds.length || 0) + 1; i += 1) {
       options.push({ label: i, value: i });
     }
     return options;
@@ -64,10 +67,13 @@ class FeedSettings extends Component {
     const index = updatedTab.feeds.findIndex(x => x.uid === feed.uid);
     updatedTab.feeds.splice(index, 1);
 
-    firebase.tab(tab.uid).update({
-      ...updatedTab,
-      editedAt: firebase.fieldValue.serverTimestamp()
-    });
+    firebase
+      .tab(tab.uid)
+      .update({
+        ...updatedTab,
+        editedAt: firebase.fieldValue.serverTimestamp()
+      })
+      .catch(error => console.log(error));
 
     if (updatedTab.feeds.findIndex(x => x.uid === feed.uid) === -1) {
       if (feed.tabs.length > 1) {
@@ -75,12 +81,18 @@ class FeedSettings extends Component {
         const index = updatedFeed.tabs.indexOf(tab.uid);
         updatedFeed.tabs.splice(index, 1);
 
-        firebase.feed(feed.uid).update({
-          ...updatedFeed,
-          editedAt: firebase.fieldValue.serverTimestamp()
-        });
+        firebase
+          .feed(feed.uid)
+          .update({
+            ...updatedFeed,
+            editedAt: firebase.fieldValue.serverTimestamp()
+          })
+          .catch(error => console.log(error));
       } else {
-        firebase.feed(feed.uid).delete();
+        firebase
+          .feed(feed.uid)
+          .delete()
+          .catch(error => console.log(error));
       }
     }
 

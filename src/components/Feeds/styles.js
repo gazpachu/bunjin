@@ -88,6 +88,8 @@ export const FeedImage = styled.img`
   vertical-align: sub;
   border-radius: 3px;
   margin-right: ${spacing.l2};
+  overflow: hidden;
+  display: inline-block;
 `;
 
 export const FeedTitle = styled.span`

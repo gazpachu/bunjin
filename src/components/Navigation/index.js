@@ -50,7 +50,7 @@ const Navigation = ({ authUser, firebase, isDark }) => {
                 </NavLink>
               </NavItem>
             )}
-            {authUser && !!authUser.roles[ROLES.ADMIN] && (
+            {authUser && authUser.roles && !!authUser.roles[ROLES.ADMIN] && (
               <NavItem>
                 <NavLink
                   to={ROUTES.ADMIN}
