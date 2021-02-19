@@ -16,6 +16,8 @@ import {
   ItemTitle,
   Snippet,
   Error,
+  ReloadButton,
+  ReloadIcon,
   SettingsButton,
   SettingsIcon
 } from "./styles";
@@ -63,7 +65,7 @@ class Feed extends Component {
     }
   }
 
-  reloadData() {
+  reloadData(flush) {
     const { feed, parser, firebase } = this.props;
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     const maxCachedItems = 30;
@@ -79,7 +81,7 @@ class Feed extends Component {
           error: String(err)
         };
 
-        if (feedData && feed.cache && feedData.items && !feed.cache.error) {
+        if (!flush && feedData && feed.cache && feedData.items && !feed.cache.error) {
           if (
             feed.cache.items.length + feedData.items.length <=
             maxCachedItems
@@ -143,15 +145,20 @@ class Feed extends Component {
                 title={data.image.title}
               ></FeedImage>
             )}
-            {data && data.title}
+            <a href={data && data.link}>{data && data.title}</a>
           </FeedTitle>
-          <SettingsButton
-            onClick={() =>
-              this.setState({ isSettingsActive: !isSettingsActive })
-            }
-          >
-            <SettingsIcon />
-          </SettingsButton>
+          <div>
+            <ReloadButton onClick={() => this.reloadData(true)}>
+              <ReloadIcon />
+            </ReloadButton>
+            <SettingsButton
+              onClick={() =>
+                this.setState({ isSettingsActive: !isSettingsActive })
+              }
+            >
+              <SettingsIcon />
+            </SettingsButton>
+          </div>
         </FeedHeader>
         <FeedWrapper>
           {isSettingsActive && (

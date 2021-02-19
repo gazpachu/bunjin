@@ -10,6 +10,7 @@ import {
   breakpoints
 } from "../../common/common.styles";
 import { ReactComponent as CogSvg } from "../../assets/img/cog.svg";
+import { ReactComponent as ReloadSvg } from "../../assets/img/reload.svg";
 
 export const GridWrapper = styled.div`
   padding-top: ${spacing.l3};
@@ -94,6 +95,7 @@ export const FeedImage = styled.img`
 
 export const FeedTitle = styled.span`
   font-size: ${fontSizes.l5};
+  a { text-decoration: none; }
 `;
 
 export const FeedWrapper = styled.div`
@@ -135,7 +137,17 @@ export const Error = styled.span`
   padding: ${spacing.l1} ${spacing.l3};
 `;
 
+export const ReloadButton = styled.button`
+  margin-right: 8px;
+`;
+
 export const SettingsButton = styled.button``;
+
+export const ReloadIcon = styled(ReloadSvg)`
+  fill: white;
+  width: 16px;
+  height: 16px;
+`;
 
 export const SettingsIcon = styled(CogSvg)`
   fill: white;

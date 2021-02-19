@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import { withFirebase } from "../Firebase";
 import PublicLayout from "../PublicLayout/";
 import * as ROUTES from "../../constants/routes";
-import * as ROLES from "../../constants/roles";
 import { SignInLink } from "../SignIn/";
 import Spinner from "../Spinner/";
 import { Form, FormInput, FormButton } from "../../common/common.styles.js";
