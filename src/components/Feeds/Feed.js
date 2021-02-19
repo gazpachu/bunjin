@@ -67,7 +67,7 @@ class Feed extends Component {
 
   reloadData(flush) {
     const { feed, parser, firebase } = this.props;
-    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    const CORS_PROXY = "https://cors.bridged.cc/";
     const maxCachedItems = 30;
 
     if (!feed || !parser) return;
