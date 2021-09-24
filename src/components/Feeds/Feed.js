@@ -36,16 +36,7 @@ class Feed extends Component {
 
   componentDidMount() {
     this.checkCache();
-    window.addEventListener("focus", this.onFocus);
   }
-
-  componentWillUnmount() {
-    window.removeEventListener("focus", this.onFocus);
-  }
-
-  onFocus = () => {
-    this.checkCache();
-  };
 
   checkCache() {
     const { feed, firebase } = this.props;
