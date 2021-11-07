@@ -11,7 +11,8 @@ class Feeds extends Component {
     super(props);
 
     this.parser = new rssParser({
-      defaultRSS: 2.0
+      defaultRSS: 2.0,
+      headers: {'x-cors-grida-api-key': '551a44ac-2d84-401d-b5b1-7959479753d2'}
     });
   }
 
